@@ -221,11 +221,11 @@
         "kdp": "",
         "amazon_ebook_asin": "",
         "amazon_paperback_asin": "",
-        "google_play": "",
-        "elevenreader": "",
-        "google_play_ebook_id": "",
-        "google_play_audiobook_id": "",
-        "elevenreader_id": ""
+        "google_play": "https://play.google.com/store/books/details?id=1WIhEgAAQBAJ",
+        "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un",
+        "google_play_ebook_id": "1WIhEgAAQBAJ",
+        "google_play_audiobook_id": "AQAAAEBGXVkdDM",
+        "elevenreader_id": "i0rp0wAezs9Jt1lGd2un"
       }
     },
     {

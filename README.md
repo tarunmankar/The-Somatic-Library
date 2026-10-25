@@ -214,7 +214,7 @@ The HTML is divided into these sections (in order):
 
 ## 📚 Complete Book Catalog (All Published Titles)
 
-### Amazon + Google Play + ElevenReader (4 flagship titles)
+### Amazon + Google Play + ElevenReader (5 flagship titles)
 
 | # | Title | Amazon Kindle | Amazon PB | Google eBook | Google Audio | ElevenReader |
 |---|---|---|---|---|---|---|
@@ -222,6 +222,7 @@ The HTML is divided into these sections (in order):
 | 2 | **Somatic Pacing** | [Kindle](https://mybook.to/B0HN53MBXP) | [PB](https://mybook.to/B0HN54HSS4) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Somatic_Pacing?id=xXcbEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGllTWAM) | [Listen](https://elevenreader.io/audiobooks/somatic-pacing-audiobook/oh8YwXf7nPdM42c4amjG) |
 | 3 | **Healing The Scarcity Mindset** | [Kindle](https://mybook.to/B0HNJVFK7S) | [PB](https://mybook.to/B0HNJYXX62) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Healing_The_Scarcity_Mindset?id=NZcbEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGfi8-eM) | [Listen](https://elevenreader.io/audiobooks/healing-the-scarcity-mindset-audiobook/gbsUy9RuUMREED5fuFTb) |
 | 4 | **Dopamine Reset and Deep Focus** | [Kindle](https://mybook.to/B0HNXS4H2Q) | [PB](https://mybook.to/B0HNXWCKQK) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Dopamine_Reset_and_Deep_Focus?id=jxcdEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGAVhBDM) | [Listen](https://elevenreader.io/audiobooks/dopamine-reset-and-deep-focus-audiobook/0OoDHxWEdG2lNNbpAUjY) |
+| 5 | **The Courage to Disappoint** | [Store](https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN) | Coming Soon | [eBook](https://play.google.com/store/books/details?id=1WIhEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM) | [Listen](https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un) |
 
 ### ElevenReader-Only Audiobooks (12 additional titles)
 

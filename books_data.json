@@ -25,7 +25,17 @@
       "category": "anxiety",
       "category_label": "Anxiety & Attachment",
       "cover": "covers/stop_spiraling.jpg",
-      "keywords": ["anxiety", "spiral", "nervous system", "overthinking", "attachment", "fear", "text", "waiting", "relationship"],
+      "keywords": [
+        "anxiety",
+        "spiral",
+        "nervous system",
+        "overthinking",
+        "attachment",
+        "fear",
+        "text",
+        "waiting",
+        "relationship"
+      ],
       "links": {
         "amazon_ebook": "https://mybook.to/B0HN23T4GD",
         "amazon_paperback": "https://mybook.to/B0HN2V5MK9",
@@ -44,7 +54,18 @@
       "category": "burnout",
       "category_label": "Burnout & Energy",
       "cover": "covers/somatic_pacing.jpg",
-      "keywords": ["burnout", "energy", "fatigue", "coffee", "brain fog", "exhaustion", "pacing", "rest", "desk", "corporate"],
+      "keywords": [
+        "burnout",
+        "energy",
+        "fatigue",
+        "coffee",
+        "brain fog",
+        "exhaustion",
+        "pacing",
+        "rest",
+        "desk",
+        "corporate"
+      ],
       "links": {
         "amazon_ebook": "https://mybook.to/B0HN53MBXP",
         "amazon_paperback": "https://mybook.to/B0HN54HSS4",
@@ -63,7 +84,18 @@
       "category": "money",
       "category_label": "Money & Scarcity",
       "cover": "covers/scarcity_mindset.jpg",
-      "keywords": ["money", "scarcity", "abundance", "financial anxiety", "bank", "fear", "lack", "wealth", "budget", "trauma"],
+      "keywords": [
+        "money",
+        "scarcity",
+        "abundance",
+        "financial anxiety",
+        "bank",
+        "fear",
+        "lack",
+        "wealth",
+        "budget",
+        "trauma"
+      ],
       "links": {
         "amazon_ebook": "https://mybook.to/B0HNJVFK7S",
         "amazon_paperback": "https://mybook.to/B0HNJYXX62",
@@ -82,7 +114,18 @@
       "category": "focus",
       "category_label": "Dopamine & Focus",
       "cover": "covers/dopamine_reset.jpg",
-      "keywords": ["dopamine", "focus", "phone", "distraction", "attention", "scroll", "addiction", "deep work", "flow", "brain fog"],
+      "keywords": [
+        "dopamine",
+        "focus",
+        "phone",
+        "distraction",
+        "attention",
+        "scroll",
+        "addiction",
+        "deep work",
+        "flow",
+        "brain fog"
+      ],
       "links": {
         "amazon_ebook": "https://mybook.to/B0HNXS4H2Q",
         "amazon_paperback": "https://mybook.to/B0HNXWCKQK",
@@ -101,9 +144,20 @@
       "category": "anxiety",
       "category_label": "Anxiety & Attachment",
       "cover": "covers/courage_to_disappoint.jpg",
-      "keywords": ["people pleasing", "boundaries", "saying no", "guilt", "fawn response", "self-worth", "assertiveness", "approval seeking"],
+      "keywords": [
+        "people pleasing",
+        "boundaries",
+        "saying no",
+        "guilt",
+        "fawn response",
+        "self-worth",
+        "assertiveness",
+        "approval seeking"
+      ],
       "links": {
-        "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un"
+        "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un",
+        "google_ebook": "https://play.google.com/store/books/details?id=1WIhEgAAQBAJ",
+        "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM"
       }
     },
     {
@@ -116,7 +170,15 @@
       "category": "anxiety",
       "category_label": "Anxiety & Attachment",
       "cover": "covers/wired_for_security.jpg",
-      "keywords": ["anxious attachment", "relationship anxiety", "hypervigilance", "partner", "secure attachment", "fear of abandonment", "love"],
+      "keywords": [
+        "anxious attachment",
+        "relationship anxiety",
+        "hypervigilance",
+        "partner",
+        "secure attachment",
+        "fear of abandonment",
+        "love"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/wired-for-security-audiobook/We5ZO64fc78yTgapRRMp"
       }
@@ -131,7 +193,16 @@
       "category": "emotional",
       "category_label": "Emotional Regulation",
       "cover": "covers/mastering_the_storm.jpg",
-      "keywords": ["anger", "emotional flooding", "reactivity", "regulation", "defensiveness", "conflict", "triggered", "emotional storm"],
+      "keywords": [
+        "anger",
+        "emotional flooding",
+        "reactivity",
+        "regulation",
+        "defensiveness",
+        "conflict",
+        "triggered",
+        "emotional storm"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/mastering-the-emotional-storm-audiobook/5Y6hOQqRHU1zSc4a2vid"
       }
@@ -146,7 +217,16 @@
       "category": "focus",
       "category_label": "Dopamine & Focus",
       "cover": "covers/procrastination_loop.jpg",
-      "keywords": ["procrastination", "self-sabotage", "delay", "fear of failure", "perfectionism", "avoidance", "motivation", "productivity"],
+      "keywords": [
+        "procrastination",
+        "self-sabotage",
+        "delay",
+        "fear of failure",
+        "perfectionism",
+        "avoidance",
+        "motivation",
+        "productivity"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-procrastination-loop-audiobook/J6A32ugNYybFvpQ6Yn4e"
       }
@@ -161,7 +241,17 @@
       "category": "burnout",
       "category_label": "Burnout & Energy",
       "cover": "covers/thawing_the_freeze.jpg",
-      "keywords": ["freeze", "numbness", "dissociation", "emotional numbness", "shutdown", "low energy", "dorsal vagal", "polyvagal", "burnout"],
+      "keywords": [
+        "freeze",
+        "numbness",
+        "dissociation",
+        "emotional numbness",
+        "shutdown",
+        "low energy",
+        "dorsal vagal",
+        "polyvagal",
+        "burnout"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/thawing-the-freeze-audiobook/Q4N4nQufjtoEZGY8lokC"
       }
@@ -176,7 +266,17 @@
       "category": "burnout",
       "category_label": "Burnout & Energy",
       "cover": "covers/inability_to_rest.jpg",
-      "keywords": ["rest", "relaxation", "busy", "guilt", "downtime", "stillness", "chronic urgency", "burnout", "productivity anxiety"],
+      "keywords": [
+        "rest",
+        "relaxation",
+        "busy",
+        "guilt",
+        "downtime",
+        "stillness",
+        "chronic urgency",
+        "burnout",
+        "productivity anxiety"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-inability-to-rest-audiobook/qBubDX1BrUqKzykGhR48"
       }
@@ -191,7 +291,16 @@
       "category": "anxiety",
       "category_label": "Anxiety & Attachment",
       "cover": "covers/midnight_nervous_system.jpg",
-      "keywords": ["sleep anxiety", "insomnia", "midnight panic", "3 AM", "bed dread", "racing thoughts", "sleep", "night anxiety"],
+      "keywords": [
+        "sleep anxiety",
+        "insomnia",
+        "midnight panic",
+        "3 AM",
+        "bed dread",
+        "racing thoughts",
+        "sleep",
+        "night anxiety"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-midnight-nervous-system-audiobook/6yrBCzAWhxVJRY05oWn5"
       }
@@ -206,7 +315,16 @@
       "category": "emotional",
       "category_label": "Emotional Regulation",
       "cover": "covers/shame_collapse.jpg",
-      "keywords": ["shame", "unworthiness", "self-worth", "inner critic", "not enough", "imposter", "people pleasing", "chronic shame"],
+      "keywords": [
+        "shame",
+        "unworthiness",
+        "self-worth",
+        "inner critic",
+        "not enough",
+        "imposter",
+        "people pleasing",
+        "chronic shame"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-shame-collapse-audiobook/xVjNhuNLLotGmkw8ZqFl"
       }
@@ -221,7 +339,16 @@
       "category": "anxiety",
       "category_label": "Anxiety & Attachment",
       "cover": "covers/phantom_alarm.jpg",
-      "keywords": ["health anxiety", "hypochondria", "symptom panic", "heart palpitations", "body hypervigilance", "medical anxiety", "somatic", "checking"],
+      "keywords": [
+        "health anxiety",
+        "hypochondria",
+        "symptom panic",
+        "heart palpitations",
+        "body hypervigilance",
+        "medical anxiety",
+        "somatic",
+        "checking"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-phantom-alarm-audiobook/k6Ou7tzSkcXbcz8Tvlfq"
       }
@@ -236,7 +363,17 @@
       "category": "emotional",
       "category_label": "Emotional Regulation",
       "cover": "covers/social_hangover.jpg",
-      "keywords": ["social anxiety", "post-event", "rumination", "replay", "introvert", "social battery", "sensory overload", "social hangover", "cringe"],
+      "keywords": [
+        "social anxiety",
+        "post-event",
+        "rumination",
+        "replay",
+        "introvert",
+        "social battery",
+        "sensory overload",
+        "social hangover",
+        "cringe"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-social-hangover-audiobook/Isl2ldQ1r3KtFN6hTTpu"
       }
@@ -251,7 +388,16 @@
       "category": "burnout",
       "category_label": "Burnout & Energy",
       "cover": "covers/braced_body.jpg",
-      "keywords": ["muscle tension", "jaw clenching", "tight shoulders", "bruxism", "body armor", "somatic armoring", "chronic tension", "stiffness"],
+      "keywords": [
+        "muscle tension",
+        "jaw clenching",
+        "tight shoulders",
+        "bruxism",
+        "body armor",
+        "somatic armoring",
+        "chronic tension",
+        "stiffness"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-braced-body-audiobook/JmIsSXo9af01O77XRBG8"
       }
@@ -266,7 +412,15 @@
       "category": "emotional",
       "category_label": "Emotional Regulation",
       "cover": "covers/imposter_alarm.jpg",
-      "keywords": ["imposter syndrome", "fraud", "workplace anxiety", "over-preparation", "public speaking", "professional confidence", "fear of exposure"],
+      "keywords": [
+        "imposter syndrome",
+        "fraud",
+        "workplace anxiety",
+        "over-preparation",
+        "public speaking",
+        "professional confidence",
+        "fear of exposure"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-imposter-alarm-audiobook/jiZpOzGMWHEVK2zNC4Q1"
       }
@@ -281,7 +435,16 @@
       "category": "anxiety",
       "category_label": "Anxiety & Attachment",
       "cover": "covers/calm_alarm.jpg",
-      "keywords": ["anticipatory dread", "cherophobia", "fear of happiness", "other shoe", "peace anxiety", "good things", "hypervigilance", "trauma"],
+      "keywords": [
+        "anticipatory dread",
+        "cherophobia",
+        "fear of happiness",
+        "other shoe",
+        "peace anxiety",
+        "good things",
+        "hypervigilance",
+        "trauma"
+      ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-calm-alarm-audiobook/yUJBhW1HG0U6Jj9pLSxg"
       }

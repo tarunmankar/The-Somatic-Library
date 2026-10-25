@@ -165,6 +165,8 @@ const INLINE_DATA = {
         "approval seeking"
       ],
       "links": {
+        "google_ebook": "https://play.google.com/store/books/details?id=1WIhEgAAQBAJ",
+        "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM",
         "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un"
       }
     },
@@ -471,7 +473,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 /* ── LOAD DATA (tries JSON first, falls back to inline) ── */
 async function loadBooks() {
   try {
-    const res = await fetch('books_data.json');
+    const res = await fetch('books_data.json?v=2.3');
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
     allBooks = data.books;
@@ -512,7 +514,7 @@ function renderBooks(books) {
           onerror="this.style.background='#1a1530';this.src=''"
         />
         <div class="card-overlay">
-          <span class="overlay-badge">Available on Amazon Kindle &amp; Print</span>
+          <span class="overlay-badge">${book.links.google_ebook ? 'Available on Amazon &amp; Google Play' : 'ElevenReader Live · Google Play Coming Soon'}</span>
           <button class="overlay-btn" onclick="event.stopPropagation();openModal(${book.id})">
             📖 Read on Kindle / Buy
           </button>
@@ -521,7 +523,7 @@ function renderBooks(books) {
       <div class="card-body">
         <div class="card-meta-line">
           <span class="card-rating">★★★★★ 4.9</span>
-          <span class="card-format-tag">Instant Kindle Delivery</span>
+          <span class="card-format-tag">${book.links.google_ebook ? 'Kindle · Google Play · Audio' : 'Audiobook · Google Coming Soon'}</span>
         </div>
         <h3 class="card-title">${book.title}</h3>
         <p class="card-subtitle">${book.subtitle}</p>
@@ -607,6 +609,16 @@ function openModal(bookId) {
   const catTag = document.getElementById('modal-category-tag');
   if (catTag) catTag.textContent = book.category_label;
 
+  const badgesWrap = document.querySelector('.modal-format-badges');
+  if (badgesWrap) {
+    badgesWrap.innerHTML = `
+      <span class="pill-kindle">${book.links.amazon_ebook ? 'Kindle eBook' : 'Kindle Store'}</span>
+      <span class="pill-paperback">${book.links.amazon_paperback ? 'Paperback' : 'Paperback Soon'}</span>
+      <span class="pill-google">${book.links.google_ebook ? 'Google Play' : 'Google Soon'}</span>
+      <span class="pill-audio">Audiobook</span>
+    `;
+  }
+
   document.getElementById('modal-title').textContent = book.title;
 
   const subEl = document.getElementById('modal-subtitle');
@@ -665,6 +677,17 @@ function buildBuyOptions(links, bookTitle) {
         <span class="buy-cta-pill ghost">Prime Order ↗</span>
       </a>
     `);
+  } else {
+    options.push(`
+      <div class="buy-option coming-soon" id="buy-paperback-cs">
+        <span class="buy-option-icon">📦</span>
+        <div class="buy-option-info">
+          <div class="buy-option-title">Amazon Paperback (Print Edition)</div>
+          <div class="buy-option-sub">Print paperback in production · Arriving soon on Amazon Prime</div>
+        </div>
+        <span class="buy-cta-pill ghost coming-soon-badge">Coming Soon</span>
+      </div>
+    `);
   }
 
   // Priority 3: Google Play Books eBook & Free Sample
@@ -681,13 +704,13 @@ function buildBuyOptions(links, bookTitle) {
     `);
   } else {
     options.push(`
-      <a href="https://play.google.com/store/search?q=Tarun+Mankar&c=books" target="_blank" rel="noopener" class="buy-option" id="buy-google-store">
+      <a href="https://play.google.com/store/search?q=Tarun+Mankar&c=books" target="_blank" rel="noopener" class="buy-option coming-soon" id="buy-google-ebook-cs" title="Google Play eBook edition coming soon">
         <span class="buy-option-icon">📱</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Google Play Books Catalog</div>
-          <div class="buy-option-sub">Browse eBooks &amp; free reading samples on Google Play</div>
+          <div class="buy-option-title">Google Play Books (eBook)</div>
+          <div class="buy-option-sub">Publishing soon on Google Play · Tap to browse author catalog</div>
         </div>
-        <span class="buy-cta-pill ghost">Browse Google ↗</span>
+        <span class="buy-cta-pill ghost coming-soon-badge">Coming Soon ↗</span>
       </a>
     `);
   }
@@ -702,6 +725,17 @@ function buildBuyOptions(links, bookTitle) {
           <div class="buy-option-sub">Stream or download in Google ecosystem</div>
         </div>
         <span class="buy-cta-pill ghost">Listen on Google ↗</span>
+      </a>
+    `);
+  } else {
+    options.push(`
+      <a href="https://play.google.com/store/search?q=Tarun+Mankar&c=books" target="_blank" rel="noopener" class="buy-option coming-soon" id="buy-google-audio-cs" title="Google Play Audiobook edition coming soon">
+        <span class="buy-option-icon">🎙️</span>
+        <div class="buy-option-info">
+          <div class="buy-option-title">Google Play Audiobook</div>
+          <div class="buy-option-sub">Audio edition in production · Releasing soon on Google Play</div>
+        </div>
+        <span class="buy-cta-pill ghost coming-soon-badge">Coming Soon ↗</span>
       </a>
     `);
   }

@@ -42,7 +42,7 @@ docs/
 | 02 | **Somatic Pacing** | Burnout & Energy | High-achiever burnout, 3 PM energy crashes | Kindle, Print, Google, ElevenReader |
 | 03 | **Healing The Scarcity Mindset** | Money & Scarcity | Somatic financial trauma, bank balance dread | Kindle, Print, Google, ElevenReader |
 | 04 | **Dopamine Reset and Deep Focus** | Dopamine & Focus | Digital attention hijacking, compulsive scrolling | Kindle, Print, Google, ElevenReader |
-| 05 | **The Courage to Disappoint** | Anxiety & Attachment | Chronic appeasement, fawning reflex, boundary guilt | Kindle, Print, ElevenReader |
+| 05 | **The Courage to Disappoint** | Anxiety & Attachment | Chronic appeasement, fawning reflex, boundary guilt | Kindle, Print, Google, ElevenReader |
 | 06 | **Wired for Security** | Anxiety & Attachment | Relationship hypervigilance, abandonment terror | Kindle, Print, ElevenReader |
 | 07 | **Mastering the Emotional Storm** | Emotional Regulation | Emotional flooding, instant reactivity, anger hijack | Kindle, Print, ElevenReader |
 | 08 | **The Procrastination Loop** | Dopamine & Focus | Avoidance-shame cycle, emotional resistance to starting | Kindle, Print, ElevenReader |
