@@ -569,8 +569,12 @@ function renderBooks(books) {
       </div>
       <div class="card-body">
         <div class="card-format-line">
-          <span class="card-format-tag ${book.links.google_ebook ? 'live' : 'soon'}">
-            ${book.links.google_ebook ? 'Kindle · Google Play · Audio' : 'Audiobook · Google Coming Soon'}
+          <span class="card-format-tag ${book.links.amazon_ebook ? 'live' : (book.links.google_ebook ? 'live' : 'soon')}">
+            ${book.links.amazon_ebook 
+              ? 'Kindle · Print · Google · Audio' 
+              : (book.links.google_ebook 
+                  ? 'Google Play &amp; Audio · Kindle Soon' 
+                  : 'Audiobook Live · Kindle &amp; Google Soon')}
           </span>
         </div>
         <div class="card-rating-line">
@@ -587,15 +591,17 @@ function renderBooks(books) {
           <button class="card-btn-buy"
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
-            aria-label="Buy or read ${book.title}">
-            <span class="btn-icon">📖</span> Read on Kindle / Buy
+            aria-label="${book.links.amazon_ebook ? 'Read on Kindle or Buy ' + book.title : (book.links.google_ebook ? 'Read on Google Play ' + book.title : 'Listen to Audiobook ' + book.title)}">
+            <span class="btn-icon">${book.links.amazon_ebook ? '📖' : (book.links.google_ebook ? '📱' : '🎧')}</span> 
+            ${book.links.amazon_ebook ? 'Read on Kindle / Buy' : (book.links.google_ebook ? 'Read on Google Play / Buy' : 'Listen to Audiobook')}
           </button>
           <button class="card-btn-audio"
             id="audio-btn-${book.id}"
-            onclick="event.stopPropagation();window.open('${book.links.elevenreader || 'https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un'}','_blank')"
-            title="Listen to Audiobook preview"
-            aria-label="Listen to ${book.title} Audiobook">
-            <span class="btn-icon">🎧</span> Audio
+            onclick="event.stopPropagation();${book.links.amazon_ebook || book.links.google_ebook ? `window.open('${book.links.elevenreader || 'https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un'}','_blank')` : `openModal(${book.id})`}"
+            title="${book.links.amazon_ebook || book.links.google_ebook ? 'Listen to Audiobook preview' : 'View all format release dates'}"
+            aria-label="${book.links.amazon_ebook || book.links.google_ebook ? 'Audiobook preview' : 'Kindle & Google Release Dates'}">
+            <span class="btn-icon">${book.links.amazon_ebook || book.links.google_ebook ? '🎧' : '📖'}</span> 
+            ${book.links.amazon_ebook || book.links.google_ebook ? 'Audio' : 'Kindle & Print Soon'}
           </button>
         </div>
       </div>
@@ -670,9 +676,9 @@ function openModal(bookId) {
   const badgesWrap = document.querySelector('.modal-format-badges');
   if (badgesWrap) {
     badgesWrap.innerHTML = `
-      <span class="pill-kindle">${book.links.amazon_ebook ? 'Kindle eBook' : 'Kindle Store'}</span>
-      <span class="pill-paperback">${book.links.amazon_paperback ? 'Paperback' : 'Paperback Soon'}</span>
-      <span class="pill-google">${book.links.google_ebook ? 'Google Play' : 'Google Soon'}</span>
+      <span class="${book.links.amazon_ebook ? 'pill-kindle' : 'pill-soon'}">${book.links.amazon_ebook ? 'Kindle eBook' : 'Kindle Soon'}</span>
+      <span class="${book.links.amazon_paperback ? 'pill-paperback' : 'pill-soon'}">${book.links.amazon_paperback ? 'Paperback' : 'Paperback Soon'}</span>
+      <span class="${book.links.google_ebook ? 'pill-google' : 'pill-soon'}">${book.links.google_ebook ? 'Google Play' : 'Google Soon'}</span>
       <span class="pill-audio">Audiobook</span>
     `;
   }
@@ -695,7 +701,7 @@ function openModal(bookId) {
 function buildBuyOptions(links, bookTitle) {
   const options = [];
 
-  // Priority 1: Amazon Kindle eBook (Featured High-Converting CTA)
+  // Priority 1: Amazon Kindle eBook
   if (links.amazon_ebook) {
     options.push(`
       <a href="${links.amazon_ebook}" target="_blank" rel="noopener" class="buy-option primary-kindle" id="buy-kindle">
@@ -709,16 +715,14 @@ function buildBuyOptions(links, bookTitle) {
       </a>
     `);
   } else {
-    // Official Amazon Storefront
     options.push(`
-      <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" class="buy-option primary-kindle" id="buy-amazon-store">
-        <span class="option-badge-top">★ #1 OFFICIAL STORE · US &amp; GLOBAL</span>
+      <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" class="buy-option coming-soon" id="buy-kindle-cs" title="Kindle edition releasing soon on Amazon">
         <span class="buy-option-icon">📖</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Read on Amazon Kindle &amp; Books</div>
-          <div class="buy-option-sub">Official Amazon Author Store · 1-Click Buy &amp; Prime Shipping</div>
+          <div class="buy-option-title">Amazon Kindle eBook</div>
+          <div class="buy-option-sub">Kindle eBook edition in preparation · Arriving soon on Amazon</div>
         </div>
-        <span class="buy-cta-pill gold">Open Amazon Store ↗</span>
+        <span class="buy-cta-pill ghost coming-soon-badge">Coming Soon ↗</span>
       </a>
     `);
   }
@@ -800,14 +804,16 @@ function buildBuyOptions(links, bookTitle) {
 
   // Priority 5 (Last): ElevenReader Audiobook
   if (links.elevenreader) {
+    const isOnlyLiveAudio = !links.amazon_ebook && !links.google_ebook;
     options.push(`
-      <a href="${links.elevenreader}" target="_blank" rel="noopener" class="buy-option" id="buy-elevenreader">
+      <a href="${links.elevenreader}" target="_blank" rel="noopener" class="buy-option ${isOnlyLiveAudio ? 'primary-kindle' : ''}" id="buy-elevenreader">
+        ${isOnlyLiveAudio ? '<span class="option-badge-top">★ #1 AVAILABLE FORMAT · INSTANT STREAM</span>' : ''}
         <span class="buy-option-icon">🎧</span>
         <div class="buy-option-info">
           <div class="buy-option-title">ElevenReader Audiobook</div>
           <div class="buy-option-sub">Stream instantly · High-fidelity somatic voice narration</div>
         </div>
-        <span class="buy-cta-pill ghost">Listen Now ↗</span>
+        <span class="buy-cta-pill ${isOnlyLiveAudio ? 'gold' : 'ghost'}">Listen Now ↗</span>
       </a>
     `);
   }
