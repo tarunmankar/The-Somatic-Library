@@ -1,0 +1,760 @@
+{
+  "catalog_metadata": {
+    "author": "Tarun Mankar",
+    "series_title": "Tarun Mankar Somatic & Behavioral Audiobook Library",
+    "ecosystem": "ElevenReader / Amazon KDP / Google Play Books",
+    "total_books": 17,
+    "last_updated": "2026-10-14",
+    "purpose": "Master registry and anti-cannibalization architecture of all published books. Enforces distinct biological mechanisms, unique physical anchors, independent protocols, and zero thematic duplication across the entire author ecosystem."
+  },
+  "books": [
+    {
+      "id": 1,
+      "folder": "01-stop-spiraling",
+      "title": "Stop Spiraling",
+      "subtitle": "The Anxiously Attached Person's Daily Toolkit for Calmer Relationships",
+      "target_audience": "Adults aged 24-42 dealing with relationship anxiety, text overthinking, and fear of sudden abandonment.",
+      "real_world_trigger_scenario": "Watching a sent text message sit without a reply for forty-five minutes; noticing a three-word response instead of the usual emoji; interpreting a subtle shift in a partner's tone during dinner.",
+      "primary_pain_point": "Catastrophizing relational cues, obsessive reassurance seeking, compulsive phone checking, and acute cognitive-emotional spirals following perceived disconnection.",
+      "primary_somatic_anchor": "Sharp visceral heat in the center of the chest, tight throat clamp, compulsive trembling in fingers tapping the phone screen, shallow breath.",
+      "nervous_system_state": "Sympathetic Hyper-Arousal driven by Relational Abandonment Threat & Attachment Panic.",
+      "core_transformation": "From frantic reassurance-seeking and text spirals to grounded self-trust, emotional pauses, and clear spoken communication.",
+      "key_proprietary_protocols": [
+        "The Sixty-Second Relational De-escalation Breath",
+        "The Thought-Stopping Sensory Tap",
+        "The Non-Urgent Response Buffer",
+        "The Text-Panic Physical Reset",
+        "The Calm Boundary Relationship Script"
+      ],
+      "whats_new_and_different": "Focuses specifically on the acute relational thought spiral (over-analyzing texts and micro-behaviors). Unlike Books 02-10, it targets interpersonal attachment panic and gives real-time communication scripts rather than workplace or productivity habits.",
+      "forbidden_overlaps": [
+        "Daytime corporate burnout (Book 02)",
+        "Financial anxiety (Book 03)",
+        "Sleep insomnia (Book 11)",
+        "Chronic neuromuscular body bracing (Book 15)",
+        "Workplace imposter syndrome (Book 16)"
+      ],
+      "target_keywords": [
+        "relationship anxiety and overthinking",
+        "anxious attachment style workbook",
+        "fear of abandonment in relationships",
+        "how to stop spiraling over texts",
+        "vagus nerve emotional regulation"
+      ],
+      "publishing_status": {
+        "kdp": "Published",
+        "amazon_ebook_asin": "B0HN23T4GD",
+        "amazon_paperback_asin": "B0HN2V5MK9",
+        "google_play": "Published",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "QvkZEgAAQBAJ",
+        "google_play_audiobook_id": "AQAAAEBGJm1mOM",
+        "elevenreader_id": "upo1o3x59kDS52xOIg6B"
+      }
+    },
+    {
+      "id": 2,
+      "folder": "02-somatic-pacing",
+      "title": "Somatic Pacing",
+      "subtitle": "The High-Achiever's Daily Guide to Reclaiming Focus and Energy Without Burning Out",
+      "target_audience": "High-achieving corporate professionals, remote workers, founders, and managers running on caffeine, adrenaline, and chronic exhaustion.",
+      "real_world_trigger_scenario": "The 3:00 PM corporate energy collapse; pushing through the sixth consecutive Zoom meeting while the temples throb; relying on a third espresso just to compose an email.",
+      "primary_pain_point": "Physical energy crashes, afternoon brain fog, the 'tired but wired' night cycle, allostatic overload, and somatic burnout from pushing past physical fatigue.",
+      "primary_somatic_anchor": "Heavy leaden limbs, burning dry eyes, hollow pit of adrenal exhaustion in the upper abdomen, dull throbbing pressure across temples.",
+      "nervous_system_state": "Allostatic Overload and Chronic Sympathetic Depletion nearing autonomic exhaustion collapse.",
+      "core_transformation": "From relentless adrenaline-driven hustle and energy crashes to biological energy budgeting, rhythmic pacing, and sustainable corporate stamina.",
+      "key_proprietary_protocols": [
+        "The Biological Energy Ledger",
+        "The Midday Vagal Restoration Stride",
+        "The Sixty-Second Cognitive De-fogger",
+        "The Caffeine-Adrenaline Decoupler",
+        "The Micro-Pacing Workday Pause"
+      ],
+      "whats_new_and_different": "Targets physical stamina, biological energy reserves, and corporate exhaustion pacing. Unlike Book 01 (relationships) or Book 10 (guilt of doing nothing), Book 02 teaches how to physically sustain heavy work without crashing your immune system.",
+      "forbidden_overlaps": [
+        "Romantic attachment panic (Book 01)",
+        "Money and poverty trauma (Book 03)",
+        "Weekend stillness guilt (Book 10)",
+        "Health hypochondria (Book 13)",
+        "Post-party social hangover (Book 14)"
+      ],
+      "target_keywords": [
+        "somatic burnout recovery guide",
+        "high achiever energy management",
+        "tired but wired nervous system",
+        "corporate fatigue vagus nerve reset",
+        "preventing burnout without quitting job"
+      ],
+      "publishing_status": {
+        "kdp": "Published",
+        "amazon_ebook_asin": "B0HN53MBXP",
+        "amazon_paperback_asin": "B0HN54HSS4",
+        "google_play": "Published",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "xXcbEgAAQBAJ",
+        "google_play_audiobook_id": "AQAAAEBGllTWAM",
+        "elevenreader_id": "oh8YwXf7nPdM42c4amjG"
+      }
+    },
+    {
+      "id": 3,
+      "folder": "03-healing-scarcity",
+      "title": "Healing The Scarcity Mindset",
+      "subtitle": "A Daily Guide to Releasing Money Anxiety and Rewiring Your Scarcity Trauma",
+      "target_audience": "Individuals, professionals, and entrepreneurs who experience visceral terror, panic, or hoarding urges around money despite earning a stable income.",
+      "real_world_trigger_scenario": "Logging into a banking app and feeling physical nausea before the balance loads; feeling sick when paying for necessary car repairs; agonizing for three days over buying groceries.",
+      "primary_pain_point": "Physical throat tightness, stomach knots when paying bills, hoarding behavior, irrational fear of imminent destitution, and inability to enjoy financial safety.",
+      "primary_somatic_anchor": "Cold visceral knot in the solar plexus/gut, sudden dry swallow, tight contracted diaphragm whenever credit card is tapped or an invoice arrives.",
+      "nervous_system_state": "Survival Threat Neuroception triggered by Resource Insecurity, Poverty Memory, and Financial Vulnerability.",
+      "core_transformation": "From compulsive financial terror and scarcity hoarding to somatic wealth capacity, relaxed spending on necessities, and nervous system financial safety.",
+      "key_proprietary_protocols": [
+        "The Somatic Direct Deposit Calibration",
+        "The Financial Reality Tap",
+        "The Safe Wealth Expansion Breath",
+        "The Bill-Opening Vagal Anchor",
+        "The Resource Sufficiency Grounding Drill"
+      ],
+      "whats_new_and_different": "The only book in the catalog focused exclusively on financial psychology, poverty trauma, and the somatic neurobiology of money. It bridges economic panic with polyvagal safety.",
+      "forbidden_overlaps": [
+        "Interpersonal romantic drama (Book 01)",
+        "Digital screen addiction (Book 04)",
+        "Anger and road rage (Book 07)",
+        "Sleep insomnia (Book 11)",
+        "Professional imposter syndrome (Book 16)"
+      ],
+      "target_keywords": [
+        "healing money anxiety somatic guide",
+        "scarcity mindset trauma recovery",
+        "nervous system regulation for finances",
+        "financial fear polyvagal safety",
+        "releasing poverty trauma from body"
+      ],
+      "publishing_status": {
+        "kdp": "Published",
+        "amazon_ebook_asin": "B0HNJVFK7S",
+        "amazon_paperback_asin": "B0HNJYXX62",
+        "google_play": "Published",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "NZcbEgAAQBAJ",
+        "google_play_audiobook_id": "AQAAAEBGfi8-eM",
+        "elevenreader_id": "gbsUy9RuUMREED5fuFTb"
+      }
+    },
+    {
+      "id": 4,
+      "folder": "04-dopamine-detox",
+      "title": "Dopamine Reset and Deep Focus",
+      "subtitle": "Reclaiming Attention, Ending Brain Fog, and Mastering Unshakable Discipline",
+      "target_audience": "Knowledge workers, creatives, students, and professionals whose attention spans have been fractured by short-form video algorithms, notifications, and compulsive digital novelty.",
+      "real_world_trigger_scenario": "Sitting at a desk to write a deep strategy document, but picking up the smartphone after forty seconds of friction; opening six browser tabs while waiting for a single page to load.",
+      "primary_pain_point": "Severe attention fragmentation, inability to read deep books, compulsive digital dopamine seeking, cognitive restlessness, and chronic digital brain fog.",
+      "primary_somatic_anchor": "Restless twitching in fingers reaching for devices, agitated buzzing behind the forehead, eyes darting from side to side, inability to hold static gaze.",
+      "nervous_system_state": "Dopaminergic Receptor Desensitization, Sensory Over-Saturation, and Attention Fragmentation.",
+      "core_transformation": "From algorithmically engineered distraction and brain fog to deep monotask focus, baseline dopamine balance, and effortless cognitive endurance.",
+      "key_proprietary_protocols": [
+        "The Forty-Eight-Hour Dopamine Basal Reset",
+        "The Friction Anchor for Devices",
+        "The Monotask Sensory Shield",
+        "The Low-Stimulation Tolerance Sequence",
+        "The Visual Horizon Attention Anchor"
+      ],
+      "whats_new_and_different": "Focused strictly on attention neurochemistry, dopamine receptor desensitization, and digital consumption mechanics. Unlike Book 10 (which addresses stillness guilt), Book 04 tackles screen addiction, digital hypnosis, and deep cognitive work capacity.",
+      "forbidden_overlaps": [
+        "Relationship text spirals (Book 01)",
+        "Downtime guilt and rest panic (Book 10)",
+        "Explosive anger outbursts (Book 07)",
+        "Health symptom hypervigilance (Book 13)",
+        "Core unworthiness collapse (Book 12)"
+      ],
+      "target_keywords": [
+        "dopamine reset for deep focus",
+        "healing attention span neuroscience",
+        "ending screen addiction brain fog",
+        "monotask focus somatic protocol",
+        "rebuilding cognitive discipline"
+      ],
+      "publishing_status": {
+        "kdp": "Published",
+        "amazon_ebook_asin": "B0HNXS4H2Q",
+        "amazon_paperback_asin": "B0HNXWCKQK",
+        "google_play": "Published",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "jxcdEgAAQBAJ",
+        "google_play_audiobook_id": "AQAAAEBGAVhBDM",
+        "elevenreader_id": "0OoDHxWEdG2lNNbpAUjY"
+      }
+    },
+    {
+      "id": 5,
+      "folder": "05-courage-to-disappoint",
+      "title": "The Courage to Disappoint",
+      "subtitle": "Choosing Your Peace Over People's Expectations",
+      "target_audience": "Empathetic individuals, chronic caretakers, and conflict-averse professionals who say yes when their body screams no, feeling crushed by guilt whenever they disappoint others.",
+      "real_world_trigger_scenario": "A colleague or family member asking for an unreasonable weekend favor; feeling a wave of panic and saying 'Sure, no problem!' before rational thought can intervene.",
+      "primary_pain_point": "The fawning survival response: compulsive compliance, boundary collapse, over-explaining, swallowing personal needs, and visceral terror of interpersonal disapproval.",
+      "primary_somatic_anchor": "Instant breath-holding in upper chest, stomach sinking into an icy void, fake appeasement smile with clenched teeth, constricted vocal cords.",
+      "nervous_system_state": "The Fawn / Appease Survival Reflex driven by Attachment & Rejection Defense.",
+      "core_transformation": "From reflexive boundary collapse and resentful compliance to grounded somatic boundary setting, tolerating disapproval, and clean authentic communication.",
+      "key_proprietary_protocols": [
+        "The Somatic 'No' Diaphragmatic Anchor",
+        "The Disappointment Tolerance Ladder",
+        "The Clean Non-Apology Boundary Script",
+        "The Fawn-Interrupt Ribcage Release",
+        "The Guilt-Discharge Grounding Practice"
+      ],
+      "whats_new_and_different": "Focuses on boundary setting and overcoming the fear of interpersonal conflict. Unlike Book 06 (romantic attachment) or Book 10 (rest downtime), Book 05 dismantles social compliance, caretakers' resentment, and fawning in family and work dynamics.",
+      "forbidden_overlaps": [
+        "Romantic texting panics (Book 01)",
+        "Money panic and scarcity (Book 03)",
+        "Task initiation freeze (Book 08)",
+        "Bedtime sleep insomnia (Book 11)",
+        "Professional imposter anxiety (Book 16)"
+      ],
+      "target_keywords": [
+        "overcoming people pleasing somatic guide",
+        "how to say no without guilt",
+        "breaking fawn response trauma",
+        "somatic boundaries for empaths",
+        "tolerating other people disappointment"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": ""
+      }
+    },
+    {
+      "id": 6,
+      "folder": "06-wired-for-security",
+      "title": "Wired for Security",
+      "subtitle": "Rewiring Anxious Attachment, Silencing Relationship Hypervigilance, and Finding Peace in Love",
+      "target_audience": "Adults trapped in long-term insecure attachment cycles, emotional dependency, anxious-avoidant dynamics, or chronic relationship self-sabotage.",
+      "real_world_trigger_scenario": "Moving in with a partner or deepening intimacy; feeling a deep, suffocating urge to test their loyalty, withdraw preemptively, or start an unnecessary fight to verify safety.",
+      "primary_pain_point": "Deep-seated developmental relationship hypervigilance, testing partners, chronic fear of emotional engulfment or abandonment, and inability to settle into steady love.",
+      "primary_somatic_anchor": "Persistent ache behind the breastbone, shallow collarbone respiration, chronic low-grade bracing during physical closeness, inability to soften gaze with partner.",
+      "nervous_system_state": "Developmental Relational Insecurity, Faulty Attachment Architecture, and Dysregulated Co-Regulation.",
+      "core_transformation": "From lifelong attachment insecurity and intimacy self-sabotage to earned secure attachment, grounded co-regulation, and peaceful vulnerability.",
+      "key_proprietary_protocols": [
+        "The Earned Security Somatic Anchor",
+        "The Partner De-escalation Bridge",
+        "The Internal Secure Base Visualization",
+        "The Intimacy Vulnerability Exposure Breath",
+        "The Co-Regulation Nervous System Sync"
+      ],
+      "whats_new_and_different": "The foundational masterwork on attachment neurobiology and long-term relational security. While Book 01 was a daily emergency triage for text spirals, Book 06 rewires the deep foundational attachment architecture for lasting partnership.",
+      "forbidden_overlaps": [
+        "Daily emergency text triage (Book 01)",
+        "Workplace exhaustion pacing (Book 02)",
+        "Anger and explosive rage (Book 07)",
+        "Bedtime insomnia (Book 11)",
+        "Health hypochondria (Book 13)"
+      ],
+      "target_keywords": [
+        "earned secure attachment workbook",
+        "rewiring anxious attachment adult relationships",
+        "healing insecure attachment somatic tools",
+        "nervous system safety in love",
+        "ending relationship self sabotage"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "We5ZO64fc78yTgapRRMp"
+      }
+    },
+    {
+      "id": 7,
+      "folder": "07-mastering-the-storm",
+      "title": "Mastering the Emotional Storm",
+      "subtitle": "Taming Emotional Flooding, Calming Instant Reactivity, and Finding Grounding Under Pressure",
+      "target_audience": "Individuals who struggle with sudden explosive anger, irritability, emotional flooding, road rage, defensive snapping, or regretting spoken words under pressure.",
+      "real_world_trigger_scenario": "Being interrupted during a high-stakes discussion, being cut off in traffic, or feeling unfairly accused; experiencing an instantaneous zero-to-sixty explosion of fury.",
+      "primary_pain_point": "Zero-to-sixty emotional reactivity, shame following verbal explosions, locked jaw, boiling blood sensation, and autonomic flooding where the rational prefrontal cortex shuts down.",
+      "primary_somatic_anchor": "Surging heat up the neck and face, clenched fists, grinding molars/jaw, tunnel vision, pounding heavy pulse in the ears.",
+      "nervous_system_state": "High-Arousal Sympathetic Fight Activation and Acute Amygdala Hijack.",
+      "core_transformation": "From destructive emotional flooding and explosive anger to biological thermal downshifting, emotional pausing, and controlled assertiveness.",
+      "key_proprietary_protocols": [
+        "The Thermal Biological Intercept",
+        "The Jaw and Fist Somatic Release",
+        "The Three-Breath Amygdala Brake",
+        "The Prefrontal Re-engagement Anchor",
+        "The Controlled Anger Discharge Sequence"
+      ],
+      "whats_new_and_different": "The only book targeting anger, emotional flooding, rage, and defensive reactivity. Unlike the anxiety and freeze books, Book 07 handles explosive outward sympathetic energy and provides rapid biological cooling protocols.",
+      "forbidden_overlaps": [
+        "Quiet dorsal freeze and numbness (Book 09)",
+        "Fawning people-pleasing (Book 05)",
+        "Bedtime sleep dread (Book 11)",
+        "Post-social rumination (Book 14)",
+        "Fear of happiness (Book 17)"
+      ],
+      "target_keywords": [
+        "managing explosive anger somatic guide",
+        "emotional flooding regulation techniques",
+        "stopping amygdala hijack reactivity",
+        "anger management nervous system reset",
+        "calming defensive reactions under stress"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "5Y6hOQqRHU1zSc4a2vid"
+      }
+    },
+    {
+      "id": 8,
+      "folder": "08-procrastination-loop",
+      "title": "The Procrastination Loop",
+      "subtitle": "Breaking the Cycle of Delay, Self-Sabotage, and the Fear Hidden Underneath",
+      "target_audience": "Chronic procrastinators, perfectionists, students, and professionals who freeze, avoid tasks, clean, or scroll until deadlines become terrifying emergencies.",
+      "real_world_trigger_scenario": "Sitting at a clean desk with a high-stakes report open on screen, feeling an overwhelming dread, and immediately standing up to clean the kitchen sink or check news.",
+      "primary_pain_point": "Chronic task avoidance, perfectionism paralysis, agonizing shame cycles of self-sabotage, and the physiological inability to initiate important work.",
+      "primary_somatic_anchor": "Heavy leaden paralysis in the forearms and shoulders, vague nausea in the stomach, compulsive physical restlessness demanding task evasion.",
+      "nervous_system_state": "Sympathetic-Dorsal Hybrid Task Freeze triggered by Evaluation Threat & Perfectionist Dread.",
+      "core_transformation": "From chronic task paralysis, dread, and emergency deadline panic to low-friction task initiation, somatic micro-steps, and self-compassionate momentum.",
+      "key_proprietary_protocols": [
+        "The Micro-Somatic Task On-Ramp",
+        "The Imperfection Decoupling Tap",
+        "The Five-Minute Safe Exposure Bridge",
+        "The Evaluation Threat Neutralizer",
+        "The Task-Initiation Kinetic Shake"
+      ],
+      "whats_new_and_different": "Focuses on task initiation, perfectionism dread, and overcoming the avoidance loop. Unlike Book 10 (which deals with people who can't stop working), Book 08 addresses people who want to start working but feel biologically paralyzed by fear of failure.",
+      "forbidden_overlaps": [
+        "Inability to stop working/resting (Book 10)",
+        "Physical energy burnout pacing (Book 02)",
+        "Health illness dread (Book 13)",
+        "Bedtime insomnia (Book 11)",
+        "Relationship attachment panic (Book 01)"
+      ],
+      "target_keywords": [
+        "procrastination as trauma response",
+        "overcoming task paralysis somatic tools",
+        "ending chronic self sabotage delay",
+        "perfectionism freeze nervous system",
+        "how to start hard tasks without panic"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "J6A32ugNYybFvpQ6Yn4e"
+      }
+    },
+    {
+      "id": 9,
+      "folder": "09-thawing-the-freeze",
+      "title": "Thawing the Freeze",
+      "subtitle": "A Somatic Guide to Breaking Functional Freeze, Emotional Numbness, and Living in Low-Power Mode",
+      "target_audience": "High-functioning adults who look competent and productive outwardly, but feel completely flat, emotionally numb, anhedonic, and disconnected inside.",
+      "real_world_trigger_scenario": "Completing a full workday on autopilot, returning home, sitting on the couch without turning on the TV, staring blankly at a wall for two hours without feeling sad, happy, or angry.",
+      "primary_pain_point": "Living behind soundproof glass, inability to feel deep joy or love, chronic fatigue disguised as apathy, functional paralysis in evenings, and emotional flatlining.",
+      "primary_somatic_anchor": "Glassy unblinking gaze, cold or numb extremities, heavy numb weight across the chest, deadened sensory perception, low resting pulse.",
+      "nervous_system_state": "Dorsal Vagal Shutdown and Hypo-Arousal Immobilization (Low-Power Survival Mode).",
+      "core_transformation": "From functional numbness, emotional hibernation, and living in low-power mode to gradual somatic thawing, sensory aliveness, and genuine emotional connection.",
+      "key_proprietary_protocols": [
+        "The Gentle Thaw Bilateral Sweep",
+        "The Periphery and Horizon Orienting Drill",
+        "The Safe Sensation Pendulation Sequence",
+        "The Dorsal Vagal Sound Resonance Hum",
+        "The Grounded Return-to-Aliveness Breath"
+      ],
+      "whats_new_and_different": "The master text on hypo-arousal, anhedonia, and emotional numbness. Unlike Books 01-08 and Book 10 (which deal with hyper-arousal, anxiety, and hyperactivity), Book 09 is dedicated entirely to the opposite biological state: the quiet freeze where the body has powered down into hibernation.",
+      "forbidden_overlaps": [
+        "High-arousal panic and racing heart (Book 01/07)",
+        "Workaholic velocity and rest guilt (Book 10)",
+        "Bedtime sleep adrenaline spikes (Book 11)",
+        "Health hypochondria (Book 13)",
+        "Professional imposter anxiety (Book 16)"
+      ],
+      "target_keywords": [
+        "breaking functional freeze state",
+        "dorsal vagal shutdown recovery",
+        "healing emotional numbness anhedonia",
+        "somatic thawing for chronic freeze",
+        "polyvagal theory hypoarousal guide"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "Q4N4nQufjtoEZGY8lokC"
+      }
+    },
+    {
+      "id": 10,
+      "folder": "10-inability-to-rest",
+      "title": "The Inability to Rest",
+      "subtitle": "A Somatic Guide to Calming the Panic of Doing Nothing, Chronic Busyness, and Downtime Anxiety",
+      "target_audience": "Driven professionals, perfectionists, and chronic over-achievers who experience physical panic, restlessness, guilt, and dread whenever they try to sit still or take a day off.",
+      "real_world_trigger_scenario": "Sitting on the living room rug on a sunny Sunday afternoon with no obligations; feeling a creeping wave of guilt, jumping up to vacuum the rug or check work emails.",
+      "primary_pain_point": "Sunday afternoon panic, compulsive cleaning/checking when free, inability to relax on vacations, treating rest as moral failure, and using work momentum as emotional armor.",
+      "primary_somatic_anchor": "Restless buzzing in the legs, tight vibrating skin across the chest, internal motor that will not idle, inability to settle spine into the chair.",
+      "nervous_system_state": "Sympathetic Lock-in with Vagal Withdrawal and Biological Rest Intolerance.",
+      "core_transformation": "From compulsive doing, downtime terror, and identity tied to exhaustion to deep restful stillness, peaceful presence, and zero-metric play.",
+      "key_proprietary_protocols": [
+        "The Deceleration Hand-on-Heart Anchor",
+        "The Five-Minute Kinetic Deceleration Sequence",
+        "The Collarbone Drop and Vagal Hum",
+        "The Stillness Pendulation Ladder",
+        "The Zero-Metric Play Practice"
+      ],
+      "whats_new_and_different": "Targets sympathetic lock-in and rest intolerance. Unlike Book 08 (procrastination/can't start) or Book 09 (freeze/numbness/can't move), Book 10 is about the inability to stop: decoupling human self-worth from productivity metrics, disarming downtime guilt, and reclaiming active play.",
+      "forbidden_overlaps": [
+        "Task avoidance and procrastination (Book 08)",
+        "Physical energy depletion pacing (Book 02)",
+        "Romantic texting panics (Book 01)",
+        "Nocturnal insomnia bed dread (Book 11)",
+        "Health disease fears (Book 13)"
+      ],
+      "target_keywords": [
+        "overcoming rest anxiety downtime guilt",
+        "somatic stillness for overachievers",
+        "sympathetic nervous system lock in",
+        "panic of doing nothing recovery",
+        "how to relax without feeling guilty"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "qBubDX1BrUqKzykGhR48"
+      }
+    },
+    {
+      "id": 11,
+      "folder": "11-midnight-nervous-system",
+      "title": "The Midnight Nervous System",
+      "subtitle": "A Somatic Guide to Calming Midnight Panic, Sleep Dread, and the Overactive Night Mind",
+      "target_audience": "Adults and professionals who lie awake in the dark at 2:00 AM or 3:00 AM with a racing pulse, dreading the morning alarm, feeling like the bed has become an interrogation room.",
+      "real_world_trigger_scenario": "Turning off the bedside lamp, closing eyes, and having a wave of catastrophic adrenaline surge through the ribs; looking at the clock at 3:14 AM and doing sleep math.",
+      "primary_pain_point": "Sleep performance anxiety, sudden 3:00 AM cortisol surges, staring at the dark ceiling, calculating remaining sleep hours, and the physical dread of the bed.",
+      "primary_somatic_anchor": "Pounding pulse in the temples audible on the pillow, cold sweat on palms, hyper-alert auditory scanning of silence, locked jaw in the dark.",
+      "nervous_system_state": "Nocturnal Sympathetic Hyper-Arousal, Nocturnal Cortisol Dysregulation, and Sleep Threat Neuroception.",
+      "core_transformation": "From midnight panic, bed dread, and frantic sleep performance pressure to effortless lying-down downshifting, biological safety in darkness, and restful deep sleep.",
+      "key_proprietary_protocols": [
+        "The Midnight Horizon Release",
+        "The Mattress Grounding Roll",
+        "The Thermal Deceleration Protocol",
+        "The Zero-Clock Visual Reset",
+        "The Safe Surrender Sequence"
+      ],
+      "whats_new_and_different": "The only book in the catalog dedicated specifically to nocturnal neurobiology, bedtime hypervigilance, and insomnia panic. Unlike Book 02 (daytime burnout) or Book 10 (daytime stillness guilt), Book 11 addresses lying in the dark: breaking sleep performance pressure, midnight cortisol surges, and bed-as-threat neuroception.",
+      "forbidden_overlaps": [
+        "Daytime corporate pacing (Book 02)",
+        "Social event rumination (Book 14)",
+        "Workplace meeting imposter fear (Book 16)",
+        "Poverty and money trauma (Book 03)",
+        "Relationship text panic (Book 01)"
+      ],
+      "target_keywords": [
+        "calming 3am midnight panic",
+        "sleep anxiety somatic downshifting",
+        "overactive nervous system insomnia",
+        "bed dread nocturnal cortisol reset",
+        "how to fall back asleep without pills"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "6yrBCzAWhxVJRY05oWn5"
+      }
+    },
+    {
+      "id": 12,
+      "folder": "12-shame-collapse",
+      "title": "The Shame Collapse",
+      "subtitle": "A Somatic Guide to Releasing Chronic Unworthiness, Dissolving the Not Enough Voice, and Reclaiming Your Right to Take Up Space",
+      "target_audience": "Adults aged 25-50 who carry a quiet lifelong conviction that their existence is fundamentally defective, defective, or a burden; people who shrink, over-apologize, and cannot accept praise.",
+      "real_world_trigger_scenario": "Receiving a mild piece of corrective feedback in an email, or dropping a glass in public; feeling a catastrophic full-body flinch and wishing the floor would open up and swallow them.",
+      "primary_pain_point": "The somatic signature of core shame: chest hollowing inward, shoulders collapsing, eyes dropping to the floor, hot humiliation flush, and the visceral conviction of being fundamentally flawed.",
+      "primary_somatic_anchor": "Visceral inward collapse of the sternum, burning heat across ears and cheeks, throat choking shut, gaze locked to the floorboards.",
+      "nervous_system_state": "Dorsal-Parasympathetic Shame Collapse with Sympathetic Humiliation Spike (The Dual-State Shame Flinch).",
+      "core_transformation": "From visceral shame collapse, chronic unworthiness, and shrinking into invisibility to upright embodied worth, taking up physical space, and grounded self-compassion.",
+      "key_proprietary_protocols": [
+        "The Shame Threshold Interrupt",
+        "The Space Permission Breath",
+        "The Chest Expansion Protocol",
+        "The Worthiness Grounding Anchor",
+        "The Humiliation Discharge Shake"
+      ],
+      "whats_new_and_different": "The only book in the catalog focused on the somatic experience of core shame and existential unworthiness. Unlike Book 03 (financial panic), Book 05 (people-pleasing fawn response), or Book 09 (dorsal freeze from prolonged stress), Book 12 targets the specific dual-state of shame collapse: the body simultaneously collapsing into invisibility (dorsal shutdown) while flooding with hot humiliation (sympathetic spike).",
+      "forbidden_overlaps": [
+        "Professional imposter over-preparation (Book 16)",
+        "People-pleasing boundary setting (Book 05)",
+        "Financial poverty trauma (Book 03)",
+        "Task avoidance and delay (Book 08)",
+        "Romantic texting panics (Book 01)"
+      ],
+      "target_keywords": [
+        "healing chronic shame somatic guide",
+        "overcoming toxic shame collapse",
+        "releasing unworthiness from the body",
+        "dorsal vagal shame response recovery",
+        "learning to take up space emotionally"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "xVjNhuNLLotGmkw8ZqFl"
+      }
+    },
+    {
+      "id": 13,
+      "folder": "13-phantom-alarm",
+      "title": "The Phantom Alarm",
+      "subtitle": "A Somatic Guide to Calming Health Anxiety, Ending Body Hypervigilance, and Trusting Your Physical Health",
+      "target_audience": "Adults aged 24-48 plagued by health anxiety, obsessive symptom checking, smartwatch pulse tracking, phantom muscle twitches, and terror of sudden medical catastrophes.",
+      "real_world_trigger_scenario": "Feeling an ectopic skipped heartbeat while watching TV, or a random muscle twitch in the calf; immediately grabbing the wrist to count pulse, opening Google, and spiraling into terror.",
+      "primary_pain_point": "Interoceptive hypervigilance: misinterpreting benign bodily sensations (heart flutters, muscle twitches, tension headaches, shallow breath) as imminent medical catastrophes, leading to compulsive body checking.",
+      "primary_somatic_anchor": "Hand frozen to wrist or neck checking radial pulse, microscopic internal scanning of chest cavity, cold sinking dread in the gut, hyperventilating thoracic breathing.",
+      "nervous_system_state": "Interoceptive Hyper-Arousal and Catastrophic Threat Neuroception triggered by Benign Somatosensory Sensations.",
+      "core_transformation": "From obsessive symptom checking, pulse tracking, and medical terror to calm interoceptive trust, reassurance delay, and peaceful bodily confidence.",
+      "key_proprietary_protocols": [
+        "The Sixty-Second Pulse-Release Anchor",
+        "The Interoceptive Sensation Decoupler",
+        "The Search-Engine Delay Buffer",
+        "The Phantom Symptom Horizon Reset",
+        "The Somatosensory Safety Pendulation"
+      ],
+      "whats_new_and_different": "The only book in the catalog dedicated to health anxiety, cardiophobia, and interoceptive hypervigilance. Unlike Book 01 (relationship texts), Book 02 (work burnout), or Book 11 (sleep insomnia), Book 13 targets medical panic: dismantling the compulsive body-checking loop, stopping phantom symptom amplification, and rewiring the brain's internal threat alarm.",
+      "forbidden_overlaps": [
+        "Relational texting panics (Book 01)",
+        "Workplace exhaustion pacing (Book 02)",
+        "Post-event social rumination (Book 14)",
+        "General muscular bracing (Book 15)",
+        "Anticipatory dread when happy (Book 17)"
+      ],
+      "target_keywords": [
+        "overcoming health anxiety somatic tools",
+        "ending cardiophobia pulse checking",
+        "interoceptive hypervigilance recovery",
+        "stopping phantom symptom panic",
+        "trusting your physical body health"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "k6Ou7tzSkcXbcz8Tvlfq"
+      }
+    },
+    {
+      "id": 14,
+      "folder": "14-social-hangover",
+      "title": "The Social Hangover",
+      "subtitle": "A Somatic Guide to Calming Post-Event Rumination, Ending the Replay Loop, and Reclaiming Your Social Battery",
+      "target_audience": "Adults aged 22-45 who experience acute exhaustion, sensory saturation, and obsessive post-conversation replay loops after social gatherings, dinners, or workplace meetings.",
+      "real_world_trigger_scenario": "Getting into the car after a three-hour dinner party; the smile falls off the face, exhaustion hits like a brick, and the brain immediately starts an autopsy: 'Did I sound stupid when I said that?'",
+      "primary_pain_point": "The agonizing post-event replay loop: walking away from a social interaction completely drained, lying in bed dissecting every spoken sentence and facial expression, experiencing visceral social cringe.",
+      "primary_somatic_anchor": "Aching zygomatic facial muscles from hours of masking, heavy sensory fatigue behind the eyes, buzzing cranial tension across the forehead.",
+      "nervous_system_state": "Post-Social Sensory Saturation & Retrospective Threat Neuroception (Exhausted Dorsal Depletion colliding with Sympathetic Rumination).",
+      "core_transformation": "From post-event conversation autopsies, social burnout, and masking exhaustion to rapid unmasking, social battery budgeting, and peaceful presence in groups.",
+      "key_proprietary_protocols": [
+        "The Post-Social Autopsy Interrupt",
+        "The Social Battery Gauge and Micro-Exit",
+        "The Unmasking Jaw and Shoulder Release",
+        "The Neutral Belonging Anchor",
+        "The Room-Decoupling Sensory Wash"
+      ],
+      "whats_new_and_different": "The only book in the catalog dedicated to post-social exhaustion, sensory saturation, and retrospective social hypervigilance. Unlike Book 01 (romantic attachment spirals) or Book 05 (people pleasing fawning), Book 14 addresses the biological aftermath of socializing: ending the post-conversation autopsy, discharging masked tension, and restoring the social battery.",
+      "forbidden_overlaps": [
+        "Romantic attachment text loops (Book 01)",
+        "Core unworthiness collapse (Book 12)",
+        "Executive boardroom presentation panic (Book 16)",
+        "Physical corporate energy depletion (Book 02)",
+        "Bedtime midnight insomnia (Book 11)"
+      ],
+      "target_keywords": [
+        "curing post event rumination social hangover",
+        "introvert social battery depletion recovery",
+        "ending post conversation mental replay",
+        "somatic unmasking after socializing",
+        "social anxiety post event autopsy"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "Isl2ldQ1r3KtFN6hTTpu"
+      }
+    },
+    {
+      "id": 15,
+      "folder": "15-braced-body",
+      "title": "The Braced Body",
+      "subtitle": "A Somatic Guide to Releasing Chronic Physical Tension, Ending Muscle Armor, and Teaching Your Body It Is Safe to Unclench",
+      "target_audience": "Adults aged 24-52 suffering from chronic unconscious physical bracing, persistent clenched jaw (TMJ/bruxism), hiked-up shoulders, locked diaphragm, contracted pelvic floor, and inability to soften muscles.",
+      "real_world_trigger_scenario": "Sitting at a stoplight or typing an ordinary email, suddenly realizing your shoulders are raised up to your ears, your molars are clamped together, and you have not taken a full breath in twenty minutes.",
+      "primary_pain_point": "The somatic impact-anticipation reflex: walking, working, and resting with a body braced as if an invisible blow is about to land. Chronic muscle armor that rational relaxation cannot unlock.",
+      "primary_somatic_anchor": "Clenched masseter jaw muscles, rigid suboccipital neck tendons, locked immobile ribcage, tightly contracted psoas and pelvic floor.",
+      "nervous_system_state": "Persistent Somatosensory Threat Neuroception and Chronic Neuromuscular Armoring (The Motor-System Bracing Reflex).",
+      "core_transformation": "From chronic muscular defense, jaw clenching, and impact-bracing to deep somatic softening, open fluid posture, and teaching the motor system it is safe to unclench.",
+      "key_proprietary_protocols": [
+        "The Five-Point Somatic Body Unclench",
+        "The Pandicular Muscle Reset",
+        "The TMJ and Suboccipital De-armoring Sequence",
+        "The Psoas and Pelvic Floor Safe Release",
+        "The Grounded Baseline Expansion Practice"
+      ],
+      "whats_new_and_different": "The only book in the catalog dedicated to neuromuscular armoring, somatic bracing, and the physical habit of anticipating impact. Unlike Book 02 (corporate energy depletion), Book 09 (dorsal hypo-arousal shutdown), Book 10 (stillness guilt/compulsive doing), or Book 13 (health anxiety/phantom symptoms), Book 15 targets the chronic motor-system defense: unclenching the jaw, softening the ribcage, releasing the psoas and pelvic floor, and interrupting the somatic flinch reflex.",
+      "forbidden_overlaps": [
+        "Health illness and heart panic (Book 13)",
+        "Productivity speed and rest guilt (Book 10)",
+        "Quiet emotional numbness (Book 09)",
+        "Daytime energy depletion pacing (Book 02)",
+        "Romantic reassurance seeking (Book 01)"
+      ],
+      "target_keywords": [
+        "releasing chronic muscle armoring somatic",
+        "how to stop unconscious body bracing",
+        "healing jaw clenching tmj nervous system",
+        "unclenching pelvic floor and shoulders",
+        "somatic pandiculation for chronic tension"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "JmIsSXo9af01O77XRBG8"
+      }
+    },
+    {
+      "id": 16,
+      "folder": "16-imposter-alarm",
+      "title": "The Imposter Alarm",
+      "subtitle": "A Body-First Guide to Silencing the Fear of Being Exposed, Ending Over-Preparation, and Grounding in Real Competence",
+      "target_audience": "High-achieving professionals, managers, creatives, and specialists aged 25-50 who privately live in terror of being exposed as unqualified frauds despite objective track records of success.",
+      "real_world_trigger_scenario": "Being invited to present in the executive boardroom or receiving a major promotion; feeling a sickening dread of being 'found out', spending eighteen hours over-preparing forty slides to hide perceived fraudulence.",
+      "primary_pain_point": "Interpersonal exposure dread: throat tightening and heart hammering before meetings, obsessive over-preparation and perfectionist over-researching to hide perceived incompetence, dismissing achievements as luck.",
+      "primary_somatic_anchor": "Constricted vocal cords making the voice tremble, fluttering stomach flutter, cold clammy palms gripping notes, shallow breathless speech.",
+      "nervous_system_state": "Social-Evaluative Threat Neuroception and Sympathetic Exposure Hyperarousal (Tribal Unmasking Panic).",
+      "core_transformation": "From chronic imposter dread, exhausting over-preparation, and feeling like a fraud to grounded somatic competence, relaxed executive authority, and embodied presence.",
+      "key_proprietary_protocols": [
+        "The Pre-Meeting Exposure Decoupler",
+        "The Competence Reality Anchor",
+        "The Over-Preparation Boundary Gauge",
+        "The Authority Throat and Diaphragm Release",
+        "The Praise Habitation Sequence"
+      ],
+      "whats_new_and_different": "The only book in the catalog dedicated to professional imposter panic, intellectual exposure terror, and competence dysregulation. Unlike Book 08 (procrastination/task freeze) or Book 12 (core shame/defective self), Book 16 targets high-performing competence: resolving the somatic contradiction of outward professional achievement paired with visceral terror of being unmasked, ending destructive over-preparation, and rewiring the nervous system's fraud alarm in high-stakes rooms.",
+      "forbidden_overlaps": [
+        "Task avoidance and procrastination (Book 08)",
+        "Existential core shame and defectiveness (Book 12)",
+        "Downtime guilt and rest panic (Book 10)",
+        "Romantic attachment reassurance (Book 01)",
+        "Financial poverty scarcity (Book 03)"
+      ],
+      "target_keywords": [
+        "imposter syndrome somatic nervous system",
+        "ending professional over preparation",
+        "overcoming fear of being exposed at work",
+        "body first guide to real competence",
+        "executive presence grounding tools"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "jiZpOzGMWHEVK2zNC4Q1"
+      }
+    },
+    {
+      "id": 17,
+      "folder": "17-calm-alarm",
+      "title": "The Calm Alarm",
+      "subtitle": "A Body-First Guide to Calming Anticipatory Dread, Releasing the 'Other Shoe' Panic, and Allowing Yourself to Feel Safe When Life Is Good",
+      "target_audience": "Adults aged 24-52 who experience visceral dread, gut drops, and obsessive catastrophic scanning whenever life is peaceful, healthy, stable, or going well.",
+      "real_world_trigger_scenario": "Sitting on a quiet beach with your healthy family or looking at a stable savings account; suddenly feeling a cold drop in the stomach and thinking: 'This is too good to be true. Something terrible is about to happen.'",
+      "primary_pain_point": "Foreboding panic and cherophobia: the physical conviction that calm is an ambush, waiting for the other shoe to drop, feeling sudden adrenaline spikes during happy moments, and an inability to tolerate peace without anticipating tragedy.",
+      "primary_somatic_anchor": "Sudden cold elevator-drop sensation in the stomach, hyper-alert horizon scanning in peaceful rooms, shallow breathing while smiling, inability to sink into joy.",
+      "nervous_system_state": "Peace-Triggered Threat Neuroception and Foreboding Sympathetic Hyperarousal (Anticipatory Catastrophic Defense).",
+      "core_transformation": "From chronic anticipatory dread, waiting for the other shoe to drop, and foreboding joy to somatic peace tolerance, expanding capacity for happiness, and deep bodily safety.",
+      "key_proprietary_protocols": [
+        "The Peaceful Baseline Grounding Anchor",
+        "The Catastrophic Forecast Decoupler",
+        "The Safe Joy Habitation Breath",
+        "The Anticipatory Dread Horizon Reset",
+        "The Somatosensory Trust Pendulation"
+      ],
+      "whats_new_and_different": "The only book in the catalog dedicated to peace-triggered threat neuroception, cherophobia, and anticipatory catastrophe. Unlike Book 10 (which targets workaholic productivity and the inability to sit still without working), Book 17 addresses emotional safety and happiness: explaining why peaceful relationships, financial stability, and joyful milestones trigger visceral panic, and teaching the nervous system how to tolerate positive states without bracing for impact.",
+      "forbidden_overlaps": [
+        "Workaholic productivity and rest guilt (Book 10)",
+        "Health illness and symptom scanning (Book 13)",
+        "Midnight sleep dread (Book 11)",
+        "Romantic texting panics (Book 01)",
+        "Task initiation freeze (Book 08)"
+      ],
+      "target_keywords": [
+        "calming anticipatory dread somatic guide",
+        "waiting for the other shoe to drop panic",
+        "cherophobia fear of happiness nervous system",
+        "expanding capacity for joy and peace",
+        "why calm feels dangerous trauma response"
+      ],
+      "publishing_status": {
+        "kdp": "",
+        "amazon_ebook_asin": "",
+        "amazon_paperback_asin": "",
+        "google_play": "",
+        "elevenreader": "Published",
+        "google_play_ebook_id": "",
+        "google_play_audiobook_id": "",
+        "elevenreader_id": "yUJBhW1HG0U6Jj9pLSxg"
+      }
+    }
+  ]
+}
