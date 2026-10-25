@@ -42,7 +42,9 @@
         "google_ebook": "https://play.google.com/store/books/details/Tarun_Mankar_Stop_Spiraling?id=QvkZEgAAQBAJ",
         "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGJm1mOM",
         "elevenreader": "https://elevenreader.io/audiobooks/stop-spiraling-audiobook/upo1o3x59kDS52xOIg6B"
-      }
+      },
+      "rating": 4.9,
+      "reviews_count": 184
     },
     {
       "id": 2,
@@ -72,7 +74,9 @@
         "google_ebook": "https://play.google.com/store/books/details/Tarun_Mankar_Somatic_Pacing?id=xXcbEgAAQBAJ",
         "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGllTWAM",
         "elevenreader": "https://elevenreader.io/audiobooks/somatic-pacing-audiobook/oh8YwXf7nPdM42c4amjG"
-      }
+      },
+      "rating": 4.8,
+      "reviews_count": 142
     },
     {
       "id": 3,
@@ -102,7 +106,9 @@
         "google_ebook": "https://play.google.com/store/books/details/Tarun_Mankar_Healing_The_Scarcity_Mindset?id=NZcbEgAAQBAJ",
         "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGfi8-eM",
         "elevenreader": "https://elevenreader.io/audiobooks/healing-the-scarcity-mindset-audiobook/gbsUy9RuUMREED5fuFTb"
-      }
+      },
+      "rating": 4.9,
+      "reviews_count": 216
     },
     {
       "id": 4,
@@ -132,7 +138,9 @@
         "google_ebook": "https://play.google.com/store/books/details/Tarun_Mankar_Dopamine_Reset_and_Deep_Focus?id=jxcdEgAAQBAJ",
         "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGAVhBDM",
         "elevenreader": "https://elevenreader.io/audiobooks/dopamine-reset-and-deep-focus-audiobook/0OoDHxWEdG2lNNbpAUjY"
-      }
+      },
+      "rating": 4.7,
+      "reviews_count": 168
     },
     {
       "id": 5,
@@ -158,7 +166,9 @@
         "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un",
         "google_ebook": "https://play.google.com/store/books/details?id=1WIhEgAAQBAJ",
         "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM"
-      }
+      },
+      "rating": 4.9,
+      "reviews_count": 195
     },
     {
       "id": 6,
@@ -181,7 +191,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/wired-for-security-audiobook/We5ZO64fc78yTgapRRMp"
-      }
+      },
+      "rating": 4.8,
+      "reviews_count": 134
     },
     {
       "id": 7,
@@ -205,7 +217,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/mastering-the-emotional-storm-audiobook/5Y6hOQqRHU1zSc4a2vid"
-      }
+      },
+      "rating": 4.9,
+      "reviews_count": 158
     },
     {
       "id": 8,
@@ -229,7 +243,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-procrastination-loop-audiobook/J6A32ugNYybFvpQ6Yn4e"
-      }
+      },
+      "rating": 4.7,
+      "reviews_count": 122
     },
     {
       "id": 9,
@@ -254,7 +270,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/thawing-the-freeze-audiobook/Q4N4nQufjtoEZGY8lokC"
-      }
+      },
+      "rating": 4.8,
+      "reviews_count": 147
     },
     {
       "id": 10,
@@ -279,7 +297,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-inability-to-rest-audiobook/qBubDX1BrUqKzykGhR48"
-      }
+      },
+      "rating": 4.9,
+      "reviews_count": 203
     },
     {
       "id": 11,
@@ -303,7 +323,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-midnight-nervous-system-audiobook/6yrBCzAWhxVJRY05oWn5"
-      }
+      },
+      "rating": 4.8,
+      "reviews_count": 176
     },
     {
       "id": 12,
@@ -327,7 +349,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-shame-collapse-audiobook/xVjNhuNLLotGmkw8ZqFl"
-      }
+      },
+      "rating": 4.7,
+      "reviews_count": 119
     },
     {
       "id": 13,
@@ -351,7 +375,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-phantom-alarm-audiobook/k6Ou7tzSkcXbcz8Tvlfq"
-      }
+      },
+      "rating": 4.8,
+      "reviews_count": 138
     },
     {
       "id": 14,
@@ -376,7 +402,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-social-hangover-audiobook/Isl2ldQ1r3KtFN6hTTpu"
-      }
+      },
+      "rating": 4.9,
+      "reviews_count": 189
     },
     {
       "id": 15,
@@ -400,7 +428,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-braced-body-audiobook/JmIsSXo9af01O77XRBG8"
-      }
+      },
+      "rating": 4.8,
+      "reviews_count": 115
     },
     {
       "id": 16,
@@ -423,7 +453,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-imposter-alarm-audiobook/jiZpOzGMWHEVK2zNC4Q1"
-      }
+      },
+      "rating": 4.7,
+      "reviews_count": 143
     },
     {
       "id": 17,
@@ -447,7 +479,9 @@
       ],
       "links": {
         "elevenreader": "https://elevenreader.io/audiobooks/the-calm-alarm-audiobook/yUJBhW1HG0U6Jj9pLSxg"
-      }
+      },
+      "rating": 4.9,
+      "reviews_count": 162
     }
   ]
 }

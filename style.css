@@ -775,25 +775,45 @@ body {
   flex: 1;
 }
 
-.card-meta-line {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.card-rating {
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--gold-light);
+.card-format-line {
+  margin-bottom: 4px;
 }
 
 .card-format-tag {
-  font-size: 0.66rem;
-  font-weight: 600;
-  color: var(--text-dim);
+  font-size: 0.64rem;
+  font-weight: 650;
+  color: #9bb7e0;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.card-format-tag.soon {
+  color: #7b7590;
+}
+
+.card-rating-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.card-stars {
+  color: var(--gold);
+  font-size: 0.72rem;
   letter-spacing: 0.04em;
+}
+
+.card-rating-score {
+  font-size: 0.76rem;
+  font-weight: 750;
+  color: var(--gold-light);
+}
+
+.card-rating-count {
+  font-size: 0.68rem;
+  color: var(--text-dim);
 }
 
 .card-title {
@@ -1589,17 +1609,29 @@ body {
     overflow: hidden;
   }
 
-  .card-meta-line {
-    margin-bottom: 4px;
-    font-size: 0.65rem;
-  }
-
-  .card-rating {
-    font-size: 0.68rem;
+  .card-format-line {
+    margin-bottom: 2px;
   }
 
   .card-format-tag {
     font-size: 0.58rem;
+  }
+
+  .card-rating-line {
+    margin-bottom: 4px;
+    gap: 4px;
+  }
+
+  .card-stars {
+    font-size: 0.65rem;
+  }
+
+  .card-rating-score {
+    font-size: 0.68rem;
+  }
+
+  .card-rating-count {
+    font-size: 0.6rem;
   }
 
   .card-actions {
