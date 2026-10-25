@@ -692,20 +692,7 @@ function buildBuyOptions(links, bookTitle) {
     `);
   }
 
-  // Priority 4: Studio-Grade Audiobook
-  if (links.elevenreader) {
-    options.push(`
-      <a href="${links.elevenreader}" target="_blank" rel="noopener" class="buy-option" id="buy-elevenreader">
-        <span class="buy-option-icon">🎧</span>
-        <div class="buy-option-info">
-          <div class="buy-option-title">ElevenReader Audiobook</div>
-          <div class="buy-option-sub">Stream instantly · High-fidelity somatic voice narration</div>
-        </div>
-        <span class="buy-cta-pill ghost">Listen Now ↗</span>
-      </a>
-    `);
-  }
-
+  // Priority 4: Google Play Audiobook
   if (links.google_audio) {
     options.push(`
       <a href="${links.google_audio}" target="_blank" rel="noopener" class="buy-option" id="buy-google-audio">
@@ -715,6 +702,20 @@ function buildBuyOptions(links, bookTitle) {
           <div class="buy-option-sub">Stream or download in Google ecosystem</div>
         </div>
         <span class="buy-cta-pill ghost">Listen on Google ↗</span>
+      </a>
+    `);
+  }
+
+  // Priority 5 (Last): ElevenReader Audiobook
+  if (links.elevenreader) {
+    options.push(`
+      <a href="${links.elevenreader}" target="_blank" rel="noopener" class="buy-option" id="buy-elevenreader">
+        <span class="buy-option-icon">🎧</span>
+        <div class="buy-option-info">
+          <div class="buy-option-title">ElevenReader Audiobook</div>
+          <div class="buy-option-sub">Stream instantly · High-fidelity somatic voice narration</div>
+        </div>
+        <span class="buy-cta-pill ghost">Listen Now ↗</span>
       </a>
     `);
   }
