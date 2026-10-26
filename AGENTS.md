@@ -215,8 +215,11 @@ Invoke-WebRequest -Uri "https://play.google.com/books/publisher/content/images/f
 ## DEPLOYMENT
 
 ```bash
+# Firebase Hosting
+firebase deploy --only hosting
+
 # GitHub Pages
-git add . && git commit -m "Add book 5" && git push
+git add . && git commit -m "Update site" && git push
 
 # Netlify drag & drop: netlify.com → drag folder
 # Vercel: npx vercel deploy
