@@ -39,8 +39,8 @@ Exhausted from carrying everyone else's emotional baggage? The Courage to Disapp
 ---
 
 ## 🛒 Publishing Details & Retailer Store Links
-* **Amazon Kindle eBook:** https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN (ASIN: ``)
-* **Amazon Paperback (Print):** https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN (ASIN: ``)
+* **Amazon Kindle eBook:** https://www.amazon.com/dp/B0HP8D7JRT (ASIN: `B0HP8D7JRT`)
+* **Amazon Paperback (Print):** https://www.amazon.com/dp/B0HP8MQL2P/ref=tmm_pap_swatch_0 (ASIN: `B0HP8MQL2P`)
 * **Google Play Books eBook:** https://play.google.com/store/books/details?id=1WIhEgAAQBAJ (ID: `1WIhEgAAQBAJ`)
 * **Google Play Audiobook:** https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM (ID: `AQAAAEBGXVkdDM`)
 * **ElevenReader Audiobook:** https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un

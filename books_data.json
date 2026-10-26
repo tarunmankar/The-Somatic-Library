@@ -1,8 +1,9 @@
 {
   "author": {
     "name": "Tarun Mankar",
-    "tagline": "Tools for the Overthinking Mind & the Dysregulated Nervous System",
-    "bio": "Tarun Mankar writes at the intersection of somatic psychology, nervous system science, and behavioral change. His books are designed to be felt — not just read.",
+    "tagline": "Author & Multidisciplinary Creator · Somatic Psychology, Next-Gen Apps & Creative Media",
+    "photo": "assets/tarun_mankar.jpg",
+    "bio": "Tarun Mankar writes at the intersection of somatic psychology, polyvagal theory, and behavioral change — designing body-first books to calm acute survival alarms. Beyond authoring, Tarun is a multidisciplinary creator and builder who crafts next-generation applications, stunning modern websites, engaging cinematic videos, high-converting compelling ads, beautiful visual design, and immersive music.",
     "stats": {
       "books": "17+",
       "audiobooks": "17",
@@ -163,9 +164,11 @@
         "approval seeking"
       ],
       "links": {
-        "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un",
+        "amazon_ebook": "https://www.amazon.com/dp/B0HP8D7JRT",
+        "amazon_paperback": "https://www.amazon.com/dp/B0HP8MQL2P/ref=tmm_pap_swatch_0",
         "google_ebook": "https://play.google.com/store/books/details?id=1WIhEgAAQBAJ",
-        "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM"
+        "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM",
+        "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un"
       },
       "rating": 4.9,
       "reviews_count": 195

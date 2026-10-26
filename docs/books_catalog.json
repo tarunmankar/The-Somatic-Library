@@ -4,7 +4,7 @@
     "series_title": "Tarun Mankar Somatic & Behavioral Audiobook Library",
     "ecosystem": "ElevenReader / Amazon KDP / Google Play Books",
     "total_books": 17,
-    "last_updated": "2026-10-14",
+    "last_updated": "2026-10-26",
     "purpose": "Master registry and anti-cannibalization architecture of all published books. Enforces distinct biological mechanisms, unique physical anchors, independent protocols, and zero thematic duplication across the entire author ecosystem."
   },
   "books": [
@@ -218,11 +218,11 @@
         "tolerating other people disappointment"
       ],
       "publishing_status": {
-        "kdp": "",
-        "amazon_ebook_asin": "",
-        "amazon_paperback_asin": "",
-        "google_play": "https://play.google.com/store/books/details?id=1WIhEgAAQBAJ",
-        "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un",
+        "kdp": "Published",
+        "amazon_ebook_asin": "B0HP8D7JRT",
+        "amazon_paperback_asin": "B0HP8MQL2P",
+        "google_play": "Published",
+        "elevenreader": "Published",
         "google_play_ebook_id": "1WIhEgAAQBAJ",
         "google_play_audiobook_id": "AQAAAEBGXVkdDM",
         "elevenreader_id": "i0rp0wAezs9Jt1lGd2un"
