@@ -555,7 +555,6 @@ function renderBooks(books) {
              style="animation-delay:${i * 0.04}s"
              aria-label="${book.title} by Tarun Mankar">
       <div class="card-cover-wrap">
-        <span class="card-top-tag">${book.category_label}</span>
         <img
           class="card-cover"
           src="${book.cover}"
@@ -571,13 +570,14 @@ function renderBooks(books) {
         </div>
       </div>
       <div class="card-body">
-        <div class="card-format-line">
+        <div class="card-meta-line">
+          <span class="card-cat-badge">${book.category_label}</span>
           <span class="card-format-tag ${book.links.amazon_ebook ? 'live' : (book.links.google_ebook ? 'live' : 'soon')}">
             ${book.links.amazon_ebook 
-              ? 'Kindle · Print · Google · Audio' 
+              ? 'Kindle · Print · Audio' 
               : (book.links.google_ebook 
-                  ? 'Google Play &amp; Audio · Kindle Soon' 
-                  : 'Audiobook Live · Kindle &amp; Google Soon')}
+                  ? 'Google Play · Audio' 
+                  : 'Audio Live')}
           </span>
         </div>
         <div class="card-rating-line">

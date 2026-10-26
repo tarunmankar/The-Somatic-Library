@@ -750,21 +750,7 @@ body {
 }
 
 .card-top-tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(8, 10, 16, 0.82);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--border-glow);
-  color: var(--gold);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-  z-index: 2;
+  display: none !important; /* Removed from cover so cover art and title typography are 100% visible */
 }
 
 /* Card Body Content */
@@ -773,6 +759,28 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+.card-meta-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.card-cat-badge {
+  font-size: 0.64rem;
+  font-weight: 750;
+  color: var(--gold);
+  background: var(--gold-dim);
+  border: 1px solid var(--border-glow);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
 .card-format-line {
