@@ -178,7 +178,7 @@ const INLINE_DATA = {
               "amazon_paperback": "https://www.amazon.com/dp/B0HP8MQL2P/ref=tmm_pap_swatch_0",
               "google_ebook": "https://play.google.com/store/books/details?id=1WIhEgAAQBAJ",
               "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM",
-              "elevenreader": "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un"
+              "elevenreader": "https://elevenreader.io/audiobooks/the-courage-to-disappoint-audiobook/FMq4yPQj8BY1CcSaafeA"
           },
           "rating": 4.9,
           "reviews_count": 195
@@ -203,6 +203,10 @@ const INLINE_DATA = {
               "love"
           ],
           "links": {
+              "amazon_ebook": "https://www.amazon.com/dp/B0HPH6QJWK",
+              "amazon_paperback": "https://www.amazon.com/dp/B0HPHG18TQ",
+              "google_ebook": "https://play.google.com/store/books/details?id=s7QiEgAAQBAJ",
+              "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGBxxHSM",
               "elevenreader": "https://elevenreader.io/audiobooks/wired-for-security-audiobook/We5ZO64fc78yTgapRRMp"
           },
           "rating": 4.8,
