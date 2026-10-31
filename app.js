@@ -599,7 +599,7 @@ function renderBooks(books) {
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
             aria-label="Get Book or Listen Now ${book.title}">
-            <span class="btn-icon">✨</span> 
+            <span class="btn-icon">📖</span> 
             Get Book / Listen Now ↗
           </button>
         </div>
