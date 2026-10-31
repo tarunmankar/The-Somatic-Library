@@ -598,17 +598,9 @@ function renderBooks(books) {
           <button class="card-btn-buy"
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
-            aria-label="${book.links.amazon_ebook ? 'Read on Kindle or Buy ' + book.title : (book.links.google_ebook ? 'Read on Google Play ' + book.title : 'Listen to Audiobook ' + book.title)}">
-            <span class="btn-icon">${book.links.amazon_ebook ? '📖' : (book.links.google_ebook ? '📱' : '🎧')}</span> 
-            ${book.links.amazon_ebook ? 'Read on Kindle / Buy' : (book.links.google_ebook ? 'Read on Google Play / Buy' : 'Listen to Audiobook')}
-          </button>
-          <button class="card-btn-audio"
-            id="audio-btn-${book.id}"
-            onclick="event.stopPropagation();${book.links.amazon_ebook || book.links.google_ebook ? `window.open('${book.links.elevenreader || 'https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un'}','_blank')` : `openModal(${book.id})`}"
-            title="${book.links.amazon_ebook || book.links.google_ebook ? 'Listen to Audiobook preview' : 'View all format release dates'}"
-            aria-label="${book.links.amazon_ebook || book.links.google_ebook ? 'Audiobook preview' : 'Kindle & Google Release Dates'}">
-            <span class="btn-icon">${book.links.amazon_ebook || book.links.google_ebook ? '🎧' : '📖'}</span> 
-            ${book.links.amazon_ebook || book.links.google_ebook ? 'Audio' : 'Kindle & Print Soon'}
+            aria-label="Get Book or Listen Now ${book.title}">
+            <span class="btn-icon">✨</span> 
+            Get Book / Listen Now ↗
           </button>
         </div>
       </div>
