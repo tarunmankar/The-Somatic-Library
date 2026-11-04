@@ -2515,6 +2515,29 @@ body {
   margin: 0 auto 56px;
 }
 
+/* ── ARTICLES TEASER SECTION (HOME PAGE) ── */
+.articles-teaser-section {
+  position: relative;
+  z-index: 1;
+  padding: 90px 24px 100px;
+  border-top: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.articles-teaser-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.articles-teaser-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
