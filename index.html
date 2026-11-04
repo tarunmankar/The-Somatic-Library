@@ -48,7 +48,7 @@
 
   <!-- Typography: Outfit + Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=3.0" />
+  <link rel="stylesheet" href="style.css?v=3.1" />
 
   <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
   <script type="application/ld+json">
@@ -244,7 +244,7 @@
   <header>
     <nav class="navbar" id="navbar" aria-label="Main Navigation">
       <div class="nav-inner">
-        <a href="#" class="nav-logo" aria-label="The Somatic Library Home">
+        <a href="index.html" class="nav-logo" aria-label="The Somatic Library Home">
           <span class="logo-icon" aria-hidden="true">◈</span>
           <span class="logo-text">The Somatic Library</span>
         </a>
@@ -364,7 +364,7 @@
       <!-- Books Grid (Populated dynamically by app.js) -->
       <div class="books-grid" id="books-grid" role="feed" aria-busy="false">
 
-        <article class="book-card" id="book-card-1"
+        <article class="book-card" id="stop-spiraling" data-slug="stop-spiraling" data-book-id="1"
                  onclick="openModal(1)"
                  aria-label="Stop Spiraling by Tarun Mankar">
           <div class="card-cover-wrap">
@@ -410,7 +410,7 @@
           </div>
         </article>
 
-        <article class="book-card" id="book-card-2"
+        <article class="book-card" id="somatic-pacing" data-slug="somatic-pacing" data-book-id="2"
                  onclick="openModal(2)"
                  aria-label="Somatic Pacing by Tarun Mankar">
           <div class="card-cover-wrap">
@@ -456,7 +456,7 @@
           </div>
         </article>
 
-        <article class="book-card" id="book-card-3"
+        <article class="book-card" id="healing-the-scarcity-mindset" data-slug="healing-the-scarcity-mindset" data-book-id="3"
                  onclick="openModal(3)"
                  aria-label="Healing The Scarcity Mindset by Tarun Mankar">
           <div class="card-cover-wrap">
@@ -502,7 +502,7 @@
           </div>
         </article>
 
-        <article class="book-card" id="book-card-4"
+        <article class="book-card" id="dopamine-reset-and-deep-focus" data-slug="dopamine-reset-and-deep-focus" data-book-id="4"
                  onclick="openModal(4)"
                  aria-label="Dopamine Reset and Deep Focus by Tarun Mankar">
           <div class="card-cover-wrap">
@@ -548,7 +548,7 @@
           </div>
         </article>
 
-        <article class="book-card" id="book-card-5"
+        <article class="book-card" id="the-courage-to-disappoint" data-slug="the-courage-to-disappoint" data-book-id="5"
                  onclick="openModal(5)"
                  aria-label="The Courage to Disappoint by Tarun Mankar">
           <div class="card-cover-wrap">
@@ -594,7 +594,7 @@
           </div>
         </article>
 
-        <article class="book-card" id="book-card-6"
+        <article class="book-card" id="wired-for-security" data-slug="wired-for-security" data-book-id="6"
                  onclick="openModal(6)"
                  aria-label="Wired for Security by Tarun Mankar">
           <div class="card-cover-wrap">
@@ -900,6 +900,9 @@
         <div class="modal-header-meta">
           <span class="modal-category-tag" id="modal-category-tag">Anxiety &amp; Attachment</span>
           <span class="modal-stars" id="modal-stars">★★★★★ 4.9/5 Rating</span>
+          <button class="modal-share-btn" id="modal-share-btn" onclick="copyCurrentBookLink()" title="Copy shareable link for this book">
+            <span class="share-icon">🔗</span> <span id="share-btn-text">Share Link</span>
+          </button>
         </div>
 
         <h3 class="modal-title" id="modal-title"></h3>
@@ -932,6 +935,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=3.0"></script>
+  <script src="app.js?v=3.1"></script>
 </body>
 </html>

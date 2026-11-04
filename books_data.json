@@ -45,7 +45,8 @@
         "elevenreader": "https://elevenreader.io/audiobooks/stop-spiraling-audiobook/upo1o3x59kDS52xOIg6B"
       },
       "rating": 4.9,
-      "reviews_count": 184
+      "reviews_count": 184,
+      "slug": "stop-spiraling"
     },
     {
       "id": 2,
@@ -77,7 +78,8 @@
         "elevenreader": "https://elevenreader.io/audiobooks/somatic-pacing-audiobook/oh8YwXf7nPdM42c4amjG"
       },
       "rating": 4.8,
-      "reviews_count": 142
+      "reviews_count": 142,
+      "slug": "somatic-pacing"
     },
     {
       "id": 3,
@@ -109,7 +111,8 @@
         "elevenreader": "https://elevenreader.io/audiobooks/healing-the-scarcity-mindset-audiobook/gbsUy9RuUMREED5fuFTb"
       },
       "rating": 4.9,
-      "reviews_count": 216
+      "reviews_count": 216,
+      "slug": "healing-the-scarcity-mindset"
     },
     {
       "id": 4,
@@ -141,7 +144,8 @@
         "elevenreader": "https://elevenreader.io/audiobooks/dopamine-reset-and-deep-focus-audiobook/0OoDHxWEdG2lNNbpAUjY"
       },
       "rating": 4.7,
-      "reviews_count": 168
+      "reviews_count": 168,
+      "slug": "dopamine-reset-and-deep-focus"
     },
     {
       "id": 5,
@@ -171,7 +175,8 @@
         "elevenreader": "https://elevenreader.io/audiobooks/the-courage-to-disappoint-audiobook/FMq4yPQj8BY1CcSaafeA"
       },
       "rating": 4.9,
-      "reviews_count": 195
+      "reviews_count": 195,
+      "slug": "the-courage-to-disappoint"
     },
     {
       "id": 6,
@@ -200,7 +205,8 @@
         "elevenreader": "https://elevenreader.io/audiobooks/wired-for-security-audiobook/We5ZO64fc78yTgapRRMp"
       },
       "rating": 4.8,
-      "reviews_count": 134
+      "reviews_count": 134,
+      "slug": "wired-for-security"
     }
   ],
   "upcoming_books": [

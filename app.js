@@ -28,6 +28,7 @@ const INLINE_DATA = {
     "books": [
         {
             "id": 1,
+            "slug": "stop-spiraling",
             "title": "Stop Spiraling",
             "subtitle": "The Anxiously Attached Person's Daily Toolkit for Calmer Relationships",
             "hook": "Sent a text 45 minutes ago and your chest is still burning?",
@@ -59,6 +60,7 @@ const INLINE_DATA = {
         },
         {
             "id": 2,
+            "slug": "somatic-pacing",
             "title": "Somatic Pacing",
             "subtitle": "The High-Achiever's Daily Guide to Reclaiming Focus and Energy Without Burning Out",
             "hook": "Why that 3 PM espresso is making your brain fog worse, not better.",
@@ -91,6 +93,7 @@ const INLINE_DATA = {
         },
         {
             "id": 3,
+            "slug": "healing-the-scarcity-mindset",
             "title": "Healing The Scarcity Mindset",
             "subtitle": "A Daily Guide to Releasing Money Anxiety and Rewiring Your Scarcity Trauma",
             "hook": "Checking your bank balance makes you feel physically sick?",
@@ -123,6 +126,7 @@ const INLINE_DATA = {
         },
         {
             "id": 4,
+            "slug": "dopamine-reset-and-deep-focus",
             "title": "Dopamine Reset and Deep Focus",
             "subtitle": "Reclaiming Attention, Ending Brain Fog, and Mastering Unshakable Discipline",
             "hook": "Why you can't read 3 pages without picking up your phone.",
@@ -155,6 +159,7 @@ const INLINE_DATA = {
         },
         {
             "id": 5,
+            "slug": "the-courage-to-disappoint",
             "title": "The Courage to Disappoint",
             "subtitle": "Choosing Your Peace Over People's Expectations",
             "hook": "You say yes when your entire body is screaming no.",
@@ -185,6 +190,7 @@ const INLINE_DATA = {
         },
         {
             "id": 6,
+            "slug": "wired-for-security",
             "title": "Wired for Security",
             "subtitle": "Rewiring Anxious Attachment, Silencing Relationship Hypervigilance, and Finding Peace in Love",
             "hook": "An unanswered text sends you into a spiral of panic?",
@@ -513,6 +519,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initKeyboardClose();
   initMobileNav();
   initFaqAccordion();
+  initBookHashRouting();
 });
 
 /* ── LOAD DATA (tries JSON first, falls back to inline) ── */
@@ -558,11 +565,15 @@ function renderBooks(books) {
   }
   noResults.style.display = 'none';
 
-  grid.innerHTML = books.map((book, i) => `
-    <article class="book-card" id="book-card-${book.id}"
+  grid.innerHTML = books.map((book, i) => {
+    const slug = book.slug || getBookSlug(book);
+    return `
+    <article class="book-card" id="${slug}" data-slug="${slug}" data-book-id="${book.id}"
              onclick="openModal(${book.id})"
              style="animation-delay:${i * 0.04}s"
              aria-label="${book.title} by Tarun Mankar">
+      <span id="book-${book.id}" style="position:absolute;top:-80px;visibility:hidden;height:0;"></span>
+      <span id="book-card-${book.id}" style="position:absolute;top:-80px;visibility:hidden;height:0;"></span>
       <div class="card-cover-wrap">
         <img
           class="card-cover"
@@ -610,7 +621,8 @@ function renderBooks(books) {
         </div>
       </div>
     </article>
-  `).join('');
+  `;
+  }).join('');
 }
 
 /* ── FILTER ── */
@@ -662,9 +674,15 @@ function applyFilters() {
 }
 
 /* ── MODAL (Kindle First Priority + Uncropped Cover) ── */
-function openModal(bookId) {
+function openModal(bookId, updateHash = true) {
   const book = allBooks.find(b => b.id === bookId);
   if (!book) return;
+  currentOpenBookId = bookId;
+  
+  if (updateHash && history.replaceState) {
+    const slug = book.slug || getBookSlug(book);
+    history.replaceState(null, '', '#' + slug);
+  }
 
   const modalCover = document.getElementById('modal-cover');
   modalCover.src = book.cover;
@@ -830,6 +848,10 @@ function closeModal() {
   const overlay = document.getElementById('modal-overlay');
   if (overlay) overlay.classList.remove('open');
   document.body.style.overflow = '';
+  currentOpenBookId = null;
+  if (history.replaceState && window.location.hash && !window.location.hash.startsWith('#books')) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
 }
 
 function initKeyboardClose() {
@@ -954,5 +976,82 @@ function initFaqAccordion() {
     firstFaq.classList.add('open');
     const firstQ = firstFaq.querySelector('.faq-question');
     if (firstQ) firstQ.setAttribute('aria-expanded', 'true');
+  }
+}
+
+/* ── BOOK SLUG & HASH DEEP-LINKING ── */
+let currentOpenBookId = null;
+
+function getBookSlug(book) {
+  if (book && book.slug) return book.slug;
+  const slugs = {
+    1: "stop-spiraling",
+    2: "somatic-pacing",
+    3: "healing-the-scarcity-mindset",
+    4: "dopamine-reset-and-deep-focus",
+    5: "the-courage-to-disappoint",
+    6: "wired-for-security"
+  };
+  return book ? (slugs[book.id] || `book-${book.id}`) : '';
+}
+
+function initBookHashRouting() {
+  function checkHash() {
+    const raw = window.location.hash.toLowerCase().replace('#', '').trim();
+    if (!raw) return;
+    
+    // Ignore general page anchors
+    if (['books', 'articles-teaser', 'trust-features', 'faq', 'hero', 'search'].includes(raw)) {
+      return;
+    }
+    
+    const slugMap = {
+      '1': 1, 'book-1': 1, 'stop-spiraling': 1,
+      '2': 2, 'book-2': 2, 'somatic-pacing': 2,
+      '3': 3, 'book-3': 3, 'scarcity-mindset': 3, 'healing-the-scarcity-mindset': 3,
+      '4': 4, 'book-4': 4, 'dopamine-reset': 4, 'dopamine-reset-and-deep-focus': 4,
+      '5': 5, 'book-5': 5, 'courage-to-disappoint': 5, 'the-courage-to-disappoint': 5,
+      '6': 6, 'book-6': 6, 'wired-for-security': 6
+    };
+    
+    const bookId = slugMap[raw];
+    if (bookId) {
+      setTimeout(() => {
+        const el = document.getElementById(raw) || document.getElementById(`book-${bookId}`) || document.getElementById(`book-card-${bookId}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('highlight-card');
+          setTimeout(() => el.classList.remove('highlight-card'), 2200);
+        }
+        openModal(bookId, false);
+      }, 350);
+    }
+  }
+  
+  checkHash();
+  window.addEventListener('hashchange', checkHash);
+}
+
+function copyCurrentBookLink() {
+  const book = allBooks.find(b => b.id === currentOpenBookId);
+  if (!book) return;
+  const slug = book.slug || getBookSlug(book);
+  const shareUrl = `${window.location.origin}/#${slug}`;
+  
+  const finish = () => {
+    const textEl = document.getElementById('share-btn-text');
+    if (textEl) {
+      const orig = textEl.textContent;
+      textEl.textContent = '✓ Copied!';
+      setTimeout(() => { textEl.textContent = orig; }, 2200);
+    }
+  };
+  
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(shareUrl).then(finish).catch(() => {
+      prompt('Copy shareable link:', shareUrl);
+    });
+  } else {
+    prompt('Copy shareable link:', shareUrl);
   }
 }
