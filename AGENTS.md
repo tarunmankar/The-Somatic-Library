@@ -24,6 +24,7 @@ to understand this codebase instantly without reading every file.
 4. **ALWAYS update BOTH `books_data.json` AND `INLINE_DATA` in `app.js`** when adding books.
 5. **DO NOT break the fallback mechanism** in `loadBooks()` — it's essential for local previewing.
 6. **Preserve all CSS variable names** in `:root` — they are referenced throughout the file.
+7. **NEVER use `mybook.to` or any URL shortener.** Amazon links MUST ALWAYS be direct official URLs: `https://www.amazon.com/dp/{ASIN}`. This is a strict inviolable rule.
 
 ---
 
