@@ -11,9 +11,9 @@ let searchQuery = '';
 const INLINE_DATA = {
     "author": {
         "name": "Tarun Mankar",
-        "tagline": "Practical Lived Experience & Body-First Protocols",
+        "tagline": "Practical Somatic Tools for Stress, Overthinking & Everyday Well-Being",
         "photo": "assets/tarun_mankar.jpg",
-        "bio": "For years, I lived trapped in my own nervous system with acute anxiety, overthinking, and burnout. Rather than writing from an academic pedestal, I share practical, battle-tested 60-second somatic resets and body-first tools that actually calmed my own alarms — so fellow overthinkers and high achievers can feel grounded in their bodies.",
+        "bio": "Having experienced the real exhaustion of daily stress, overthinking, and burnout, I write practical, body-first guides to help people regulate their nervous systems. Rather than heavy theory, I share simple 60-second somatic resets and everyday tools to help you feel calm, grounded, and clear-headed.",
         "stats": {
             "books": "6",
             "audiobooks": "6",
