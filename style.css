@@ -73,47 +73,8 @@ body {
   position: relative;
 }
 
-/* ── Top Trust Banner (US Reader Credibility) ── */
 .top-trust-bar {
-  background: linear-gradient(90deg, #110e06 0%, #1c1505 50%, #110e06 100%);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
-  color: var(--gold);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 8px 16px;
-  position: relative;
-  z-index: 101;
-}
-
-.top-trust-bar .trust-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.trust-star {
-  color: var(--gold-light);
-  font-weight: 700;
-}
-
-.trust-dot {
-  color: rgba(212, 175, 55, 0.4);
-  font-size: 0.8rem;
-}
-
-.trust-highlight {
-  color: var(--text-bright);
-  background: rgba(212, 175, 55, 0.15);
-  padding: 2px 8px;
-  border-radius: 4px;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: none !important;
 }
 
 /* ── Ambient Glow Orbs ── */
@@ -1732,13 +1693,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .top-trust-bar {
-    font-size: 0.68rem;
-    padding: 6px 12px;
-  }
-  .top-trust-bar .trust-dot {
-    display: none;
-  }
 
   .nav-inner {
     padding: 14px 18px;
