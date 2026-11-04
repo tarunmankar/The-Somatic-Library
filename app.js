@@ -605,7 +605,7 @@ function renderBooks(books) {
             onclick="event.stopPropagation();openModal(${book.id})"
             aria-label="Get Book or Listen Now ${book.title}">
             <span class="btn-icon">📖</span> 
-            Get Book / Listen Now ↗
+            Get Book / Listen Now
           </button>
         </div>
       </div>
@@ -818,7 +818,7 @@ function buildBuyOptions(links, bookTitle) {
           <div class="buy-option-title">ElevenReader Audiobook</div>
           <div class="buy-option-sub">Stream instantly · High-fidelity somatic voice narration</div>
         </div>
-        <span class="buy-cta-pill ${isOnlyLiveAudio ? 'gold' : 'ghost'}">Listen Now ↗</span>
+        <span class="buy-cta-pill ${isOnlyLiveAudio ? 'gold' : 'ghost'}">Listen Now</span>
       </a>
     `);
   }
