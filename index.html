@@ -48,7 +48,7 @@
 
   <!-- Typography: Outfit + Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=3.1" />
+  <link rel="stylesheet" href="style.css?v=3.2" />
 
   <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
   <script type="application/ld+json">
@@ -353,11 +353,11 @@
       <!-- Category Filter Tabs with count tags -->
       <div class="filter-container">
         <div class="filter-tabs" id="filter-tabs" role="tablist" aria-label="Filter books by category">
-          <button class="filter-btn active" data-filter="all" id="filter-all" onclick="filterBooks('all')">All Titles (6)</button>
-          <button class="filter-btn" data-filter="anxiety" id="filter-anxiety" onclick="filterBooks('anxiety')">Anxiety &amp; Attachment (3)</button>
-          <button class="filter-btn" data-filter="burnout" id="filter-burnout" onclick="filterBooks('burnout')">Burnout &amp; Energy (1)</button>
-          <button class="filter-btn" data-filter="focus" id="filter-focus" onclick="filterBooks('focus')">Dopamine &amp; Focus (1)</button>
-          <button class="filter-btn" data-filter="money" id="filter-money" onclick="filterBooks('money')">Money &amp; Scarcity (1)</button>
+          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all" id="filter-all" onclick="filterBooks('all')">All Titles (6)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="anxiety" id="filter-anxiety" onclick="filterBooks('anxiety')">Anxiety &amp; Attachment (3)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="burnout" id="filter-burnout" onclick="filterBooks('burnout')">Burnout &amp; Energy (1)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="focus" id="filter-focus" onclick="filterBooks('focus')">Dopamine &amp; Focus (1)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="money" id="filter-money" onclick="filterBooks('money')">Money &amp; Scarcity (1)</button>
         </div>
       </div>
 
@@ -402,7 +402,7 @@
               <button class="card-btn-buy"
                 id="buy-btn-1"
                 onclick="event.stopPropagation();openModal(1)"
-                aria-label="Get Book or Listen Now">
+                aria-label="Get Book / Listen Now — Stop Spiraling">
                 <span class="btn-icon">📖</span> 
                 Get Book / Listen Now
               </button>
@@ -448,7 +448,7 @@
               <button class="card-btn-buy"
                 id="buy-btn-2"
                 onclick="event.stopPropagation();openModal(2)"
-                aria-label="Get Book or Listen Now">
+                aria-label="Get Book / Listen Now — Somatic Pacing">
                 <span class="btn-icon">📖</span> 
                 Get Book / Listen Now
               </button>
@@ -494,7 +494,7 @@
               <button class="card-btn-buy"
                 id="buy-btn-3"
                 onclick="event.stopPropagation();openModal(3)"
-                aria-label="Get Book or Listen Now">
+                aria-label="Get Book / Listen Now — Healing The Scarcity Mindset">
                 <span class="btn-icon">📖</span> 
                 Get Book / Listen Now
               </button>
@@ -540,7 +540,7 @@
               <button class="card-btn-buy"
                 id="buy-btn-4"
                 onclick="event.stopPropagation();openModal(4)"
-                aria-label="Get Book or Listen Now">
+                aria-label="Get Book / Listen Now — Dopamine Reset and Deep Focus">
                 <span class="btn-icon">📖</span> 
                 Get Book / Listen Now
               </button>
@@ -586,7 +586,7 @@
               <button class="card-btn-buy"
                 id="buy-btn-5"
                 onclick="event.stopPropagation();openModal(5)"
-                aria-label="Get Book or Listen Now">
+                aria-label="Get Book / Listen Now — The Courage to Disappoint">
                 <span class="btn-icon">📖</span> 
                 Get Book / Listen Now
               </button>
@@ -632,7 +632,7 @@
               <button class="card-btn-buy"
                 id="buy-btn-6"
                 onclick="event.stopPropagation();openModal(6)"
-                aria-label="Get Book or Listen Now">
+                aria-label="Get Book / Listen Now — Wired for Security">
                 <span class="btn-icon">📖</span> 
                 Get Book / Listen Now
               </button>
@@ -935,6 +935,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=3.1"></script>
+  <script src="app.js?v=3.2"></script>
 </body>
 </html>

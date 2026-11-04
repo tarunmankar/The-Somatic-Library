@@ -11,7 +11,7 @@ let searchQuery = '';
 const INLINE_DATA = {
     "author": {
         "name": "Tarun Mankar",
-        "tagline": "Practical Somatic Tools for Stress, Overthinking & Everyday Well-Being",
+        "tagline": "Practical Somatic Tools for Stress, Burnout & Everyday Well-Being",
         "photo": "assets/tarun_mankar.jpg",
         "bio": "For years, I dealt with everyday stress, constant overthinking, and mental exhaustion. That led me to deeply research behavioral neuroscience and somatic psychology. I created The Somatic Library to share practical, fluff-free guides and 60-second body resets that quiet racing thoughts and bring genuine balance to everyday life.",
         "stats": {
@@ -525,7 +525,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 /* ── LOAD DATA (tries JSON first, falls back to inline) ── */
 async function loadBooks() {
   try {
-    const res = await fetch('books_data.json?v=2.3');
+    let basePath = '';
+    const scriptEl = document.querySelector('script[src*="app.js"]');
+    if (scriptEl) {
+      const src = scriptEl.getAttribute('src');
+      basePath = src.substring(0, src.indexOf('app.js'));
+    }
+    const res = await fetch(basePath + 'books_data.json?v=2.3');
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
     allBooks = data.books;
@@ -614,7 +620,7 @@ function renderBooks(books) {
           <button class="card-btn-buy"
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
-            aria-label="Get Book or Listen Now ${book.title}">
+            aria-label="Get Book / Listen Now — ${book.title}">
             <span class="btn-icon">📖</span> 
             Get Book / Listen Now
           </button>
@@ -629,9 +635,11 @@ function renderBooks(books) {
 function filterBooks(category) {
   activeFilter = category;
 
-  // Update active tab
+  // Update active tab & aria-selected
   document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.filter === category);
+    const isActive = btn.dataset.filter === category;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
   });
 
   applyFilters();
@@ -651,9 +659,17 @@ function initSearch() {
 }
 
 function clearSearch() {
-  document.getElementById('search-input').value = '';
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.value = '';
   searchQuery = '';
-  document.getElementById('search-clear-btn').style.display = 'none';
+  const clearBtn = document.getElementById('search-clear-btn');
+  if (clearBtn) clearBtn.style.display = 'none';
+  activeFilter = 'all';
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    const isAll = b.dataset.filter === 'all';
+    b.classList.toggle('active', isAll);
+    b.setAttribute('aria-selected', isAll ? 'true' : 'false');
+  });
   applyFilters();
 }
 
