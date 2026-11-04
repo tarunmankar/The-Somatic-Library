@@ -11,9 +11,9 @@ let searchQuery = '';
 const INLINE_DATA = {
     "author": {
         "name": "Tarun Mankar",
-        "tagline": "Software Developer & Author · Sharing Practical Experiences & Body-First Protocols",
+        "tagline": "Practical Lived Experience & Body-First Protocols",
         "photo": "assets/tarun_mankar.jpg",
-        "bio": "As a software developer, I spent years battling acute anxiety, overthinking, and burnout at screens. I am not an academic researcher; I am an engineer sharing practical, battle-tested somatic experiences. The Somatic Library delivers real-time body-first protocols so fellow overthinkers and high achievers can calm survival alarms and feel grounded in their own bodies.",
+        "bio": "For years, I lived trapped in my own nervous system with acute anxiety, overthinking, and burnout. Rather than writing from an academic pedestal, I share practical, battle-tested 60-second somatic resets and body-first tools that actually calmed my own alarms — so fellow overthinkers and high achievers can feel grounded in their bodies.",
         "stats": {
             "books": "6",
             "audiobooks": "6",
@@ -546,6 +546,7 @@ function getBookReviewsCount(book) {
 /* ── RENDER BOOKS ── */
 function renderBooks(books) {
   const grid = document.getElementById('books-grid');
+  if (!grid) return;
   const noResults = document.getElementById('no-results');
 
   if (books.length === 0) {
@@ -625,6 +626,7 @@ function filterBooks(category) {
 /* ── SEARCH ── */
 function initSearch() {
   const input = document.getElementById('search-input');
+  if (!input) return;
   const clearBtn = document.getElementById('search-clear-btn');
 
   input.addEventListener('input', () => {
