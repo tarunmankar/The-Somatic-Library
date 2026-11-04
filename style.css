@@ -269,6 +269,54 @@ body {
   transform: translate(2px, -2px);
 }
 
+/* ── Hamburger Menu Button (Mobile & Tablet) ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.nav-hamburger:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--border-glow);
+}
+
+.nav-hamburger .hamburger-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-bright);
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  transform-origin: center;
+}
+
+.nav-hamburger.active .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger.active .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
 /* ── HERO SECTION ── */
 .hero {
   position: relative;
@@ -1720,13 +1768,61 @@ body {
 
   .nav-inner {
     padding: 14px 18px;
+    position: relative;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(8, 10, 16, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-glow);
+    padding: 85px 24px 32px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.8);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    z-index: 1000;
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
   .nav-links a:not(.nav-cta) {
-    display: none;
+    display: block;
+    color: var(--text-bright);
+    font-size: 1.02rem;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  .nav-links a:not(.nav-cta):hover,
+  .nav-links a:not(.nav-cta).active {
+    background: rgba(212, 175, 55, 0.12);
+    border-color: var(--border-glow);
+    color: var(--gold-light);
   }
   .nav-cta {
-    padding: 8px 16px;
-    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.92rem;
+    margin-top: 6px;
+    width: 100%;
   }
 
   .hero {
@@ -1876,7 +1972,7 @@ body {
   }
 
   .modal-book-frame {
-    max-width: 160px;
+    max-width: 130px;
   }
 
   .modal-info {
@@ -1888,10 +1984,16 @@ body {
   }
 
   .modal-close {
-    top: 14px;
-    right: 14px;
-    width: 32px;
-    height: 32px;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .buy-option {
@@ -1918,17 +2020,17 @@ body {
     font-size: 0.98rem;
   }
   .card-body {
-    padding: 18px 16px 20px;
+    padding: 10px 8px 12px;
   }
   .card-title {
-    font-size: 1.15rem;
+    font-size: 0.86rem;
   }
   .card-hook {
-    font-size: 0.84rem;
+    font-size: 0.72rem;
   }
   .card-actions {
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
   }
   .card-btn-buy, .card-btn-audio {
     width: 100%;
@@ -2337,30 +2439,64 @@ body {
   border-radius: 16px;
   margin-bottom: 16px;
   overflow: hidden;
-  transition: border-color 0.2s;
+  transition: all 0.3s ease;
 }
 
 .faq-item:hover {
   border-color: var(--border-glow);
 }
 
+.faq-item.open {
+  border-color: var(--border-glow);
+  background: rgba(212, 175, 55, 0.04);
+}
+
 .faq-question {
   padding: 20px 24px;
   cursor: pointer;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-bright);
   display: flex;
   justify-content: space-between;
   align-items: center;
   user-select: none;
+  gap: 16px;
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+  color: var(--gold-light);
+}
+
+.faq-icon {
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
 }
 
 .faq-answer {
-  padding: 0 24px 20px;
-  font-size: 1.02rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 24px;
+  font-size: 1rem;
   line-height: 1.75;
   color: var(--text-mid);
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding 0.35s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 600px;
+  opacity: 1;
+  padding: 0 24px 22px;
 }
 
 /* Articles Hub Grid (for articles.html) */
@@ -2381,8 +2517,22 @@ body {
 
 .articles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1040px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }
 
 .article-card {

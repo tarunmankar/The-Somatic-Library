@@ -511,6 +511,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   initNavScroll();
   initSearch();
   initKeyboardClose();
+  initMobileNav();
+  initFaqAccordion();
 });
 
 /* ── LOAD DATA (tries JSON first, falls back to inline) ── */
@@ -825,7 +827,8 @@ function buildBuyOptions(links, bookTitle) {
 }
 
 function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay) overlay.classList.remove('open');
   document.body.style.overflow = '';
 }
 
@@ -850,5 +853,106 @@ function updateStats(stats) {
     if (booksEl) booksEl.textContent = allBooks.length + '+';
     const audioEl = document.getElementById('stat-audio');
     if (audioEl) audioEl.textContent = stats.audiobooks;
+  }
+}
+
+/* ── MOBILE NAV DRAWER ── */
+function initMobileNav() {
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (!hamburger || !navLinks) return;
+
+  const toggleNav = (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.contains('open');
+    if (isOpen) {
+      closeNav();
+    } else {
+      openNav();
+    }
+  };
+
+  const openNav = () => {
+    navLinks.classList.add('open');
+    hamburger.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+  };
+
+  const closeNav = () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+  };
+
+  hamburger.addEventListener('click', toggleNav);
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.navbar') && navLinks.classList.contains('open')) {
+      closeNav();
+    }
+  });
+
+  // Close when clicking any link inside nav-links
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeNav();
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      closeNav();
+    }
+  });
+}
+
+/* ── FAQ ACCORDION ── */
+function initFaqAccordion() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  if (!faqQuestions.length) return;
+
+  faqQuestions.forEach(q => {
+    q.setAttribute('role', 'button');
+    q.setAttribute('tabindex', '0');
+    q.setAttribute('aria-expanded', 'false');
+
+    const toggle = () => {
+      const parent = q.closest('.faq-item');
+      if (!parent) return;
+      const isOpen = parent.classList.contains('open');
+
+      // Close siblings in the same faq-list
+      const container = parent.parentElement;
+      if (container) {
+        container.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== parent) {
+            item.classList.remove('open');
+            const siblingQ = item.querySelector('.faq-question');
+            if (siblingQ) siblingQ.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      parent.classList.toggle('open', !isOpen);
+      q.setAttribute('aria-expanded', String(!isOpen));
+    };
+
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+
+  // Open first FAQ by default on initial load for instant context
+  const firstFaq = document.querySelector('.faq-item');
+  if (firstFaq) {
+    firstFaq.classList.add('open');
+    const firstQ = firstFaq.querySelector('.faq-question');
+    if (firstQ) firstQ.setAttribute('aria-expanded', 'true');
   }
 }
