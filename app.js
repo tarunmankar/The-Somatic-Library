@@ -11,9 +11,9 @@ let searchQuery = '';
 const INLINE_DATA = {
     "author": {
         "name": "Tarun Mankar",
-        "tagline": "Author & Multidisciplinary Creator · Somatic Psychology, Next-Gen Apps & Creative Media",
+        "tagline": "Author & Somatic Psychology Researcher · Lived Experience to Body-First Protocols",
         "photo": "assets/tarun_mankar.jpg",
-        "bio": "Tarun Mankar writes at the intersection of somatic psychology, polyvagal theory, and behavioral change — designing body-first books to calm acute survival alarms. Beyond authoring, Tarun is a multidisciplinary creator and builder who crafts next-generation applications, stunning modern websites, engaging cinematic videos, high-converting compelling ads, beautiful visual design, and immersive music.",
+        "bio": "For years, I lived trapped in my own nervous system — battling acute anxiety, sudden chest tightness, chronic overthinking, and the exhausting fog of mental burnout. Like many, I tried positive affirmations, mindfulness apps, and willpower, but none of it silenced the bodily alarms. That frustration led me into a relentless journey deep into somatic psychology, polyvagal neuroscience, and interoception — discovering that you cannot simply think your way out of a survival reflex stored in the body. The Somatic Library is born directly from that lived experience and scientific breakdown: body-first literature and practical real-time protocols crafted so that fellow overthinkers and sensitive bodies can finally feel grounded, calm, and sovereign.",
         "stats": {
             "books": "6",
             "audiobooks": "6",
