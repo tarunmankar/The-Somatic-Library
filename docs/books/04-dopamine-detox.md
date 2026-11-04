@@ -39,8 +39,8 @@ Constantly checking your phone, struggling to focus, or feeling mentally exhaust
 ---
 
 ## 🛒 Publishing Details & Retailer Store Links
-* **Amazon Kindle eBook:** https://mybook.to/B0HNXS4H2Q (ASIN: `B0HNXS4H2Q`)
-* **Amazon Paperback (Print):** https://mybook.to/B0HNXWCKQK (ASIN: `B0HNXWCKQK`)
+* **Amazon Kindle eBook:** https://www.amazon.com/dp/B0HNXS4H2Q (ASIN: `B0HNXS4H2Q`)
+* **Amazon Paperback (Print):** https://www.amazon.com/dp/B0HNXWCKQK (ASIN: `B0HNXWCKQK`)
 * **Google Play Books eBook:** https://play.google.com/store/books/details/Tarun_Mankar_Dopamine_Reset_and_Deep_Focus?id=jxcdEgAAQBAJ (ID: `jxcdEgAAQBAJ`)
 * **Google Play Audiobook:** https://play.google.com/store/audiobooks/details?id=AQAAAEBGAVhBDM (ID: `AQAAAEBGAVhBDM`)
 * **ElevenReader Audiobook:** https://elevenreader.io/audiobooks/dopamine-reset-and-deep-focus-audiobook/0OoDHxWEdG2lNNbpAUjY (ID: `0OoDHxWEdG2lNNbpAUjY`)

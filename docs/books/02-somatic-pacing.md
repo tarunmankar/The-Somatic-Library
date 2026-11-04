@@ -39,8 +39,8 @@ Stare at your screen for hours, physically exhausted yet mentally wired? Run on 
 ---
 
 ## 🛒 Publishing Details & Retailer Store Links
-* **Amazon Kindle eBook:** https://mybook.to/B0HN53MBXP (ASIN: `B0HN53MBXP`)
-* **Amazon Paperback (Print):** https://mybook.to/B0HN54HSS4 (ASIN: `B0HN54HSS4`)
+* **Amazon Kindle eBook:** https://www.amazon.com/dp/B0HN53MBXP (ASIN: `B0HN53MBXP`)
+* **Amazon Paperback (Print):** https://www.amazon.com/dp/B0HN54HSS4 (ASIN: `B0HN54HSS4`)
 * **Google Play Books eBook:** https://play.google.com/store/books/details/Tarun_Mankar_Somatic_Pacing?id=xXcbEgAAQBAJ (ID: `xXcbEgAAQBAJ`)
 * **Google Play Audiobook:** https://play.google.com/store/audiobooks/details?id=AQAAAEBGllTWAM (ID: `AQAAAEBGllTWAM`)
 * **ElevenReader Audiobook:** https://elevenreader.io/audiobooks/somatic-pacing-audiobook/oh8YwXf7nPdM42c4amjG (ID: `oh8YwXf7nPdM42c4amjG`)

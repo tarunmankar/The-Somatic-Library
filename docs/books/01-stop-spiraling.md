@@ -39,8 +39,8 @@ Check your phone constantly when a text goes unanswered? Overthink shifts in ton
 ---
 
 ## 🛒 Publishing Details & Retailer Store Links
-* **Amazon Kindle eBook:** https://mybook.to/B0HN23T4GD (ASIN: `B0HN23T4GD`)
-* **Amazon Paperback (Print):** https://mybook.to/B0HN2V5MK9 (ASIN: `B0HN2V5MK9`)
+* **Amazon Kindle eBook:** https://www.amazon.com/dp/B0HN23T4GD (ASIN: `B0HN23T4GD`)
+* **Amazon Paperback (Print):** https://www.amazon.com/dp/B0HN2V5MK9 (ASIN: `B0HN2V5MK9`)
 * **Google Play Books eBook:** https://play.google.com/store/books/details/Tarun_Mankar_Stop_Spiraling?id=QvkZEgAAQBAJ (ID: `QvkZEgAAQBAJ`)
 * **Google Play Audiobook:** https://play.google.com/store/audiobooks/details?id=AQAAAEBGJm1mOM (ID: `AQAAAEBGJm1mOM`)
 * **ElevenReader Audiobook:** https://elevenreader.io/audiobooks/stop-spiraling-audiobook/upo1o3x59kDS52xOIg6B (ID: `upo1o3x59kDS52xOIg6B`)

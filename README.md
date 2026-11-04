@@ -102,8 +102,8 @@ This is the **single source of truth** for all book data.
   "cover": "covers/filename.jpg",   ← Relative path to cover image
   "keywords": ["word1", "word2"],   ← Used by the search bar
   "links": {
-    "amazon_ebook":      "https://mybook.to/ASIN",
-    "amazon_paperback":  "https://mybook.to/PAPERBACK_ASIN",
+    "amazon_ebook":      "https://www.amazon.com/dp/ASIN",
+    "amazon_paperback":  "https://www.amazon.com/dp/PAPERBACK_ASIN",
     "google_ebook":      "https://play.google.com/store/books/details/...",
     "google_audio":      "https://play.google.com/store/audiobooks/details?id=...",
     "elevenreader":      "https://elevenreader.io/audiobooks/..."
@@ -218,10 +218,10 @@ The HTML is divided into these sections (in order):
 
 | # | Title | Amazon Kindle | Amazon PB | Google eBook | Google Audio | ElevenReader |
 |---|---|---|---|---|---|---|
-| 1 | **Stop Spiraling** | [Kindle](https://mybook.to/B0HN23T4GD) | [PB](https://mybook.to/B0HN2V5MK9) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Stop_Spiraling?id=QvkZEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGJm1mOM) | [Listen](https://elevenreader.io/audiobooks/stop-spiraling-audiobook/upo1o3x59kDS52xOIg6B) |
-| 2 | **Somatic Pacing** | [Kindle](https://mybook.to/B0HN53MBXP) | [PB](https://mybook.to/B0HN54HSS4) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Somatic_Pacing?id=xXcbEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGllTWAM) | [Listen](https://elevenreader.io/audiobooks/somatic-pacing-audiobook/oh8YwXf7nPdM42c4amjG) |
-| 3 | **Healing The Scarcity Mindset** | [Kindle](https://mybook.to/B0HNJVFK7S) | [PB](https://mybook.to/B0HNJYXX62) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Healing_The_Scarcity_Mindset?id=NZcbEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGfi8-eM) | [Listen](https://elevenreader.io/audiobooks/healing-the-scarcity-mindset-audiobook/gbsUy9RuUMREED5fuFTb) |
-| 4 | **Dopamine Reset and Deep Focus** | [Kindle](https://mybook.to/B0HNXS4H2Q) | [PB](https://mybook.to/B0HNXWCKQK) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Dopamine_Reset_and_Deep_Focus?id=jxcdEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGAVhBDM) | [Listen](https://elevenreader.io/audiobooks/dopamine-reset-and-deep-focus-audiobook/0OoDHxWEdG2lNNbpAUjY) |
+| 1 | **Stop Spiraling** | [Kindle](https://www.amazon.com/dp/B0HN23T4GD) | [PB](https://www.amazon.com/dp/B0HN2V5MK9) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Stop_Spiraling?id=QvkZEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGJm1mOM) | [Listen](https://elevenreader.io/audiobooks/stop-spiraling-audiobook/upo1o3x59kDS52xOIg6B) |
+| 2 | **Somatic Pacing** | [Kindle](https://www.amazon.com/dp/B0HN53MBXP) | [PB](https://www.amazon.com/dp/B0HN54HSS4) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Somatic_Pacing?id=xXcbEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGllTWAM) | [Listen](https://elevenreader.io/audiobooks/somatic-pacing-audiobook/oh8YwXf7nPdM42c4amjG) |
+| 3 | **Healing The Scarcity Mindset** | [Kindle](https://www.amazon.com/dp/B0HNJVFK7S) | [PB](https://www.amazon.com/dp/B0HNJYXX62) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Healing_The_Scarcity_Mindset?id=NZcbEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGfi8-eM) | [Listen](https://elevenreader.io/audiobooks/healing-the-scarcity-mindset-audiobook/gbsUy9RuUMREED5fuFTb) |
+| 4 | **Dopamine Reset and Deep Focus** | [Kindle](https://www.amazon.com/dp/B0HNXS4H2Q) | [PB](https://www.amazon.com/dp/B0HNXWCKQK) | [eBook](https://play.google.com/store/books/details/Tarun_Mankar_Dopamine_Reset_and_Deep_Focus?id=jxcdEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGAVhBDM) | [Listen](https://elevenreader.io/audiobooks/dopamine-reset-and-deep-focus-audiobook/0OoDHxWEdG2lNNbpAUjY) |
 | 5 | **The Courage to Disappoint** | [Kindle](https://www.amazon.com/dp/B0HP8D7JRT) | [PB](https://www.amazon.com/dp/B0HP8MQL2P/ref=tmm_pap_swatch_0) | [eBook](https://play.google.com/store/books/details?id=1WIhEgAAQBAJ) | [Audio](https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM) | [Listen](https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un) |
 
 ### ElevenReader-Only Audiobooks (12 additional titles)
@@ -271,8 +271,8 @@ Open `books_data.json` and add a new object to the `"books"` array:
   "cover": "covers/your_book_name.jpg",
   "keywords": ["keyword1", "keyword2", "keyword3"],
   "links": {
-    "amazon_ebook":      "https://mybook.to/YOUR_KINDLE_ASIN",
-    "amazon_paperback":  "https://mybook.to/YOUR_PAPERBACK_ASIN",
+    "amazon_ebook":      "https://www.amazon.com/dp/YOUR_KINDLE_ASIN",
+    "amazon_paperback":  "https://www.amazon.com/dp/YOUR_PAPERBACK_ASIN",
     "google_ebook":      "https://play.google.com/store/books/details/...",
     "google_audio":      "https://play.google.com/store/audiobooks/details?id=...",
     "elevenreader":      "https://elevenreader.io/audiobooks/your-book-slug/ID"

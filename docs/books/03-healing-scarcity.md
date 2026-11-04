@@ -39,8 +39,8 @@ Stare at your bank app, physically frozen with anxiety? Feel a tight chest when 
 ---
 
 ## 🛒 Publishing Details & Retailer Store Links
-* **Amazon Kindle eBook:** https://mybook.to/B0HNJVFK7S (ASIN: `B0HNJVFK7S`)
-* **Amazon Paperback (Print):** https://mybook.to/B0HNJYXX62 (ASIN: `B0HNJYXX62`)
+* **Amazon Kindle eBook:** https://www.amazon.com/dp/B0HNJVFK7S (ASIN: `B0HNJVFK7S`)
+* **Amazon Paperback (Print):** https://www.amazon.com/dp/B0HNJYXX62 (ASIN: `B0HNJYXX62`)
 * **Google Play Books eBook:** https://play.google.com/store/books/details/Tarun_Mankar_Healing_The_Scarcity_Mindset?id=NZcbEgAAQBAJ (ID: `NZcbEgAAQBAJ`)
 * **Google Play Audiobook:** https://play.google.com/store/audiobooks/details?id=AQAAAEBGfi8-eM (ID: `AQAAAEBGfi8-eM`)
 * **ElevenReader Audiobook:** https://elevenreader.io/audiobooks/healing-the-scarcity-mindset-audiobook/gbsUy9RuUMREED5fuFTb (ID: `gbsUy9RuUMREED5fuFTb`)

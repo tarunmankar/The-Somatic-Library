@@ -48,8 +48,8 @@ const INLINE_DATA = {
               "relationship"
           ],
           "links": {
-              "amazon_ebook": "https://mybook.to/B0HN23T4GD",
-              "amazon_paperback": "https://mybook.to/B0HN2V5MK9",
+              "amazon_ebook": "https://www.amazon.com/dp/B0HN23T4GD",
+              "amazon_paperback": "https://www.amazon.com/dp/B0HN2V5MK9",
               "google_ebook": "https://play.google.com/store/books/details/Tarun_Mankar_Stop_Spiraling?id=QvkZEgAAQBAJ",
               "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGJm1mOM",
               "elevenreader": "https://elevenreader.io/audiobooks/stop-spiraling-audiobook/upo1o3x59kDS52xOIg6B"
@@ -80,8 +80,8 @@ const INLINE_DATA = {
               "corporate"
           ],
           "links": {
-              "amazon_ebook": "https://mybook.to/B0HN53MBXP",
-              "amazon_paperback": "https://mybook.to/B0HN54HSS4",
+              "amazon_ebook": "https://www.amazon.com/dp/B0HN53MBXP",
+              "amazon_paperback": "https://www.amazon.com/dp/B0HN54HSS4",
               "google_ebook": "https://play.google.com/store/books/details/Tarun_Mankar_Somatic_Pacing?id=xXcbEgAAQBAJ",
               "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGllTWAM",
               "elevenreader": "https://elevenreader.io/audiobooks/somatic-pacing-audiobook/oh8YwXf7nPdM42c4amjG"
@@ -112,8 +112,8 @@ const INLINE_DATA = {
               "trauma"
           ],
           "links": {
-              "amazon_ebook": "https://mybook.to/B0HNJVFK7S",
-              "amazon_paperback": "https://mybook.to/B0HNJYXX62",
+              "amazon_ebook": "https://www.amazon.com/dp/B0HNJVFK7S",
+              "amazon_paperback": "https://www.amazon.com/dp/B0HNJYXX62",
               "google_ebook": "https://play.google.com/store/books/details/Tarun_Mankar_Healing_The_Scarcity_Mindset?id=NZcbEgAAQBAJ",
               "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGfi8-eM",
               "elevenreader": "https://elevenreader.io/audiobooks/healing-the-scarcity-mindset-audiobook/gbsUy9RuUMREED5fuFTb"
@@ -144,8 +144,8 @@ const INLINE_DATA = {
               "brain fog"
           ],
           "links": {
-              "amazon_ebook": "https://mybook.to/B0HNXS4H2Q",
-              "amazon_paperback": "https://mybook.to/B0HNXWCKQK",
+              "amazon_ebook": "https://www.amazon.com/dp/B0HNXS4H2Q",
+              "amazon_paperback": "https://www.amazon.com/dp/B0HNXWCKQK",
               "google_ebook": "https://play.google.com/store/books/details/Tarun_Mankar_Dopamine_Reset_and_Deep_Focus?id=jxcdEgAAQBAJ",
               "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGAVhBDM",
               "elevenreader": "https://elevenreader.io/audiobooks/dopamine-reset-and-deep-focus-audiobook/0OoDHxWEdG2lNNbpAUjY"

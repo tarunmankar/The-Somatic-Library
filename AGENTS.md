@@ -73,8 +73,8 @@ interface Book {
   cover: string;                 // Relative path: "covers/filename.jpg"
   keywords: string[];            // For search bar matching
   links: {
-    amazon_ebook: string;        // mybook.to universal redirect
-    amazon_paperback: string;    // mybook.to redirect
+    amazon_ebook: string;        // amazon.com/dp/ universal direct link
+    amazon_paperback: string;    // amazon.com/dp/ direct link
     google_ebook: string;        // play.google.com/store/books/details/...
     google_audio: string;        // play.google.com/store/audiobooks/details?id=...
     elevenreader: string;        // elevenreader.io/audiobooks/...
