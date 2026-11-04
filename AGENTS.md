@@ -195,21 +195,40 @@ Invoke-WebRequest -Uri "COVER_URL" -Headers $headers -OutFile "covers\book_name.
 
 ---
 
-## HOW TO ADD A NEW BOOK (AI TASK STEPS)
+## HOW TO ADD A NEW BOOK & COMPANION ARTICLE (AI TASK STEPS)
 
-When the user says "add Book 5" or "nai book add karo":
+When the user says "add Book 7", "nai book add karo", or provides links for upcoming books:
 
-**Step 1:** Download cover image
+**Step 1: Download High-Res Cover Image**
 ```powershell
 $headers = @{ "User-Agent" = "Mozilla/5.0" }
-Invoke-WebRequest -Uri "https://play.google.com/books/publisher/content/images/frontcover/{ID}?fife=w1200-h1800" -Headers $headers -OutFile "d:\my-apps\The-Somatic-Library\covers\new_book.jpg"
+Invoke-WebRequest -Uri "https://play.google.com/books/publisher/content/images/frontcover/{ID}?fife=w1200-h1800" -Headers $headers -OutFile "covers\new_book.jpg"
 ```
 
-**Step 2:** Edit `books_data.json` — append new book object to `"books"` array
+**Step 2: Update Data Sources (Dual Data Source Pattern)**
+- Append new book object to `books_data.json` (`"books"` array).
+- Append the EXACT SAME object to `INLINE_DATA.books` in `app.js`.
+- Ensure Amazon links are strictly official direct URLs: `https://www.amazon.com/dp/{ASIN}` (NEVER use mybook.to or shorteners).
 
-**Step 3:** Edit `app.js` — append the SAME object to `INLINE_DATA.books` array
+**Step 3: Write Companion SEO Somatic Article**
+- Create `articles/{slug}.html` addressing the book's core visceral emotional hook.
+- Include complete JSON-LD Schema (`Article`, `Book`, `FAQPage`).
+- Include the high-converting in-article book buy box.
+- Include interactive 4-item FAQ section for Google rich snippets.
 
-**Step 4:** If new category needed, add filter button to `index.html` in `#filter-tabs`
+**Step 4: Create Compressed 16:9 Featured Image**
+- Save lightweight WebP (< 80 KB) + JPG fallback to `assets/articles/{slug}.webp` and `.jpg`.
+
+**Step 5: Integrate into Article Hub & Storefront Teaser**
+- Add article card to `articles.html` inside `.articles-grid`.
+- Add article card to `index.html` inside `.articles-teaser-section .articles-grid`.
+- Update category counts in `index.html` `#filter-tabs`.
+
+**Step 6: Deploy**
+```bash
+git add . && git commit -m "feat: add Book X and companion SEO article" && git push origin main
+firebase deploy --only hosting
+```
 
 ---
 
