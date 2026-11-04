@@ -13,7 +13,7 @@ const INLINE_DATA = {
         "name": "Tarun Mankar",
         "tagline": "Practical Somatic Tools for Stress, Overthinking & Everyday Well-Being",
         "photo": "assets/tarun_mankar.jpg",
-        "bio": "Having experienced the real exhaustion of daily stress, overthinking, and burnout, I write practical, body-first guides to help people regulate their nervous systems. Rather than heavy theory, I share simple 60-second somatic resets and everyday tools to help you feel calm, grounded, and clear-headed.",
+        "bio": "After years of struggling with chronic stress, brain fog, and relentless overthinking, I immersed myself in behavioral neuroscience and somatic psychology research. Discovering that real calm starts with the body first, I created The Somatic Library to share simple, battle-tested 60-second resets that quiet mental loops, release burnout, and bring your nervous system back to safety.",
         "stats": {
             "books": "6",
             "audiobooks": "6",
