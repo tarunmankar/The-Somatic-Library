@@ -623,7 +623,7 @@ function renderBooks(books) {
             <a href="${book.links.amazon_ebook}" target="_blank" rel="noopener"
                class="card-btn-amazon-direct"
                onclick="event.stopPropagation()"
-               aria-label="Buy on Amazon Kindle 1-Click — ${book.title}">
+               aria-label="Buy on Amazon (1-Click) — ${book.title}">
               <span class="btn-icon">⚡</span> Buy on Amazon (1-Click) ↗
             </a>
           ` : ''}
