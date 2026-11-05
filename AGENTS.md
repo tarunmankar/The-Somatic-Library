@@ -219,9 +219,8 @@ Invoke-WebRequest -Uri "https://play.google.com/books/publisher/content/images/f
 **Step 4: Create Compressed 16:9 Featured Image**
 - Save lightweight WebP (< 80 KB) + JPG fallback to `assets/articles/{slug}.webp` and `.jpg`.
 
-**Step 5: Integrate into Article Hub & Storefront Teaser**
+**Step 5: Integrate into Article/Blog Hub**
 - Add article card to `articles.html` inside `.articles-grid`.
-- Add article card to `index.html` inside `.articles-teaser-section .articles-grid`.
 - Update category counts in `index.html` `#filter-tabs`.
 
 **Step 6: Deploy**
