@@ -520,6 +520,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initMobileNav();
   initFaqAccordion();
   initBookHashRouting();
+  initMobileStickyBar();
 });
 
 /* ── LOAD DATA (tries JSON first, falls back to inline) ── */
@@ -581,6 +582,7 @@ function renderBooks(books) {
       <span id="book-${book.id}" style="position:absolute;top:-80px;visibility:hidden;height:0;"></span>
       <span id="book-card-${book.id}" style="position:absolute;top:-80px;visibility:hidden;height:0;"></span>
       <div class="card-cover-wrap">
+        ${book.id === 1 ? '<span class="bestseller-ribbon">🔥 #1 Bestseller · Start Here</span>' : ''}
         <img
           class="card-cover"
           src="${book.cover}"
@@ -617,12 +619,19 @@ function renderBooks(books) {
           <p class="card-hook">"${book.hook}"</p>
         </div>
         <div class="card-actions">
-          <button class="card-btn-buy"
+          ${book.links.amazon_ebook ? `
+            <a href="${book.links.amazon_ebook}" target="_blank" rel="noopener"
+               class="card-btn-amazon-direct"
+               onclick="event.stopPropagation()"
+               aria-label="Buy on Amazon Kindle 1-Click — ${book.title}">
+              <span class="btn-icon">⚡</span> Buy on Amazon (1-Click) ↗
+            </a>
+          ` : ''}
+          <button class="card-btn-options"
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
-            aria-label="Get Book / Listen Now — ${book.title}">
-            <span class="btn-icon">📖</span> 
-            Get Book / Listen Now
+            aria-label="Quick Look & Audio — ${book.title}">
+            <span class="btn-icon">📖</span> Quick Look &amp; Audio
           </button>
         </div>
       </div>
@@ -1017,7 +1026,7 @@ function initBookHashRouting() {
     if (!raw) return;
     
     // Ignore general page anchors
-    if (['books', 'articles-teaser', 'trust-features', 'faq', 'hero', 'search'].includes(raw)) {
+    if (['books', 'articles-teaser', 'trust-features', 'faq', 'hero', 'search', 'struggle-matcher', 'reader-proof'].includes(raw)) {
       return;
     }
     
@@ -1071,3 +1080,40 @@ function copyCurrentBookLink() {
     prompt('Copy shareable link:', shareUrl);
   }
 }
+
+/* ── 1-TAP STRUGGLE SELECTOR (High-Converting Ad Funnel) ── */
+function selectStruggle(bookId, slug) {
+  const targetId = slug || `book-${bookId}`;
+  const el = document.getElementById(targetId) || document.getElementById(`book-${bookId}`) || document.getElementById(`book-card-${bookId}`);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.classList.add('highlight-card');
+    setTimeout(() => el.classList.remove('highlight-card'), 2400);
+    setTimeout(() => openModal(bookId), 500);
+  } else {
+    openModal(bookId);
+  }
+}
+window.selectStruggle = selectStruggle;
+
+/* ── MOBILE STICKY BUY BAR ── */
+function initMobileStickyBar() {
+  const stickyBar = document.getElementById('mobile-sticky-bar');
+  if (!stickyBar) return;
+  
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 400) {
+          stickyBar.classList.add('visible');
+        } else {
+          stickyBar.classList.remove('visible');
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+}
+window.initMobileStickyBar = initMobileStickyBar;
