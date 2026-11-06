@@ -5,8 +5,8 @@
     "photo": "assets/tarun_mankar.jpg",
     "bio": "For years, I dealt with everyday stress, constant overthinking, and mental exhaustion. That led me to deeply research behavioral neuroscience and somatic psychology. I created The Somatic Library to share practical, fluff-free guides and 60-second body resets that quiet racing thoughts and bring genuine balance to everyday life.",
     "stats": {
-      "books": "6",
-      "audiobooks": "6",
+      "books": "8",
+      "audiobooks": "8",
       "platforms": "3"
     },
     "profiles": {
@@ -207,6 +207,72 @@
       "rating": 4.8,
       "reviews_count": 134,
       "slug": "wired-for-security"
+    },
+    {
+      "id": 7,
+      "title": "Mastering the Emotional Storm",
+      "subtitle": "Taming Emotional Flooding, Calming Instant Reactivity, and Finding Grounding Under Pressure",
+      "hook": "Minor annoyances make your blood boil in seconds?",
+      "hook_sub": "Your body floods with adrenaline before your logical brain can speak — learn the 90-second vagal brake.",
+      "description": "Your somatic, science-backed roadmap to regaining complete self-command. Reveals how to halt emotional flooding at the neurochemical level before it dictates your words. Detect subtle bodily warning signs, cool down sympathetic surges in ninety seconds with vagal resets, and replace instant defensiveness with unshakable inner poise.",
+      "category": "emotional",
+      "category_label": "Emotional Regulation",
+      "cover": "covers/mastering_the_storm.jpg",
+      "keywords": [
+        "anger",
+        "emotional flooding",
+        "reactivity",
+        "temper",
+        "defensiveness",
+        "amygdala hijack",
+        "calm",
+        "rage",
+        "freeze",
+        "somatic reset"
+      ],
+      "links": {
+        "amazon_ebook": "https://www.amazon.com/dp/B0HQ4NXMK3",
+        "amazon_paperback": "https://www.amazon.com/dp/B0HQ4QCGGS",
+        "google_ebook": "https://play.google.com/store/books/details?id=59glEgAAQBAJ",
+        "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEDGDD5M6M",
+        "elevenreader": "https://elevenreader.io/audiobooks/mastering-the-emotional-storm-audiobook/5Y6hOQqRHU1zSc4a2vid"
+      },
+      "rating": 4.9,
+      "reviews_count": 158,
+      "slug": "mastering-the-emotional-storm"
+    },
+    {
+      "id": 8,
+      "title": "The Procrastination Loop",
+      "subtitle": "Breaking the Cycle of Delay, Self-Sabotage, and the Fear Hidden Underneath",
+      "hook": "You keep telling yourself you'll start tomorrow.",
+      "hook_sub": "It's not a discipline problem. Avoidance is a nervous system freeze response to perceived threat.",
+      "description": "The emotional and neurological truth behind chronic delay: it is not a time problem, it is a fear problem. Through somatic tools, psychological clarity, and a compassionate identity reset, this book breaks the avoidance-shame cycle at its root — and helps you finally become someone who starts, finishes, and follows through.",
+      "category": "focus",
+      "category_label": "Focus & Flow",
+      "cover": "covers/procrastination_loop.jpg",
+      "keywords": [
+        "procrastination",
+        "delay",
+        "freeze",
+        "avoidance",
+        "focus",
+        "dopamine",
+        "self sabotage",
+        "perfectionism",
+        "start",
+        "discipline"
+      ],
+      "links": {
+        "amazon_ebook": "https://www.amazon.com/dp/B0H2SLPQG9",
+        "amazon_paperback": "",
+        "google_ebook": "https://play.google.com/store/books/details?id=ghknEgAAQBAJ",
+        "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEDGgkjCnM",
+        "elevenreader": "https://elevenreader.io/audiobooks/the-procrastination-loop-audiobook/J6A32ugNYybFvpQ6Yn4e"
+      },
+      "rating": 4.8,
+      "reviews_count": 147,
+      "slug": "the-procrastination-loop"
     }
   ],
   "upcoming_books": [

@@ -15,8 +15,8 @@ const INLINE_DATA = {
         "photo": "assets/tarun_mankar.jpg",
         "bio": "For years, I dealt with everyday stress, constant overthinking, and mental exhaustion. That led me to deeply research behavioral neuroscience and somatic psychology. I created The Somatic Library to share practical, fluff-free guides and 60-second body resets that quiet racing thoughts and bring genuine balance to everyday life.",
         "stats": {
-            "books": "6",
-            "audiobooks": "6",
+            "books": "8",
+            "audiobooks": "8",
             "platforms": "3"
         },
         "profiles": {
@@ -28,7 +28,6 @@ const INLINE_DATA = {
     "books": [
         {
             "id": 1,
-            "slug": "stop-spiraling",
             "title": "Stop Spiraling",
             "subtitle": "The Anxiously Attached Person's Daily Toolkit for Calmer Relationships",
             "hook": "Sent a text 45 minutes ago and your chest is still burning?",
@@ -56,11 +55,11 @@ const INLINE_DATA = {
                 "elevenreader": "https://elevenreader.io/audiobooks/stop-spiraling-audiobook/upo1o3x59kDS52xOIg6B"
             },
             "rating": 4.9,
-            "reviews_count": 184
+            "reviews_count": 184,
+            "slug": "stop-spiraling"
         },
         {
             "id": 2,
-            "slug": "somatic-pacing",
             "title": "Somatic Pacing",
             "subtitle": "The High-Achiever's Daily Guide to Reclaiming Focus and Energy Without Burning Out",
             "hook": "Why that 3 PM espresso is making your brain fog worse, not better.",
@@ -89,11 +88,11 @@ const INLINE_DATA = {
                 "elevenreader": "https://elevenreader.io/audiobooks/somatic-pacing-audiobook/oh8YwXf7nPdM42c4amjG"
             },
             "rating": 4.8,
-            "reviews_count": 142
+            "reviews_count": 142,
+            "slug": "somatic-pacing"
         },
         {
             "id": 3,
-            "slug": "healing-the-scarcity-mindset",
             "title": "Healing The Scarcity Mindset",
             "subtitle": "A Daily Guide to Releasing Money Anxiety and Rewiring Your Scarcity Trauma",
             "hook": "Checking your bank balance makes you feel physically sick?",
@@ -122,11 +121,11 @@ const INLINE_DATA = {
                 "elevenreader": "https://elevenreader.io/audiobooks/healing-the-scarcity-mindset-audiobook/gbsUy9RuUMREED5fuFTb"
             },
             "rating": 4.9,
-            "reviews_count": 216
+            "reviews_count": 216,
+            "slug": "healing-the-scarcity-mindset"
         },
         {
             "id": 4,
-            "slug": "dopamine-reset-and-deep-focus",
             "title": "Dopamine Reset and Deep Focus",
             "subtitle": "Reclaiming Attention, Ending Brain Fog, and Mastering Unshakable Discipline",
             "hook": "Why you can't read 3 pages without picking up your phone.",
@@ -155,11 +154,11 @@ const INLINE_DATA = {
                 "elevenreader": "https://elevenreader.io/audiobooks/dopamine-reset-and-deep-focus-audiobook/0OoDHxWEdG2lNNbpAUjY"
             },
             "rating": 4.7,
-            "reviews_count": 168
+            "reviews_count": 168,
+            "slug": "dopamine-reset-and-deep-focus"
         },
         {
             "id": 5,
-            "slug": "the-courage-to-disappoint",
             "title": "The Courage to Disappoint",
             "subtitle": "Choosing Your Peace Over People's Expectations",
             "hook": "You say yes when your entire body is screaming no.",
@@ -186,11 +185,11 @@ const INLINE_DATA = {
                 "elevenreader": "https://elevenreader.io/audiobooks/the-courage-to-disappoint-audiobook/FMq4yPQj8BY1CcSaafeA"
             },
             "rating": 4.9,
-            "reviews_count": 195
+            "reviews_count": 195,
+            "slug": "the-courage-to-disappoint"
         },
         {
             "id": 6,
-            "slug": "wired-for-security",
             "title": "Wired for Security",
             "subtitle": "Rewiring Anxious Attachment, Silencing Relationship Hypervigilance, and Finding Peace in Love",
             "hook": "An unanswered text sends you into a spiral of panic?",
@@ -216,7 +215,74 @@ const INLINE_DATA = {
                 "elevenreader": "https://elevenreader.io/audiobooks/wired-for-security-audiobook/We5ZO64fc78yTgapRRMp"
             },
             "rating": 4.8,
-            "reviews_count": 134
+            "reviews_count": 134,
+            "slug": "wired-for-security"
+        },
+        {
+            "id": 7,
+            "title": "Mastering the Emotional Storm",
+            "subtitle": "Taming Emotional Flooding, Calming Instant Reactivity, and Finding Grounding Under Pressure",
+            "hook": "Minor annoyances make your blood boil in seconds?",
+            "hook_sub": "Your body floods with adrenaline before your logical brain can speak — learn the 90-second vagal brake.",
+            "description": "Your somatic, science-backed roadmap to regaining complete self-command. Reveals how to halt emotional flooding at the neurochemical level before it dictates your words. Detect subtle bodily warning signs, cool down sympathetic surges in ninety seconds with vagal resets, and replace instant defensiveness with unshakable inner poise.",
+            "category": "emotional",
+            "category_label": "Emotional Regulation",
+            "cover": "covers/mastering_the_storm.jpg",
+            "keywords": [
+                "anger",
+                "emotional flooding",
+                "reactivity",
+                "temper",
+                "defensiveness",
+                "amygdala hijack",
+                "calm",
+                "rage",
+                "freeze",
+                "somatic reset"
+            ],
+            "links": {
+                "amazon_ebook": "https://www.amazon.com/dp/B0HQ4NXMK3",
+                "amazon_paperback": "https://www.amazon.com/dp/B0HQ4QCGGS",
+                "google_ebook": "https://play.google.com/store/books/details?id=59glEgAAQBAJ",
+                "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEDGDD5M6M",
+                "elevenreader": "https://elevenreader.io/audiobooks/mastering-the-emotional-storm-audiobook/5Y6hOQqRHU1zSc4a2vid"
+            },
+            "rating": 4.9,
+            "reviews_count": 158,
+            "slug": "mastering-the-emotional-storm"
+        },
+        {
+            "id": 8,
+            "title": "The Procrastination Loop",
+            "subtitle": "Breaking the Cycle of Delay, Self-Sabotage, and the Fear Hidden Underneath",
+            "hook": "You keep telling yourself you'll start tomorrow.",
+            "hook_sub": "It's not a discipline problem. Avoidance is a nervous system freeze response to perceived threat.",
+            "description": "The emotional and neurological truth behind chronic delay: it is not a time problem, it is a fear problem. Through somatic tools, psychological clarity, and a compassionate identity reset, this book breaks the avoidance-shame cycle at its root — and helps you finally become someone who starts, finishes, and follows through.",
+            "category": "focus",
+            "category_label": "Focus & Flow",
+            "cover": "covers/procrastination_loop.jpg",
+            "keywords": [
+                "procrastination",
+                "delay",
+                "freeze",
+                "avoidance",
+                "focus",
+                "dopamine",
+                "self sabotage",
+                "perfectionism",
+                "start",
+                "discipline"
+            ],
+            "links": {
+                "amazon_ebook": "https://www.amazon.com/dp/B0H2SLPQG9",
+                "amazon_paperback": "",
+                "google_ebook": "https://play.google.com/store/books/details?id=ghknEgAAQBAJ",
+                "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEDGgkjCnM",
+                "elevenreader": "https://elevenreader.io/audiobooks/the-procrastination-loop-audiobook/J6A32ugNYybFvpQ6Yn4e"
+            },
+            "rating": 4.8,
+            "reviews_count": 147,
+            "slug": "the-procrastination-loop"
         }
     ],
     "upcoming_books": [
@@ -1036,7 +1102,9 @@ function initBookHashRouting() {
       '3': 3, 'book-3': 3, 'scarcity-mindset': 3, 'healing-the-scarcity-mindset': 3,
       '4': 4, 'book-4': 4, 'dopamine-reset': 4, 'dopamine-reset-and-deep-focus': 4,
       '5': 5, 'book-5': 5, 'courage-to-disappoint': 5, 'the-courage-to-disappoint': 5,
-      '6': 6, 'book-6': 6, 'wired-for-security': 6
+      '6': 6, 'book-6': 6, 'wired-for-security': 6,
+      '7': 7, 'book-7': 7, 'mastering-the-emotional-storm': 7, 'emotional-storm': 7,
+      '8': 8, 'book-8': 8, 'the-procrastination-loop': 8, 'procrastination-loop': 8
     };
     
     const bookId = slugMap[raw];

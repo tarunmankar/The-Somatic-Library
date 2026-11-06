@@ -48,7 +48,7 @@
 
   <!-- Typography: Outfit + Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=3.4" />
+  <link rel="stylesheet" href="style.css?v=3.5" />
 
   <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
   <script type="application/ld+json">
@@ -249,7 +249,7 @@
           <span class="logo-text">The Somatic Library</span>
         </a>
         <div class="nav-links">
-          <a href="#books" id="nav-books-link">Catalog (6)</a>
+          <a href="#books" id="nav-books-link">Catalog (8)</a>
           <a href="articles.html" id="nav-articles-link">Blogs</a>
           <a href="#trust-features" id="nav-features-link">Why Body-First</a>
           <a href="about.html" id="nav-author-link">About Author</a>
@@ -298,7 +298,7 @@
               <span class="btn-icon">⚡</span> Find My Somatic Book ↓
             </a>
             <a href="#books" class="btn-ghost" id="hero-browse-btn">
-              <span class="btn-icon">📖</span> Browse All 6 Titles
+              <span class="btn-icon">📖</span> Browse All 8 Titles
             </a>
           </div>
 
@@ -399,6 +399,24 @@
             </div>
             <span class="struggle-arrow">Book 6 →</span>
           </button>
+
+          <button class="struggle-card" onclick="selectStruggle(7, 'mastering-the-emotional-storm')">
+            <div class="struggle-icon">🌋</div>
+            <div class="struggle-text">
+              <strong>Explosive Anger &amp; Emotional Flooding</strong>
+              <span>Minor annoyances make blood boil, instant defensiveness</span>
+            </div>
+            <span class="struggle-arrow">Book 7 →</span>
+          </button>
+
+          <button class="struggle-card" onclick="selectStruggle(8, 'the-procrastination-loop')">
+            <div class="struggle-icon">⏳</div>
+            <div class="struggle-text">
+              <strong>Chronic Delay &amp; Freeze Avoidance</strong>
+              <span>Staring at the task, dreading starting, avoidance shame cycle</span>
+            </div>
+            <span class="struggle-arrow">Book 8 →</span>
+          </button>
         </div>
       </div>
     </section>
@@ -406,12 +424,12 @@
     <!-- STATS BAR -->
     <div class="stats-bar" id="stats-bar" role="region" aria-label="Storefront Statistics">
       <div class="stat-item">
-        <span class="stat-num" id="stat-books">6</span>
+        <span class="stat-num" id="stat-books">8</span>
         <span class="stat-label">Published Titles</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
-        <span class="stat-num" id="stat-audio">6</span>
+        <span class="stat-num" id="stat-audio">8</span>
         <span class="stat-label">Audiobooks</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
@@ -452,11 +470,12 @@
       <!-- Category Filter Tabs with count tags -->
       <div class="filter-container">
         <div class="filter-tabs" id="filter-tabs" role="tablist" aria-label="Filter books by category">
-          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all" id="filter-all" onclick="filterBooks('all')">All Titles (6)</button>
+          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all" id="filter-all" onclick="filterBooks('all')">All Titles (8)</button>
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="anxiety" id="filter-anxiety" onclick="filterBooks('anxiety')">Anxiety &amp; Attachment (3)</button>
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="burnout" id="filter-burnout" onclick="filterBooks('burnout')">Burnout &amp; Energy (1)</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="focus" id="filter-focus" onclick="filterBooks('focus')">Dopamine &amp; Focus (1)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="focus" id="filter-focus" onclick="filterBooks('focus')">Dopamine &amp; Focus (2)</button>
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="money" id="filter-money" onclick="filterBooks('money')">Money &amp; Scarcity (1)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="emotional" id="filter-emotional" onclick="filterBooks('emotional')">Emotional Regulation (1)</button>
         </div>
       </div>
 
@@ -770,7 +789,108 @@
           </div>
         </article>
 
-      </div>
+              <article class="book-card" id="mastering-the-emotional-storm" data-slug="mastering-the-emotional-storm" data-book-id="7"
+                 onclick="openModal(7)"
+                 aria-label="Mastering the Emotional Storm by Tarun Mankar">
+          <div class="card-cover-wrap">
+            <img
+              class="card-cover"
+              src="covers/mastering_the_storm.jpg"
+              alt="Mastering the Emotional Storm Book Cover — Somatic Psychology by Tarun Mankar"
+              loading="lazy"
+            />
+            <div class="card-overlay">
+              <span class="overlay-badge">Available on Amazon &amp; Google Play</span>
+              <button class="overlay-btn" onclick="event.stopPropagation();openModal(7)">
+                📖 Read on Kindle / Buy
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-line">
+              <span class="card-cat-badge">Emotional Regulation</span>
+              <span class="card-format-tag live">
+                Kindle · Print · Audio
+              </span>
+            </div>
+            <div class="card-rating-line">
+              <span class="card-stars">★★★★★</span>
+              <span class="card-rating-score">4.9</span>
+              <span class="card-rating-count">(158)</span>
+            </div>
+            <h3 class="card-title">Mastering the Emotional Storm</h3>
+            <p class="card-subtitle">Taming Emotional Flooding, Calming Instant Reactivity, and Finding Grounding Under Pressure</p>
+            <div class="card-hook-wrap">
+              <p class="card-hook">"Minor annoyances make your blood boil in seconds?"</p>
+            </div>
+            <div class="card-actions">
+              <a href="https://www.amazon.com/dp/B0HQ4NXMK3" target="_blank" rel="noopener"
+                 class="card-btn-amazon-direct"
+                 onclick="event.stopPropagation()"
+                 aria-label="Buy on Amazon (1-Click) — Mastering the Emotional Storm">
+                <span class="btn-icon">⚡</span> Buy on Amazon (1-Click) ↗
+              </a>
+              <button class="card-btn-options"
+                id="buy-btn-7"
+                onclick="event.stopPropagation();openModal(7)"
+                aria-label="Quick Look & Audio — Mastering the Emotional Storm">
+                <span class="btn-icon">📖</span> Quick Look &amp; Audio
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" id="the-procrastination-loop" data-slug="the-procrastination-loop" data-book-id="8"
+                 onclick="openModal(8)"
+                 aria-label="The Procrastination Loop by Tarun Mankar">
+          <div class="card-cover-wrap">
+            <img
+              class="card-cover"
+              src="covers/procrastination_loop.jpg"
+              alt="The Procrastination Loop Book Cover — Somatic Psychology by Tarun Mankar"
+              loading="lazy"
+            />
+            <div class="card-overlay">
+              <span class="overlay-badge">Available on Amazon &amp; Google Play</span>
+              <button class="overlay-btn" onclick="event.stopPropagation();openModal(8)">
+                📖 Read on Kindle / Buy
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-line">
+              <span class="card-cat-badge">Focus & Flow</span>
+              <span class="card-format-tag live">
+                Kindle · Audio
+              </span>
+            </div>
+            <div class="card-rating-line">
+              <span class="card-stars">★★★★★</span>
+              <span class="card-rating-score">4.8</span>
+              <span class="card-rating-count">(147)</span>
+            </div>
+            <h3 class="card-title">The Procrastination Loop</h3>
+            <p class="card-subtitle">Breaking the Cycle of Delay, Self-Sabotage, and the Fear Hidden Underneath</p>
+            <div class="card-hook-wrap">
+              <p class="card-hook">"You keep telling yourself you'll start tomorrow."</p>
+            </div>
+            <div class="card-actions">
+              <a href="https://www.amazon.com/dp/B0H2SLPQG9" target="_blank" rel="noopener"
+                 class="card-btn-amazon-direct"
+                 onclick="event.stopPropagation()"
+                 aria-label="Buy on Amazon (1-Click) — The Procrastination Loop">
+                <span class="btn-icon">⚡</span> Buy on Amazon (1-Click) ↗
+              </a>
+              <button class="card-btn-options"
+                id="buy-btn-8"
+                onclick="event.stopPropagation();openModal(8)"
+                aria-label="Quick Look & Audio — The Procrastination Loop">
+                <span class="btn-icon">📖</span> Quick Look &amp; Audio
+              </button>
+            </div>
+          </div>
+        </article>
+</div>
 
       <div class="no-results" id="no-results" style="display:none" role="status">
         <p>No books matched your search. Try typing "anxiety", "freeze", "phone", or "burnout".</p>
@@ -942,6 +1062,6 @@
     </div>
   </aside>
 
-  <script src="app.js?v=3.4"></script>
+  <script src="app.js?v=3.5"></script>
 </body>
 </html>
