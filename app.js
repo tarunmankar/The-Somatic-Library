@@ -764,15 +764,57 @@ function applyFilters() {
   renderBooks(filtered);
 }
 
-/* ── MODAL (Kindle First Priority + Uncropped Cover) ── */
+/* ── MODAL STATE TRACKING (Browser Back Button & Deep Linking Support) ── */
+let currentOpenBookId = null;
+let isModalOpen = false;
+let modalHistoryPushed = false;
+
+/* ── DOM CLOSE (Visual and State Reset without History Navigation) ── */
+function closeModalDom() {
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  currentOpenBookId = null;
+  isModalOpen = false;
+  modalHistoryPushed = false;
+  if (history.replaceState && window.location.hash && !window.location.hash.startsWith('#books')) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+}
+
+/* ── UI CLOSE (Invoked by Close Button, Backdrop Click, or Escape Key) ── */
+function closeModal() {
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+
+  if (isModalOpen && modalHistoryPushed) {
+    modalHistoryPushed = false;
+    isModalOpen = false;
+    currentOpenBookId = null;
+    history.back();
+  } else {
+    closeModalDom();
+  }
+}
+
+/* ── MODAL (Kindle First Priority + Uncropped Cover + History Push) ── */
 function openModal(bookId, updateHash = true) {
   const book = allBooks.find(b => b.id === bookId);
   if (!book) return;
   currentOpenBookId = bookId;
+  isModalOpen = true;
   
-  if (updateHash && history.replaceState) {
-    const slug = book.slug || getBookSlug(book);
-    history.replaceState(null, '', '#' + slug);
+  const slug = book.slug || getBookSlug(book);
+  const targetHash = '#' + slug;
+
+  if (updateHash && history.pushState) {
+    if (window.location.hash !== targetHash) {
+      history.pushState({ modalBookId: bookId }, '', targetHash);
+      modalHistoryPushed = true;
+    } else {
+      modalHistoryPushed = true;
+    }
   }
 
   const modalCover = document.getElementById('modal-cover');
@@ -935,15 +977,7 @@ function buildBuyOptions(links, bookTitle) {
   return options.join('');
 }
 
-function closeModal() {
-  const overlay = document.getElementById('modal-overlay');
-  if (overlay) overlay.classList.remove('open');
-  document.body.style.overflow = '';
-  currentOpenBookId = null;
-  if (history.replaceState && window.location.hash && !window.location.hash.startsWith('#books')) {
-    history.replaceState(null, '', window.location.pathname + window.location.search);
-  }
-}
+
 
 function initKeyboardClose() {
   document.addEventListener('keydown', e => {
@@ -1071,8 +1105,6 @@ function initFaqAccordion() {
 }
 
 /* ── BOOK SLUG & HASH DEEP-LINKING ── */
-let currentOpenBookId = null;
-
 function getBookSlug(book) {
   if (book && book.slug) return book.slug;
   const slugs = {
@@ -1081,34 +1113,51 @@ function getBookSlug(book) {
     3: "healing-the-scarcity-mindset",
     4: "dopamine-reset-and-deep-focus",
     5: "the-courage-to-disappoint",
-    6: "wired-for-security"
+    6: "wired-for-security",
+    7: "mastering-the-emotional-storm",
+    8: "the-procrastination-loop"
   };
   return book ? (slugs[book.id] || `book-${book.id}`) : '';
 }
 
 function initBookHashRouting() {
-  function checkHash() {
+  const slugMap = {
+    '1': 1, 'book-1': 1, 'stop-spiraling': 1,
+    '2': 2, 'book-2': 2, 'somatic-pacing': 2,
+    '3': 3, 'book-3': 3, 'scarcity-mindset': 3, 'healing-the-scarcity-mindset': 3,
+    '4': 4, 'book-4': 4, 'dopamine-reset': 4, 'dopamine-reset-and-deep-focus': 4,
+    '5': 5, 'book-5': 5, 'courage-to-disappoint': 5, 'the-courage-to-disappoint': 5,
+    '6': 6, 'book-6': 6, 'wired-for-security': 6,
+    '7': 7, 'book-7': 7, 'mastering-the-emotional-storm': 7, 'emotional-storm': 7,
+    '8': 8, 'book-8': 8, 'the-procrastination-loop': 8, 'procrastination-loop': 8
+  };
+
+  function checkHash(isInitial = false) {
     const raw = window.location.hash.toLowerCase().replace('#', '').trim();
-    if (!raw) return;
     
-    // Ignore general page anchors
-    if (['books', 'articles-teaser', 'trust-features', 'faq', 'hero', 'search', 'struggle-matcher', 'reader-proof'].includes(raw)) {
+    // If hash was removed or is empty, close the open modal
+    if (!raw) {
+      if (isModalOpen) closeModalDom();
       return;
     }
     
-    const slugMap = {
-      '1': 1, 'book-1': 1, 'stop-spiraling': 1,
-      '2': 2, 'book-2': 2, 'somatic-pacing': 2,
-      '3': 3, 'book-3': 3, 'scarcity-mindset': 3, 'healing-the-scarcity-mindset': 3,
-      '4': 4, 'book-4': 4, 'dopamine-reset': 4, 'dopamine-reset-and-deep-focus': 4,
-      '5': 5, 'book-5': 5, 'courage-to-disappoint': 5, 'the-courage-to-disappoint': 5,
-      '6': 6, 'book-6': 6, 'wired-for-security': 6,
-      '7': 7, 'book-7': 7, 'mastering-the-emotional-storm': 7, 'emotional-storm': 7,
-      '8': 8, 'book-8': 8, 'the-procrastination-loop': 8, 'procrastination-loop': 8
-    };
+    // Ignore general page anchors
+    if (['books', 'articles-teaser', 'trust-features', 'faq', 'hero', 'search', 'struggle-matcher', 'reader-proof'].includes(raw)) {
+      if (isModalOpen) closeModalDom();
+      return;
+    }
     
     const bookId = slugMap[raw];
     if (bookId) {
+      // If landing directly on book hash (e.g. from an ad or shared link):
+      // Prepare history stack so that pressing browser Back button returns to the home page instead of exiting the site!
+      if (isInitial && history.replaceState && history.pushState) {
+        const cleanUrl = window.location.pathname + window.location.search;
+        history.replaceState({ page: 'home' }, '', cleanUrl);
+        history.pushState({ modalBookId: bookId }, '', '#' + raw);
+        modalHistoryPushed = true;
+      }
+      
       setTimeout(() => {
         const el = document.getElementById(raw) || document.getElementById(`book-${bookId}`) || document.getElementById(`book-card-${bookId}`);
         if (el) {
@@ -1117,12 +1166,41 @@ function initBookHashRouting() {
           setTimeout(() => el.classList.remove('highlight-card'), 2200);
         }
         openModal(bookId, false);
-      }, 350);
+        modalHistoryPushed = true;
+      }, isInitial ? 350 : 50);
+    } else {
+      if (isModalOpen) closeModalDom();
     }
   }
-  
-  checkHash();
-  window.addEventListener('hashchange', checkHash);
+
+  // Handle browser / mobile device Back & Forward buttons
+  window.addEventListener('popstate', (e) => {
+    if (isModalOpen) {
+      // If forward/backward navigated to another book modal
+      if (e.state && e.state.modalBookId) {
+        openModal(e.state.modalBookId, false);
+      } else {
+        // Back button was pressed: close popup and stay on page!
+        closeModalDom();
+      }
+    } else {
+      // If navigating forward to a book modal
+      if (e.state && e.state.modalBookId) {
+        openModal(e.state.modalBookId, false);
+      } else {
+        const raw = window.location.hash.toLowerCase().replace('#', '').trim();
+        if (slugMap[raw]) {
+          openModal(slugMap[raw], false);
+        }
+      }
+    }
+  });
+
+  window.addEventListener('hashchange', () => {
+    checkHash(false);
+  });
+
+  checkHash(true);
 }
 
 function copyCurrentBookLink() {
@@ -1185,3 +1263,6 @@ function initMobileStickyBar() {
   }, { passive: true });
 }
 window.initMobileStickyBar = initMobileStickyBar;
+window.openModal = openModal;
+window.closeModal = closeModal;
+window.closeModalDom = closeModalDom;
