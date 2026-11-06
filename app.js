@@ -275,7 +275,7 @@ const INLINE_DATA = {
             ],
             "links": {
                 "amazon_ebook": "https://www.amazon.com/dp/B0H2SLPQG9",
-                "amazon_paperback": "",
+                "amazon_paperback": "https://www.amazon.com/dp/B0HQDLSJDM",
                 "google_ebook": "https://play.google.com/store/books/details?id=ghknEgAAQBAJ",
                 "google_audio": "https://play.google.com/store/audiobooks/details?id=AQAAAEDGgkjCnM",
                 "elevenreader": "https://elevenreader.io/audiobooks/the-procrastination-loop-audiobook/J6A32ugNYybFvpQ6Yn4e"
