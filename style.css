@@ -176,10 +176,11 @@ body {
 }
 
 .logo-icon {
-  color: var(--gold);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   line-height: 1;
-  text-shadow: 0 0 12px var(--gold-glow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-text {
