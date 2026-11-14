@@ -14,6 +14,11 @@
   <meta name="author" content="Tarun Mankar" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://www.somatic-library.com/" />
+  <link rel="alternate" hreflang="en-us" href="https://www.somatic-library.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.somatic-library.com/" />
+
+  <!-- High-Priority LCP Hero Preload -->
+  <link rel="preload" as="image" href="covers/stop_spiraling.jpg" fetchpriority="high" />
 
   <!-- Favicon Suite -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -26,7 +31,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.somatic-library.com/" />
   <meta property="og:title" content="The Somatic Library — Somatic Psychology Books by Tarun Mankar" />
-  <meta property="og:description" content="Body-first somatic toolkits for overthinkers, high achievers, and chronically overwhelmed bodies. Discover 6 bestselling titles on Amazon Kindle, Paperback &amp; Audio." />
+  <meta property="og:description" content="Body-first somatic toolkits for overthinkers, high achievers, and chronically overwhelmed bodies. Discover 8 bestselling titles on Amazon Kindle, Paperback &amp; Audio." />
   <meta property="og:image" content="https://www.somatic-library.com/covers/stop_spiraling.jpg" />
   <meta property="og:site_name" content="The Somatic Library" />
   <meta property="og:locale" content="en_US" />
@@ -47,7 +52,11 @@
   <link rel="preconnect" href="https://elevenreader.io" />
 
   <!-- Typography: Outfit + Playfair Display -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" />
+  </noscript>
   <link rel="stylesheet" href="style.css?v=3.5" />
 
   <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
@@ -59,22 +68,54 @@
       "@type": "WebSite",
       "@id": "https://www.somatic-library.com/#website",
       "url": "https://www.somatic-library.com/",
-      "name": "The Somatic Library \u2014 Tarun Mankar",
+      "name": "The Somatic Library",
+      "alternateName": "The Somatic Library by Tarun Mankar",
       "description": "Bestselling somatic psychology books and audiobooks by Tarun Mankar on anxious attachment, burnout, dopamine resets, and nervous system regulation. Available on Amazon Kindle and Paperback.",
       "inLanguage": "en-US",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1840",
-        "bestRating": "5",
-        "worstRating": "1"
+      "publisher": {
+        "@id": "https://www.somatic-library.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.somatic-library.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.somatic-library.com/#organization",
+      "name": "The Somatic Library",
+      "url": "https://www.somatic-library.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.somatic-library.com/favicon.svg"
+      },
+      "founder": {
+        "@id": "https://www.somatic-library.com/#author"
+      },
+      "sameAs": [
+        "https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN",
+        "https://play.google.com/store/search?q=Tarun+Mankar&c=books",
+        "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un"
+      ]
     },
     {
       "@type": "Person",
       "@id": "https://www.somatic-library.com/#author",
       "name": "Tarun Mankar",
       "jobTitle": "Author & Somatic Psychology Researcher",
+      "url": "https://www.somatic-library.com/about.html",
+      "knowsAbout": [
+        "Somatic Psychology",
+        "Polyvagal Theory",
+        "Nervous System Regulation",
+        "Anxious Attachment",
+        "Burnout Recovery",
+        "Dopamine Resets"
+      ],
       "sameAs": [
         "https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN",
         "https://play.google.com/store/search?q=Tarun+Mankar&c=books",
@@ -84,7 +125,7 @@
     {
       "@type": "ItemList",
       "name": "The Somatic Library Book Catalog",
-      "numberOfItems": 6,
+      "numberOfItems": 8,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -94,8 +135,7 @@
             "name": "Stop Spiraling",
             "alternateName": "The Anxiously Attached Person's Daily Toolkit for Calmer Relationships",
             "author": {
-              "@type": "Person",
-              "name": "Tarun Mankar"
+              "@id": "https://www.somatic-library.com/#author"
             },
             "bookFormat": [
               "https://schema.org/EBook",
@@ -116,8 +156,7 @@
             "name": "Somatic Pacing",
             "alternateName": "The High-Achiever's Daily Guide to Reclaiming Focus and Energy Without Burning Out",
             "author": {
-              "@type": "Person",
-              "name": "Tarun Mankar"
+              "@id": "https://www.somatic-library.com/#author"
             },
             "bookFormat": [
               "https://schema.org/EBook",
@@ -138,8 +177,7 @@
             "name": "Healing The Scarcity Mindset",
             "alternateName": "A Daily Guide to Releasing Money Anxiety and Rewiring Your Scarcity Trauma",
             "author": {
-              "@type": "Person",
-              "name": "Tarun Mankar"
+              "@id": "https://www.somatic-library.com/#author"
             },
             "bookFormat": [
               "https://schema.org/EBook",
@@ -160,8 +198,7 @@
             "name": "Dopamine Reset and Deep Focus",
             "alternateName": "Reclaiming Attention, Ending Brain Fog, and Mastering Unshakable Discipline",
             "author": {
-              "@type": "Person",
-              "name": "Tarun Mankar"
+              "@id": "https://www.somatic-library.com/#author"
             },
             "bookFormat": [
               "https://schema.org/EBook",
@@ -182,8 +219,7 @@
             "name": "The Courage to Disappoint",
             "alternateName": "Choosing Your Peace Over People's Expectations",
             "author": {
-              "@type": "Person",
-              "name": "Tarun Mankar"
+              "@id": "https://www.somatic-library.com/#author"
             },
             "bookFormat": [
               "https://schema.org/EBook",
@@ -193,14 +229,7 @@
             "description": "Exhausted from carrying everyone else's emotional baggage? The Courage to Disappoint is a body-first guide to breaking free from chronic people-pleasing. Discover practical scripts, real-time nervous system regulation exercises, and deep psychological tools to stop over-explaining, dismantle boundary guilt, deliver clean unapologetic refusals, and reclaim your personal sovereignty.",
             "genre": "Anxiety & Attachment",
             "image": "https://www.somatic-library.com/covers/courage_to_disappoint.jpg",
-            "url": "https://www.amazon.com/dp/B0HP8D7JRT",
-            "sameAs": [
-              "https://www.amazon.com/dp/B0HP8D7JRT",
-              "https://www.amazon.com/dp/B0HP8MQL2P/ref=tmm_pap_swatch_0",
-              "https://play.google.com/store/books/details?id=1WIhEgAAQBAJ",
-              "https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM",
-              "https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un"
-            ]
+            "url": "https://www.amazon.com/dp/B0HP8D7JRT"
           }
         },
         {
@@ -211,8 +240,7 @@
             "name": "Wired for Security",
             "alternateName": "Rewiring Anxious Attachment, Silencing Relationship Hypervigilance, and Finding Peace in Love",
             "author": {
-              "@type": "Person",
-              "name": "Tarun Mankar"
+              "@id": "https://www.somatic-library.com/#author"
             },
             "bookFormat": [
               "https://schema.org/EBook",
@@ -223,6 +251,48 @@
             "genre": "Anxiety & Attachment",
             "image": "https://www.somatic-library.com/covers/wired_for_security.jpg",
             "url": "https://www.amazon.com/dp/B0HPH6QJWK"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Book",
+            "name": "Mastering the Emotional Storm",
+            "alternateName": "Taming Emotional Flooding, Calming Instant Reactivity, and Finding Grounding Under Pressure",
+            "author": {
+              "@id": "https://www.somatic-library.com/#author"
+            },
+            "bookFormat": [
+              "https://schema.org/EBook",
+              "https://schema.org/AudiobookFormat",
+              "https://schema.org/Paperback"
+            ],
+            "description": "Your somatic, science-backed roadmap to regaining complete self-command. Reveals how to halt emotional flooding at the neurochemical level before it dictates your words. Detect subtle bodily warning signs, cool down sympathetic surges in ninety seconds with vagal resets, and replace instant defensiveness with unshakable inner poise.",
+            "genre": "Emotional Regulation",
+            "image": "https://www.somatic-library.com/covers/mastering_the_storm.jpg",
+            "url": "https://www.amazon.com/dp/B0HQ4NXMK3"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Book",
+            "name": "The Procrastination Loop",
+            "alternateName": "Breaking the Cycle of Delay, Self-Sabotage, and the Fear Hidden Underneath",
+            "author": {
+              "@id": "https://www.somatic-library.com/#author"
+            },
+            "bookFormat": [
+              "https://schema.org/EBook",
+              "https://schema.org/AudiobookFormat",
+              "https://schema.org/Paperback"
+            ],
+            "description": "The emotional and neurological truth behind chronic delay: it is not a time problem, it is a fear problem. Through somatic tools, psychological clarity, and a compassionate identity reset, this book breaks the avoidance-shame cycle at its root \u2014 and helps you finally become someone who starts, finishes, and follows through.",
+            "genre": "Focus & Flow",
+            "image": "https://www.somatic-library.com/covers/procrastination_loop.jpg",
+            "url": "https://www.amazon.com/dp/B0H2SLPQG9"
           }
         }
       ]
@@ -325,7 +395,7 @@
             </div>
             <div class="stack-card card-front-center">
               <span class="stack-featured-tag">🔥 #1 BESTSELLER</span>
-              <img src="covers/stop_spiraling.jpg" alt="Stop Spiraling Book Cover" loading="eager" />
+              <img src="covers/stop_spiraling.jpg" alt="Stop Spiraling Book Cover — #1 Somatic Psychology Bestseller" loading="eager" fetchpriority="high" />
               <div class="stack-cta-pill">Tap to Read on Kindle ↗</div>
             </div>
           </div>
@@ -986,6 +1056,9 @@
         <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" id="footer-amazon">Amazon Store</a>
         <a href="https://play.google.com/store/search?q=Tarun+Mankar&c=books" target="_blank" rel="noopener" id="footer-google">Google Play</a>
         <a href="https://elevenreader.io/authors/tarun-mankar-audiobooks/i0rp0wAezs9Jt1lGd2un" target="_blank" rel="noopener" id="footer-eleven">ElevenReader</a>
+      </div>
+      <div class="footer-disclaimer" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.76rem; color: var(--text-dim); line-height: 1.5; text-align: center; max-width: 820px; margin-left: auto; margin-right: auto;">
+        <strong>Educational &amp; Wellness Notice:</strong> The books, audiobooks, and somatic techniques shared across The Somatic Library are designed for educational, self-reflection, and nervous system regulation practice. They do not constitute clinical psychiatric diagnosis, medical advice, or licensed psychotherapy. If you are experiencing acute psychological trauma or medical emergencies, please consult a qualified healthcare or mental health professional.
       </div>
     </div>
   </footer>

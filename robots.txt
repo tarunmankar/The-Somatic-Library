@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Private configuration files
+Disallow: /firebase.json
+Disallow: /.firebaserc
+Disallow: /AGENTS.md
+
 Sitemap: https://www.somatic-library.com/sitemap.xml
