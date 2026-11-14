@@ -689,8 +689,8 @@ function renderBooks(books) {
             <a href="${book.links.amazon_ebook}" target="_blank" rel="noopener"
                class="card-btn-amazon-direct"
                onclick="event.stopPropagation()"
-               aria-label="Buy on Amazon (1-Click) — ${book.title}">
-              <span class="btn-icon">⚡</span> Buy on Amazon (1-Click) ↗
+               aria-label="Buy on Amazon ($4.99) — ${book.title}">
+              <span class="btn-icon">⚡</span> Buy on Amazon ($4.99) ↗
             </a>
           ` : ''}
           <button class="card-btn-options"
@@ -857,17 +857,17 @@ function openModal(bookId, updateHash = true) {
 function buildBuyOptions(links, bookTitle) {
   const options = [];
 
-  // Priority 1: Amazon Kindle eBook
+  // Priority 1: Amazon Kindle eBook ($4.99)
   if (links.amazon_ebook) {
     options.push(`
       <a href="${links.amazon_ebook}" target="_blank" rel="noopener" class="buy-option primary-kindle" id="buy-kindle">
-        <span class="option-badge-top">★ #1 READER CHOICE · INSTANT READ</span>
+        <span class="option-badge-top">★ #1 READER CHOICE · INSTANT READ · $4.99</span>
         <span class="buy-option-icon">📖</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Amazon Kindle eBook</div>
+          <div class="buy-option-title">Amazon Kindle eBook <span class="price-highlight">$4.99</span></div>
           <div class="buy-option-sub">Read instantly on Kindle, iPhone, iPad, Android, or PC</div>
         </div>
-        <span class="buy-cta-pill gold">Instant 1-Click Buy ↗</span>
+        <span class="buy-cta-pill gold">$4.99 · Instant 1-Click Buy ↗</span>
       </a>
     `);
   } else {
@@ -875,7 +875,7 @@ function buildBuyOptions(links, bookTitle) {
       <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" class="buy-option coming-soon" id="buy-kindle-cs" title="Kindle edition releasing soon on Amazon">
         <span class="buy-option-icon">📖</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Amazon Kindle eBook</div>
+          <div class="buy-option-title">Amazon Kindle eBook <span class="price-highlight">$4.99</span></div>
           <div class="buy-option-sub">Kindle eBook edition in preparation · Arriving soon on Amazon</div>
         </div>
         <span class="buy-cta-pill ghost coming-soon-badge">Coming Soon ↗</span>
@@ -883,16 +883,16 @@ function buildBuyOptions(links, bookTitle) {
     `);
   }
 
-  // Priority 2: Amazon Paperback (Print Edition)
+  // Priority 2: Amazon Paperback (Print Edition) ($11.99)
   if (links.amazon_paperback) {
     options.push(`
       <a href="${links.amazon_paperback}" target="_blank" rel="noopener" class="buy-option" id="buy-paperback">
         <span class="buy-option-icon">📦</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Amazon Paperback (Print Edition)</div>
+          <div class="buy-option-title">Amazon Paperback (Print Edition) <span class="price-highlight">$11.99</span></div>
           <div class="buy-option-sub">Physical book · Fast Amazon Prime 1-2 day delivery</div>
         </div>
-        <span class="buy-cta-pill ghost">Prime Order ↗</span>
+        <span class="buy-cta-pill ghost">$11.99 · Prime Order ↗</span>
       </a>
     `);
   } else {

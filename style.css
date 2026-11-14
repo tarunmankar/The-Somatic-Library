@@ -1530,6 +1530,19 @@ body {
   background: #171d2e;
 }
 
+.price-highlight {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.16);
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 /* Featured Amazon Kindle Option (#1 Priority) */
 .buy-option.primary-kindle {
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(20, 24, 38, 0.8) 100%);
