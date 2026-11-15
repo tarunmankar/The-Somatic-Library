@@ -641,33 +641,24 @@ function renderBooks(books) {
             <a href="${book.links.amazon_ebook}" target="_blank" rel="noopener"
                class="card-btn-amazon-direct"
                onclick="event.stopPropagation()"
-               aria-label="Buy on Amazon ($4.99) — ${book.title}">
-              <span class="btn-icon">⚡</span> Buy on Amazon ($4.99) ↗
+               aria-label="Read on Kindle ($4.99) — ${book.title}">
+              <span class="btn-icon">⚡</span> Read on Kindle ($4.99) ↗
             </a>
           ` : ''}
           ${book.links.elevenreader ? `
             <a href="${book.links.elevenreader}" target="_blank" rel="noopener"
                class="card-btn-eleven-direct"
                onclick="event.stopPropagation()"
-               aria-label="Listen on ElevenReader Audio — ${book.title}"
-               title="Listen to Studio Somatic Audiobook on ElevenReader">
-              <span class="btn-icon">🎧</span> Listen on ElevenReader Audio ↗
-            </a>
-          ` : ''}
-          ${book.links.google_ebook ? `
-            <a href="${book.links.google_ebook}" target="_blank" rel="noopener"
-               class="card-btn-google-direct"
-               onclick="event.stopPropagation()"
-               aria-label="Buy on Google Play ($4.99) — ${book.title}"
-               title="Read on Google Play Books">
-              <span class="btn-icon">📱</span> Buy on Google Play ($4.99) ↗
+               aria-label="Listen on ElevenReader — ${book.title}"
+               title="Stream Studio Somatic Audiobook on ElevenReader">
+              <span class="btn-icon">🎧</span> Listen on ElevenReader ↗
             </a>
           ` : ''}
           <button class="card-btn-options"
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
-            aria-label="Compare All 5 Formats & Audio — ${book.title}">
-            <span class="btn-icon">📖</span> Compare All 5 Formats &amp; Audio
+            aria-label="Google Play, Paperback & All 5 Formats — ${book.title}">
+            <span class="btn-icon">📱</span> Google Play, Paperback &amp; 5 Formats ↓
           </button>
         </div>
       </div>
