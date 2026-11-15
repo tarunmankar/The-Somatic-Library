@@ -3243,3 +3243,178 @@ body {
   }
 }
 
+
+
+/* ── MULTI-STORE BUY OPTIONS & BRANDING (Amazon, Google Play, ElevenReader) ── */
+.modal-format-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.modal-format-tab {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
+  color: var(--text-mid);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.modal-format-tab:hover {
+  color: var(--text-bright);
+  border-color: var(--border-glow);
+  background: rgba(255, 255, 255, 0.09);
+}
+.modal-format-tab.active {
+  background: var(--gold);
+  color: #120e03;
+  border-color: var(--gold-light);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Card 2-row dual buttons for Google Play & ElevenReader */
+.card-btn-row-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  width: 100%;
+}
+.card-btn-store {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 7px 8px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.card-btn-store.google {
+  background: rgba(66, 133, 244, 0.12);
+  border: 1px solid rgba(66, 133, 244, 0.45);
+  color: #93bbfc;
+}
+.card-btn-store.google:hover {
+  background: rgba(66, 133, 244, 0.25);
+  border-color: #4285f4;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+.card-btn-store.eleven {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  color: #d8b4fe;
+}
+.card-btn-store.eleven:hover {
+  background: rgba(168, 85, 247, 0.25);
+  border-color: #a855f7;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Modal Option: Google Play Books eBook */
+.buy-option.primary-google {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.12) 0%, rgba(20, 24, 38, 0.85) 100%);
+  border: 1.5px solid rgba(66, 133, 244, 0.55);
+}
+.buy-option.primary-google:hover {
+  border-color: #6ba5ff;
+  box-shadow: 0 8px 30px rgba(66, 133, 244, 0.3);
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.2) 0%, rgba(24, 30, 48, 0.9) 100%);
+}
+.option-badge-top.google-badge {
+  background: linear-gradient(135deg, #4285F4, #34A853);
+  color: #ffffff;
+}
+.buy-cta-pill.google {
+  background: #4285F4;
+  color: #ffffff;
+}
+.buy-option:hover .buy-cta-pill.google {
+  background: #5b9bf8;
+  transform: scale(1.04);
+  box-shadow: 0 2px 12px rgba(66, 133, 244, 0.4);
+}
+
+/* Modal Option: ElevenReader Immersive Audiobook */
+.buy-option.primary-eleven {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.14) 0%, rgba(20, 24, 38, 0.85) 100%);
+  border: 1.5px solid rgba(168, 85, 247, 0.6);
+}
+.buy-option.primary-eleven:hover {
+  border-color: #c084fc;
+  box-shadow: 0 8px 30px rgba(168, 85, 247, 0.35);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.22) 0%, rgba(24, 30, 48, 0.9) 100%);
+}
+.option-badge-top.eleven-badge {
+  background: linear-gradient(135deg, #a855f7, #c084fc);
+  color: #0d061a;
+  font-weight: 800;
+}
+.buy-cta-pill.eleven {
+  background: linear-gradient(135deg, #a855f7, #c084fc);
+  color: #0d061a;
+  font-weight: 800;
+}
+.buy-option:hover .buy-cta-pill.eleven {
+  transform: scale(1.04);
+  box-shadow: 0 2px 14px rgba(168, 85, 247, 0.45);
+}
+
+/* Modal Option: Google Play Audiobook */
+.buy-option.primary-google-audio {
+  background: linear-gradient(135deg, rgba(0, 201, 167, 0.1) 0%, rgba(20, 24, 38, 0.85) 100%);
+  border: 1.5px solid rgba(0, 201, 167, 0.5);
+}
+.buy-option.primary-google-audio:hover {
+  border-color: #38ef7d;
+  box-shadow: 0 8px 30px rgba(0, 201, 167, 0.28);
+  background: linear-gradient(135deg, rgba(0, 201, 167, 0.18) 0%, rgba(24, 30, 48, 0.9) 100%);
+}
+.option-badge-top.google-audio-badge {
+  background: linear-gradient(135deg, #00c9a7, #11998e);
+  color: #041410;
+  font-weight: 800;
+}
+.buy-cta-pill.google-audio {
+  background: linear-gradient(135deg, #00c9a7, #11998e);
+  color: #041410;
+  font-weight: 800;
+}
+.buy-option:hover .buy-cta-pill.google-audio {
+  transform: scale(1.04);
+  box-shadow: 0 2px 14px rgba(0, 201, 167, 0.4);
+}
+
+/* Modal Option: Amazon Paperback */
+.buy-option.primary-paperback {
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.1) 0%, rgba(20, 24, 38, 0.85) 100%);
+  border: 1.5px solid rgba(255, 153, 0, 0.45);
+}
+.buy-option.primary-paperback:hover {
+  border-color: #ffaa2b;
+  box-shadow: 0 8px 30px rgba(255, 153, 0, 0.25);
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.16) 0%, rgba(24, 30, 48, 0.9) 100%);
+}
+.option-badge-top.paperback-badge {
+  background: linear-gradient(135deg, #ff9900, #ffb84d);
+  color: #1a0f00;
+  font-weight: 800;
+}
+.buy-cta-pill.paperback {
+  background: linear-gradient(135deg, #ff9900, #ffb84d);
+  color: #1a0f00;
+  font-weight: 800;
+}
+.buy-option:hover .buy-cta-pill.paperback {
+  transform: scale(1.04);
+  box-shadow: 0 2px 14px rgba(255, 153, 0, 0.35);
+}

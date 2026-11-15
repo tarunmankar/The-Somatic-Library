@@ -615,22 +615,16 @@ function renderBooks(books) {
           onerror="this.style.background='#1a1530';this.src=''"
         />
         <div class="card-overlay">
-          <span class="overlay-badge">${book.links.google_ebook ? 'Available on Amazon &amp; Google Play' : 'ElevenReader Live · Google Play Coming Soon'}</span>
+          <span class="overlay-badge">Available on Amazon · Google Play · ElevenReader</span>
           <button class="overlay-btn" onclick="event.stopPropagation();openModal(${book.id})">
-            📖 Read on Kindle / Buy
+            ⚡ All Formats &amp; Audio Preview
           </button>
         </div>
       </div>
       <div class="card-body">
         <div class="card-meta-line">
           <span class="card-cat-badge">${book.category_label}</span>
-          <span class="card-format-tag ${book.links.amazon_ebook ? 'live' : (book.links.google_ebook ? 'live' : 'soon')}">
-            ${book.links.amazon_ebook 
-              ? 'Kindle · Print · Audio' 
-              : (book.links.google_ebook 
-                  ? 'Google Play · Audio' 
-                  : 'Audio Live')}
-          </span>
+          <span class="card-format-tag live">Kindle · Google · Audio</span>
         </div>
         <div class="card-rating-line">
           <span class="card-stars">★★★★★</span>
@@ -651,11 +645,31 @@ function renderBooks(books) {
               <span class="btn-icon">⚡</span> Buy on Amazon ($4.99) ↗
             </a>
           ` : ''}
+          <div class="card-btn-row-dual">
+            ${book.links.google_ebook ? `
+              <a href="${book.links.google_ebook}" target="_blank" rel="noopener"
+                 class="card-btn-store google"
+                 onclick="event.stopPropagation()"
+                 aria-label="Buy on Google Play ($4.99) — ${book.title}"
+                 title="Read on Google Play Books">
+                <span class="btn-icon">📱</span> Google Play ($4.99) ↗
+              </a>
+            ` : ''}
+            ${book.links.elevenreader ? `
+              <a href="${book.links.elevenreader}" target="_blank" rel="noopener"
+                 class="card-btn-store eleven"
+                 onclick="event.stopPropagation()"
+                 aria-label="Listen on ElevenReader Audio — ${book.title}"
+                 title="Listen to Studio Somatic Audiobook on ElevenReader">
+                <span class="btn-icon">🎧</span> ElevenReader Audio ↗
+              </a>
+            ` : ''}
+          </div>
           <button class="card-btn-options"
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
-            aria-label="Quick Look & Audio — ${book.title}">
-            <span class="btn-icon">📖</span> Quick Look &amp; Audio
+            aria-label="Compare All 5 Formats & Audio — ${book.title}">
+            <span class="btn-icon">📖</span> Compare All 5 Formats &amp; Audio
           </button>
         </div>
       </div>
@@ -709,7 +723,17 @@ function clearSearch() {
 /* ── COMBINED FILTER+SEARCH ── */
 function applyFilters() {
   const filtered = allBooks.filter(book => {
-    const matchesFilter = activeFilter === 'all' || book.category === activeFilter;
+    let matchesFilter = false;
+    if (activeFilter === 'all') {
+      matchesFilter = true;
+    } else if (activeFilter === 'audio') {
+      matchesFilter = Boolean(book.links && (book.links.elevenreader || book.links.google_audio));
+    } else if (activeFilter === 'google') {
+      matchesFilter = Boolean(book.links && (book.links.google_ebook || book.links.google_audio));
+    } else {
+      matchesFilter = book.category === activeFilter;
+    }
+
     const matchesSearch = !searchQuery || (
       book.title.toLowerCase().includes(searchQuery) ||
       book.hook.toLowerCase().includes(searchQuery) ||
@@ -757,6 +781,23 @@ function closeModal() {
 }
 
 /* ── MODAL (Kindle First Priority + Uncropped Cover + History Push) ── */
+function filterModalBuyOptions(fmt) {
+  const tabs = document.querySelectorAll('.modal-format-tab');
+  tabs.forEach(t => {
+    const isActive = t.dataset.fmt === fmt;
+    t.classList.toggle('active', isActive);
+  });
+
+  const options = document.querySelectorAll('#buy-grid .buy-option');
+  options.forEach(opt => {
+    if (fmt === 'all' || opt.dataset.fmt === fmt) {
+      opt.style.display = 'flex';
+    } else {
+      opt.style.display = 'none';
+    }
+  });
+}
+
 function openModal(bookId, updateHash = true) {
   const book = allBooks.find(b => b.id === bookId);
   if (!book) return;
@@ -790,10 +831,10 @@ function openModal(bookId, updateHash = true) {
   const badgesWrap = document.querySelector('.modal-format-badges');
   if (badgesWrap) {
     badgesWrap.innerHTML = `
-      <span class="${book.links.amazon_ebook ? 'pill-kindle' : 'pill-soon'}">${book.links.amazon_ebook ? 'Kindle eBook' : 'Kindle Soon'}</span>
-      <span class="${book.links.amazon_paperback ? 'pill-paperback' : 'pill-soon'}">${book.links.amazon_paperback ? 'Paperback' : 'Paperback Soon'}</span>
-      <span class="${book.links.google_ebook ? 'pill-google' : 'pill-soon'}">${book.links.google_ebook ? 'Google Play' : 'Google Soon'}</span>
-      <span class="pill-audio">Audiobook</span>
+      <span class="pill-kindle">Kindle eBook · $4.99</span>
+      <span class="pill-google">Google Play · $4.99</span>
+      <span class="pill-audio">ElevenReader Audio</span>
+      <span class="pill-paperback">Paperback · $11.99</span>
     `;
   }
 
@@ -815,22 +856,32 @@ function openModal(bookId, updateHash = true) {
 function buildBuyOptions(links, bookTitle) {
   const options = [];
 
-  // Priority 1: Amazon Kindle eBook ($4.99)
+  // Tab switcher inside modal
+  const formatTabsHtml = `
+    <div class="modal-format-tabs" id="modal-format-tabs" role="tablist" aria-label="Filter formats">
+      <button type="button" class="modal-format-tab active" data-fmt="all" onclick="filterModalBuyOptions('all')">All Options (5)</button>
+      <button type="button" class="modal-format-tab" data-fmt="audio" onclick="filterModalBuyOptions('audio')">🎧 Audiobooks (2)</button>
+      <button type="button" class="modal-format-tab" data-fmt="ebook" onclick="filterModalBuyOptions('ebook')">📖 eBooks (2)</button>
+      <button type="button" class="modal-format-tab" data-fmt="print" onclick="filterModalBuyOptions('print')">📦 Paperback (1)</button>
+    </div>
+  `;
+
+  // 1. Amazon Kindle eBook ($4.99)
   if (links.amazon_ebook) {
     options.push(`
-      <a href="${links.amazon_ebook}" target="_blank" rel="noopener" class="buy-option primary-kindle" id="buy-kindle">
-        <span class="option-badge-top">★ #1 READER CHOICE · INSTANT READ · $4.99</span>
+      <a href="${links.amazon_ebook}" target="_blank" rel="noopener" class="buy-option primary-kindle" data-fmt="ebook" id="buy-kindle">
+        <span class="option-badge-top">★ AMAZON KINDLE · 1-CLICK INSTANT READ · $4.99</span>
         <span class="buy-option-icon">📖</span>
         <div class="buy-option-info">
           <div class="buy-option-title">Amazon Kindle eBook <span class="price-highlight">$4.99</span></div>
-          <div class="buy-option-sub">Read instantly on Kindle, iPhone, iPad, Android, or PC</div>
+          <div class="buy-option-sub">Read instantly on Kindle app, iPhone, iPad, Android, or PC</div>
         </div>
-        <span class="buy-cta-pill gold">$4.99 · Instant 1-Click Buy ↗</span>
+        <span class="buy-cta-pill gold">$4.99 · Buy on Amazon ↗</span>
       </a>
     `);
   } else {
     options.push(`
-      <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" class="buy-option coming-soon" id="buy-kindle-cs" title="Kindle edition releasing soon on Amazon">
+      <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" class="buy-option coming-soon" data-fmt="ebook" id="buy-kindle-cs" title="Kindle edition releasing soon on Amazon">
         <span class="buy-option-icon">📖</span>
         <div class="buy-option-info">
           <div class="buy-option-title">Amazon Kindle eBook <span class="price-highlight">$4.99</span></div>
@@ -841,46 +892,22 @@ function buildBuyOptions(links, bookTitle) {
     `);
   }
 
-  // Priority 2: Amazon Paperback (Print Edition) ($11.99)
-  if (links.amazon_paperback) {
-    options.push(`
-      <a href="${links.amazon_paperback}" target="_blank" rel="noopener" class="buy-option" id="buy-paperback">
-        <span class="buy-option-icon">📦</span>
-        <div class="buy-option-info">
-          <div class="buy-option-title">Amazon Paperback (Print Edition) <span class="price-highlight">$11.99</span></div>
-          <div class="buy-option-sub">Physical book · Fast Amazon Prime 1-2 day delivery</div>
-        </div>
-        <span class="buy-cta-pill ghost">$11.99 · Prime Order ↗</span>
-      </a>
-    `);
-  } else {
-    options.push(`
-      <div class="buy-option coming-soon" id="buy-paperback-cs">
-        <span class="buy-option-icon">📦</span>
-        <div class="buy-option-info">
-          <div class="buy-option-title">Amazon Paperback (Print Edition)</div>
-          <div class="buy-option-sub">Print paperback in production · Arriving soon on Amazon Prime</div>
-        </div>
-        <span class="buy-cta-pill ghost coming-soon-badge">Coming Soon</span>
-      </div>
-    `);
-  }
-
-  // Priority 3: Google Play Books eBook & Free Sample
+  // 2. Google Play Books (eBook) ($4.99 & Free Sample)
   if (links.google_ebook) {
     options.push(`
-      <a href="${links.google_ebook}" target="_blank" rel="noopener" class="buy-option" id="buy-google-ebook">
+      <a href="${links.google_ebook}" target="_blank" rel="noopener" class="buy-option primary-google" data-fmt="ebook" id="buy-google-ebook">
+        <span class="option-badge-top google-badge">★ GOOGLE PLAY BOOKS · ANDROID &amp; WEB · $4.99</span>
         <span class="buy-option-icon">📱</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Google Play Books (eBook)</div>
-          <div class="buy-option-sub">Read free preview · Sync across all Android &amp; iOS devices</div>
+          <div class="buy-option-title">Google Play Books (eBook) <span class="price-highlight">$4.99</span></div>
+          <div class="buy-option-sub">Read free preview · Cloud sync on Android, iPhone &amp; Web browser</div>
         </div>
-        <span class="buy-cta-pill ghost">Read Sample ↗</span>
+        <span class="buy-cta-pill google">$4.99 · Buy on Google Play ↗</span>
       </a>
     `);
   } else {
     options.push(`
-      <a href="https://play.google.com/store/search?q=Tarun+Mankar&c=books" target="_blank" rel="noopener" class="buy-option coming-soon" id="buy-google-ebook-cs" title="Google Play eBook edition coming soon">
+      <a href="https://play.google.com/store/search?q=Tarun+Mankar&c=books" target="_blank" rel="noopener" class="buy-option coming-soon" data-fmt="ebook" id="buy-google-ebook-cs" title="Google Play eBook edition coming soon">
         <span class="buy-option-icon">📱</span>
         <div class="buy-option-info">
           <div class="buy-option-title">Google Play Books (eBook)</div>
@@ -891,21 +918,37 @@ function buildBuyOptions(links, bookTitle) {
     `);
   }
 
-  // Priority 4: Google Play Audiobook
+  // 3. ElevenReader Immersive Audiobook (Studio Somatic Voice)
+  if (links.elevenreader) {
+    options.push(`
+      <a href="${links.elevenreader}" target="_blank" rel="noopener" class="buy-option primary-eleven" data-fmt="audio" id="buy-elevenreader">
+        <span class="option-badge-top eleven-badge">🎙️ ELEVENREADER · STUDIO SOMATIC AUDIOBOOK</span>
+        <span class="buy-option-icon">🎧</span>
+        <div class="buy-option-info">
+          <div class="buy-option-title">ElevenReader Immersive Audiobook</div>
+          <div class="buy-option-sub">Stream instantly · High-fidelity somatic voice narration for nervous system downshift</div>
+        </div>
+        <span class="buy-cta-pill eleven">🎧 Stream on ElevenReader ↗</span>
+      </a>
+    `);
+  }
+
+  // 4. Google Play Audiobook
   if (links.google_audio) {
     options.push(`
-      <a href="${links.google_audio}" target="_blank" rel="noopener" class="buy-option" id="buy-google-audio">
+      <a href="${links.google_audio}" target="_blank" rel="noopener" class="buy-option primary-google-audio" data-fmt="audio" id="buy-google-audio">
+        <span class="option-badge-top google-audio-badge">🎧 GOOGLE PLAY AUDIO · OFFICIAL AUDIOBOOK</span>
         <span class="buy-option-icon">🎙️</span>
         <div class="buy-option-info">
           <div class="buy-option-title">Google Play Audiobook</div>
-          <div class="buy-option-sub">Stream or download in Google ecosystem</div>
+          <div class="buy-option-sub">Stream or download in Google ecosystem · Offline car &amp; headphone listening</div>
         </div>
-        <span class="buy-cta-pill ghost">Listen on Google ↗</span>
+        <span class="buy-cta-pill google-audio">Listen on Google Play ↗</span>
       </a>
     `);
   } else {
     options.push(`
-      <a href="https://play.google.com/store/search?q=Tarun+Mankar&c=books" target="_blank" rel="noopener" class="buy-option coming-soon" id="buy-google-audio-cs" title="Google Play Audiobook edition coming soon">
+      <a href="https://play.google.com/store/search?q=Tarun+Mankar&c=books" target="_blank" rel="noopener" class="buy-option coming-soon" data-fmt="audio" id="buy-google-audio-cs" title="Google Play Audiobook edition coming soon">
         <span class="buy-option-icon">🎙️</span>
         <div class="buy-option-info">
           <div class="buy-option-title">Google Play Audiobook</div>
@@ -916,26 +959,34 @@ function buildBuyOptions(links, bookTitle) {
     `);
   }
 
-  // Priority 5 (Last): ElevenReader Audiobook
-  if (links.elevenreader) {
-    const isOnlyLiveAudio = !links.amazon_ebook && !links.google_ebook;
+  // 5. Amazon Paperback (Print Edition) ($11.99)
+  if (links.amazon_paperback) {
     options.push(`
-      <a href="${links.elevenreader}" target="_blank" rel="noopener" class="buy-option ${isOnlyLiveAudio ? 'primary-kindle' : ''}" id="buy-elevenreader">
-        ${isOnlyLiveAudio ? '<span class="option-badge-top">★ #1 AVAILABLE FORMAT · INSTANT STREAM</span>' : ''}
-        <span class="buy-option-icon">🎧</span>
+      <a href="${links.amazon_paperback}" target="_blank" rel="noopener" class="buy-option primary-paperback" data-fmt="print" id="buy-paperback">
+        <span class="option-badge-top paperback-badge">📦 PRIME PAPERBACK · PHYSICAL BOOK · $11.99</span>
+        <span class="buy-option-icon">📦</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">ElevenReader Audiobook</div>
-          <div class="buy-option-sub">Stream instantly · High-fidelity somatic voice narration</div>
+          <div class="buy-option-title">Amazon Paperback (Print Edition) <span class="price-highlight">$11.99</span></div>
+          <div class="buy-option-sub">Physical bedside copy · Fast Amazon Prime 1-2 day delivery</div>
         </div>
-        <span class="buy-cta-pill ${isOnlyLiveAudio ? 'gold' : 'ghost'}">Listen Now</span>
+        <span class="buy-cta-pill paperback">$11.99 · Prime Order ↗</span>
       </a>
+    `);
+  } else {
+    options.push(`
+      <div class="buy-option coming-soon" data-fmt="print" id="buy-paperback-cs">
+        <span class="buy-option-icon">📦</span>
+        <div class="buy-option-info">
+          <div class="buy-option-title">Amazon Paperback (Print Edition)</div>
+          <div class="buy-option-sub">Print paperback in production · Arriving soon on Amazon Prime</div>
+        </div>
+        <span class="buy-cta-pill ghost coming-soon-badge">Coming Soon</span>
+      </div>
     `);
   }
 
-  return options.join('');
+  return formatTabsHtml + options.join('');
 }
-
-
 
 function initKeyboardClose() {
   document.addEventListener('keydown', e => {
