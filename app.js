@@ -645,26 +645,24 @@ function renderBooks(books) {
               <span class="btn-icon">⚡</span> Buy on Amazon ($4.99) ↗
             </a>
           ` : ''}
-          <div class="card-btn-row-dual">
-            ${book.links.google_ebook ? `
-              <a href="${book.links.google_ebook}" target="_blank" rel="noopener"
-                 class="card-btn-store google"
-                 onclick="event.stopPropagation()"
-                 aria-label="Buy on Google Play ($4.99) — ${book.title}"
-                 title="Read on Google Play Books">
-                <span class="btn-icon">📱</span> Google Play ($4.99) ↗
-              </a>
-            ` : ''}
-            ${book.links.elevenreader ? `
-              <a href="${book.links.elevenreader}" target="_blank" rel="noopener"
-                 class="card-btn-store eleven"
-                 onclick="event.stopPropagation()"
-                 aria-label="Listen on ElevenReader Audio — ${book.title}"
-                 title="Listen to Studio Somatic Audiobook on ElevenReader">
-                <span class="btn-icon">🎧</span> ElevenReader Audio ↗
-              </a>
-            ` : ''}
-          </div>
+          ${book.links.elevenreader ? `
+            <a href="${book.links.elevenreader}" target="_blank" rel="noopener"
+               class="card-btn-eleven-direct"
+               onclick="event.stopPropagation()"
+               aria-label="Listen on ElevenReader Audio — ${book.title}"
+               title="Listen to Studio Somatic Audiobook on ElevenReader">
+              <span class="btn-icon">🎧</span> Listen on ElevenReader Audio ↗
+            </a>
+          ` : ''}
+          ${book.links.google_ebook ? `
+            <a href="${book.links.google_ebook}" target="_blank" rel="noopener"
+               class="card-btn-google-direct"
+               onclick="event.stopPropagation()"
+               aria-label="Buy on Google Play ($4.99) — ${book.title}"
+               title="Read on Google Play Books">
+              <span class="btn-icon">📱</span> Buy on Google Play ($4.99) ↗
+            </a>
+          ` : ''}
           <button class="card-btn-options"
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
