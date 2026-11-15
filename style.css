@@ -3277,6 +3277,13 @@ body {
 }
 
 /* ── HIGH-CONVERTING "READ VS LISTEN" DUAL CTAs ── */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
 .card-btn-amazon-direct {
   width: 100%;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
@@ -3285,7 +3292,7 @@ body {
   font-size: 0.82rem;
   border: none;
   border-radius: var(--radius-full);
-  padding: 9px 12px;
+  padding: 10px 14px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -3310,7 +3317,7 @@ body {
   font-size: 0.80rem;
   border: 1px solid rgba(192, 132, 252, 0.4);
   border-radius: var(--radius-full);
-  padding: 9px 12px;
+  padding: 10px 14px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -3328,44 +3335,41 @@ body {
   color: #ffffff !important;
 }
 
-.card-btn-options {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--text-mid);
+/* Subtle, minimal text link (NO button, NO box, zero clutter) */
+.card-more-formats {
+  display: block;
+  text-align: center;
+  font-size: 0.70rem;
   font-weight: 600;
-  font-size: 0.74rem;
-  border-radius: var(--radius-full);
-  padding: 7px 10px;
+  color: var(--text-dim);
   cursor: pointer;
-  font-family: inherit;
+  padding: 2px 0 0;
+  margin: 0 auto;
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  white-space: nowrap;
+  background: none;
+  border: none;
+  box-shadow: none;
+  letter-spacing: 0.02em;
 }
-.card-btn-options:hover {
-  background: rgba(212, 175, 55, 0.08);
-  border-color: var(--gold);
-  color: var(--gold-light);
+.card-more-formats:hover {
+  color: var(--gold);
+  text-decoration: underline;
   transform: translateY(-1px);
 }
 
 @media (max-width: 480px) {
   .card-btn-amazon-direct,
   .card-btn-eleven-direct {
-    font-size: 0.72rem;
-    padding: 7px 6px;
+    font-size: 0.73rem;
+    padding: 8px 8px;
     gap: 4px;
   }
-  .card-btn-options {
-    font-size: 0.68rem;
-    padding: 6px 4px;
+  .card-more-formats {
+    font-size: 0.67rem;
+    padding-top: 2px;
   }
   .card-actions {
-    gap: 5px;
+    gap: 6px;
   }
 }
 

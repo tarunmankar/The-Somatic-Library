@@ -654,12 +654,14 @@ function renderBooks(books) {
               <span class="btn-icon">🎧</span> Listen on ElevenReader ↗
             </a>
           ` : ''}
-          <button class="card-btn-options"
+          <div class="card-more-formats"
             id="buy-btn-${book.id}"
             onclick="event.stopPropagation();openModal(${book.id})"
-            aria-label="Google Play, Paperback & All 5 Formats — ${book.title}">
-            <span class="btn-icon">📱</span> Google Play, Paperback &amp; 5 Formats ↓
-          </button>
+            role="button"
+            tabindex="0"
+            aria-label="View Paperback & Google Play options — ${book.title}">
+            Paperback &amp; Google Play available ↓
+          </div>
         </div>
       </div>
     </article>
