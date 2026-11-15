@@ -615,11 +615,11 @@ function updateCurrencyUI() {
 }
 
 function getEbookPrice() {
-  return currentCurrency === 'INR' ? '₹449' : '$4.99';
+  return currentCurrency === 'INR' ? '₹480' : '$4.99';
 }
 
 function getPaperbackPrice() {
-  return currentCurrency === 'INR' ? '₹999' : '$11.99';
+  return currentCurrency === 'INR' ? '₹1,500' : '$11.99';
 }
 
 function getAmazonUrl(url) {
