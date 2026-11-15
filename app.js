@@ -535,8 +535,104 @@ const INLINE_DATA = {
     ]
 };
 
+/* ── GEO & CURRENCY LOCALIZATION (Zero SEO impact, instant client-side) ── */
+let currentCurrency = 'USD'; // Default canonical currency for SEO & international
+
+function initLocalization() {
+  const saved = localStorage.getItem('somatic_currency');
+  if (saved === 'INR' || saved === 'USD') {
+    currentCurrency = saved;
+  } else {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      const lang = navigator.language || (navigator.languages && navigator.languages[0]) || '';
+      if (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta' || lang.endsWith('-IN') || lang === 'hi' || lang.startsWith('hi-')) {
+        currentCurrency = 'INR';
+      } else {
+        currentCurrency = 'USD';
+      }
+    } catch (e) {
+      currentCurrency = 'USD';
+    }
+  }
+  updateCurrencyUI();
+}
+
+function setCurrency(curr) {
+  currentCurrency = curr;
+  localStorage.setItem('somatic_currency', curr);
+  updateCurrencyUI();
+  if (typeof allBooks !== 'undefined' && allBooks.length > 0) {
+    renderBooks(allBooks);
+  }
+  // If modal is currently open, re-render
+  if (typeof isModalOpen !== 'undefined' && isModalOpen && typeof currentOpenBookId !== 'undefined' && currentOpenBookId) {
+    const book = allBooks.find(b => b.id === currentOpenBookId);
+    if (book) {
+      const buyGrid = document.getElementById('buy-grid');
+      if (buyGrid) buyGrid.innerHTML = buildBuyOptions(book.links, book.title);
+      const badgesWrap = document.querySelector('.modal-format-badges');
+      if (badgesWrap) {
+        badgesWrap.innerHTML = `
+          <span class="pill-kindle">Kindle eBook · ${getEbookPrice()}</span>
+          <span class="pill-google">Google Play · ${getEbookPrice()}</span>
+          <span class="pill-audio">ElevenReader Audio</span>
+          <span class="pill-paperback">Paperback · ${getPaperbackPrice()}</span>
+        `;
+      }
+    }
+  }
+}
+
+function updateCurrencyUI() {
+  const inrBtn = document.getElementById('curr-inr');
+  const usdBtn = document.getElementById('curr-usd');
+  if (inrBtn && usdBtn) {
+    inrBtn.classList.toggle('active', currentCurrency === 'INR');
+    usdBtn.classList.toggle('active', currentCurrency === 'USD');
+  }
+
+  // Update Amazon store link domain
+  const navAmazonLink = document.getElementById('nav-amazon-link');
+  const navAmazonText = document.getElementById('nav-amazon-text');
+  if (navAmazonLink) {
+    if (currentCurrency === 'INR') {
+      navAmazonLink.href = 'https://www.amazon.in/stores/Tarun-Mankar/author/B0BTBLH2SN';
+      if (navAmazonText) navAmazonText.textContent = 'Amazon India';
+    } else {
+      navAmazonLink.href = 'https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN';
+      if (navAmazonText) navAmazonText.textContent = 'Amazon Store';
+    }
+  }
+
+  // Update hero stats badge
+  const heroStatsText = document.getElementById('hero-stats-text');
+  if (heroStatsText) {
+    heroStatsText.textContent = currentCurrency === 'INR'
+      ? '★ 4.9/5 RATED BY READERS · FAST AMAZON.IN DELIVERY'
+      : '★ 4.9/5 RATED BY READERS · 1-CLICK AMAZON DELIVERY';
+  }
+}
+
+function getEbookPrice() {
+  return currentCurrency === 'INR' ? '₹449' : '$4.99';
+}
+
+function getPaperbackPrice() {
+  return currentCurrency === 'INR' ? '₹999' : '$11.99';
+}
+
+function getAmazonUrl(url) {
+  if (!url) return '';
+  if (currentCurrency === 'INR') {
+    return url.replace('https://www.amazon.com', 'https://www.amazon.in').replace('http://www.amazon.com', 'https://www.amazon.in');
+  }
+  return url;
+}
+
 /* ── INIT ── */
 document.addEventListener('DOMContentLoaded', async () => {
+  initLocalization();
   await loadBooks();
   initNavScroll();
   initSearch();
@@ -638,11 +734,11 @@ function renderBooks(books) {
         </div>
         <div class="card-actions">
           ${book.links.amazon_ebook ? `
-            <a href="${book.links.amazon_ebook}" target="_blank" rel="noopener"
+            <a href="${getAmazonUrl(book.links.amazon_ebook)}" target="_blank" rel="noopener"
                class="card-btn-amazon-direct"
                onclick="event.stopPropagation()"
-               aria-label="Read on Kindle ($4.99) — ${book.title}">
-              <span class="btn-icon">⚡</span> Read on Kindle ($4.99) ↗
+               aria-label="Read on Kindle (${getEbookPrice()}) — ${book.title}">
+              <span class="btn-icon">⚡</span> Read on Kindle (${getEbookPrice()}) ↗
             </a>
           ` : ''}
           ${book.links.elevenreader ? `
@@ -822,10 +918,10 @@ function openModal(bookId, updateHash = true) {
   const badgesWrap = document.querySelector('.modal-format-badges');
   if (badgesWrap) {
     badgesWrap.innerHTML = `
-      <span class="pill-kindle">Kindle eBook · $4.99</span>
-      <span class="pill-google">Google Play · $4.99</span>
+      <span class="pill-kindle">Kindle eBook · ${getEbookPrice()}</span>
+      <span class="pill-google">Google Play · ${getEbookPrice()}</span>
       <span class="pill-audio">ElevenReader Audio</span>
-      <span class="pill-paperback">Paperback · $11.99</span>
+      <span class="pill-paperback">Paperback · ${getPaperbackPrice()}</span>
     `;
   }
 
@@ -857,17 +953,20 @@ function buildBuyOptions(links, bookTitle) {
     </div>
   `;
 
-  // 1. Amazon Kindle eBook ($4.99)
+  // 1. Amazon Kindle eBook
   if (links.amazon_ebook) {
+    const kUrl = getAmazonUrl(links.amazon_ebook);
+    const ebPrice = getEbookPrice();
+    const kBadge = currentCurrency === 'INR' ? '★ AMAZON.IN KINDLE · 1-CLICK INSTANT READ · ' + ebPrice : '★ AMAZON KINDLE · 1-CLICK INSTANT READ · $4.99';
     options.push(`
-      <a href="${links.amazon_ebook}" target="_blank" rel="noopener" class="buy-option primary-kindle" data-fmt="ebook" id="buy-kindle">
-        <span class="option-badge-top">★ AMAZON KINDLE · 1-CLICK INSTANT READ · $4.99</span>
+      <a href="${kUrl}" target="_blank" rel="noopener" class="buy-option primary-kindle" data-fmt="ebook" id="buy-kindle">
+        <span class="option-badge-top">${kBadge}</span>
         <span class="buy-option-icon">📖</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Amazon Kindle eBook <span class="price-highlight">$4.99</span></div>
-          <div class="buy-option-sub">Read instantly on Kindle app, iPhone, iPad, Android, or PC</div>
+          <div class="buy-option-title">Amazon Kindle eBook <span class="price-highlight">${ebPrice}</span></div>
+          <div class="buy-option-sub">Read instantly on Kindle app, iPhone, iPad, Android, or PC (UPI / Cards supported)</div>
         </div>
-        <span class="buy-cta-pill gold">$4.99 · Buy on Amazon ↗</span>
+        <span class="buy-cta-pill gold">${ebPrice} · Buy on Amazon ↗</span>
       </a>
     `);
   } else {
@@ -883,17 +982,18 @@ function buildBuyOptions(links, bookTitle) {
     `);
   }
 
-  // 2. Google Play Books (eBook) ($4.99 & Free Sample)
+  // 2. Google Play Books (eBook)
   if (links.google_ebook) {
+    const ebPrice = getEbookPrice();
     options.push(`
       <a href="${links.google_ebook}" target="_blank" rel="noopener" class="buy-option primary-google" data-fmt="ebook" id="buy-google-ebook">
-        <span class="option-badge-top google-badge">★ GOOGLE PLAY BOOKS · ANDROID &amp; WEB · $4.99</span>
+        <span class="option-badge-top google-badge">★ GOOGLE PLAY BOOKS · ANDROID &amp; WEB · ${ebPrice}</span>
         <span class="buy-option-icon">📱</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Google Play Books (eBook) <span class="price-highlight">$4.99</span></div>
+          <div class="buy-option-title">Google Play Books (eBook) <span class="price-highlight">${ebPrice}</span></div>
           <div class="buy-option-sub">Read free preview · Cloud sync on Android, iPhone &amp; Web browser</div>
         </div>
-        <span class="buy-cta-pill google">$4.99 · Buy on Google Play ↗</span>
+        <span class="buy-cta-pill google">${ebPrice} · Buy on Google Play ↗</span>
       </a>
     `);
   } else {
@@ -950,17 +1050,19 @@ function buildBuyOptions(links, bookTitle) {
     `);
   }
 
-  // 5. Amazon Paperback (Print Edition) ($11.99)
+  // 5. Amazon Paperback (Print Edition)
   if (links.amazon_paperback) {
+    const pUrl = getAmazonUrl(links.amazon_paperback);
+    const pbPrice = getPaperbackPrice();
     options.push(`
-      <a href="${links.amazon_paperback}" target="_blank" rel="noopener" class="buy-option primary-paperback" data-fmt="print" id="buy-paperback">
-        <span class="option-badge-top paperback-badge">📦 PRIME PAPERBACK · PHYSICAL BOOK · $11.99</span>
+      <a href="${pUrl}" target="_blank" rel="noopener" class="buy-option primary-paperback" data-fmt="print" id="buy-paperback">
+        <span class="option-badge-top paperback-badge">📦 PRIME PAPERBACK · PHYSICAL BOOK · ${pbPrice}</span>
         <span class="buy-option-icon">📦</span>
         <div class="buy-option-info">
-          <div class="buy-option-title">Amazon Paperback (Print Edition) <span class="price-highlight">$11.99</span></div>
+          <div class="buy-option-title">Amazon Paperback (Print Edition) <span class="price-highlight">${pbPrice}</span></div>
           <div class="buy-option-sub">Physical bedside copy · Fast Amazon Prime 1-2 day delivery</div>
         </div>
-        <span class="buy-cta-pill paperback">$11.99 · Prime Order ↗</span>
+        <span class="buy-cta-pill paperback">${pbPrice} · Prime Order ↗</span>
       </a>
     `);
   } else {
