@@ -545,14 +545,13 @@ function initLocalization() {
   } else {
     try {
       const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-      const lang = navigator.language || (navigator.languages && navigator.languages[0]) || '';
-      if (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta' || lang.endsWith('-IN') || lang === 'hi' || lang.startsWith('hi-')) {
-        currentCurrency = 'INR';
-      } else {
-        currentCurrency = 'USD';
-      }
+      const offset = new Date().getTimezoneOffset();
+      // STRICTLY INDIA ONLY: Indian Standard Time (Asia/Kolkata, UTC+5:30)
+      // All other countries (USA, UK, Canada, Australia, Europe, etc.) strictly get USD ($4.99)
+      const isIndia = (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta') && offset === -330;
+      currentCurrency = isIndia ? 'INR' : 'USD';
     } catch (e) {
-      currentCurrency = 'USD';
+      currentCurrency = 'USD'; // Safe international fallback
     }
   }
   updateCurrencyUI();
