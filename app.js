@@ -3,6 +3,11 @@
    Reads books_data.json, renders cards, handles search/filter/modal
    ================================================================ */
 
+/* ── INSTANT CANONICAL HOST REDIRECT (Apex to WWW) ── */
+if (typeof window !== 'undefined' && window.location.hostname === 'somatic-library.com') {
+  window.location.replace('https://www.somatic-library.com' + window.location.pathname + window.location.search + window.location.hash);
+}
+
 let allBooks = [];
 let activeFilter = 'all';
 let searchQuery = '';

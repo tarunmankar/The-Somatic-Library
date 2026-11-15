@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Instant Canonical Apex to WWW Redirect -->
+  <script>
+    if (window.location.hostname === 'somatic-library.com') {
+      window.location.replace('https://www.somatic-library.com' + window.location.pathname + window.location.search + window.location.hash);
+    }
+  </script>
   <!-- Google Search Console Site Verification -->
   <meta name="google-site-verification" content="uqHJvs6jtcBRIOOt1iiY0QzCBnj5IBU_utna0sX1xUE" />
   
