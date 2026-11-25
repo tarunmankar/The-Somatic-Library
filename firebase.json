@@ -2,6 +2,7 @@
   "hosting": {
     "site": "the-somatic-library",
     "public": ".",
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       ".firebaserc",
