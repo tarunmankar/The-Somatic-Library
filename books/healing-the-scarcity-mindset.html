@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Instant Canonical Apex to WWW Redirect -->
+  <script>
+    if (window.location.hostname === 'somatic-library.com') {
+      window.location.replace('https://www.somatic-library.com' + window.location.pathname + window.location.search + window.location.hash);
+    }
+  </script>
   
   <!-- Primary SEO Meta Tags for USA & Global Readers -->
   <title>Healing The Scarcity Mindset by Tarun Mankar — Buy on Amazon Kindle &amp; Paperback | The Somatic Library</title>
@@ -11,9 +17,9 @@
   <meta name="keywords" content="healing money anxiety somatic guide, scarcity mindset trauma recovery, nervous system regulation for finances, financial fear polyvagal safety, releasing poverty trauma from body, Tarun Mankar, somatic psychology book, buy kindle book USA, amazon paperback" />
   <meta name="author" content="Tarun Mankar" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.somatic-library.com/books/healing-the-scarcity-mindset.html" />
-  <link rel="alternate" hreflang="en-us" href="https://www.somatic-library.com/books/healing-the-scarcity-mindset.html" />
-  <link rel="alternate" hreflang="x-default" href="https://www.somatic-library.com/books/healing-the-scarcity-mindset.html" />
+  <link rel="canonical" href="https://www.somatic-library.com/books/healing-the-scarcity-mindset" />
+  <link rel="alternate" hreflang="en-us" href="https://www.somatic-library.com/books/healing-the-scarcity-mindset" />
+  <link rel="alternate" hreflang="x-default" href="https://www.somatic-library.com/books/healing-the-scarcity-mindset" />
 
   <!-- Favicon Suite -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
@@ -24,7 +30,7 @@
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://www.somatic-library.com/books/healing-the-scarcity-mindset.html" />
+  <meta property="og:url" content="https://www.somatic-library.com/books/healing-the-scarcity-mindset" />
   <meta property="og:title" content="Healing The Scarcity Mindset — Tarun Mankar" />
   <meta property="og:description" content="A Daily Guide to Releasing Money Anxiety and Rewiring Your Scarcity Trauma. Instant 1-Click Amazon Kindle Delivery &amp; Prime Paperback." />
   <meta property="og:image" content="https://www.somatic-library.com/covers/scarcity_mindset.jpg" />
@@ -33,7 +39,7 @@
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.somatic-library.com/books/healing-the-scarcity-mindset.html" />
+  <meta name="twitter:url" content="https://www.somatic-library.com/books/healing-the-scarcity-mindset" />
   <meta name="twitter:title" content="Healing The Scarcity Mindset — Tarun Mankar" />
   <meta name="twitter:description" content="A Daily Guide to Releasing Money Anxiety and Rewiring Your Scarcity Trauma. Read instantly on Kindle or order Prime Paperback." />
   <meta name="twitter:image" content="https://www.somatic-library.com/covers/scarcity_mindset.jpg" />
@@ -285,6 +291,61 @@
         font-size: 2.1rem;
       }
     }
+  
+    .btn-google-play {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(52, 168, 83, 0.12);
+      border: 1px solid rgba(52, 168, 83, 0.38);
+      color: #a7f3d0;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.96rem;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .btn-google-play:hover {
+      background: rgba(52, 168, 83, 0.22);
+      border-color: rgba(52, 168, 83, 0.7);
+      transform: translateY(-2px);
+    }
+    .related-mesh-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .related-mesh-card {
+      display: block;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text-bright);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .related-mesh-card:hover {
+      border-color: rgba(212, 175, 55, 0.45);
+      transform: translateY(-2px);
+    }
+    .related-mesh-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 5px;
+    }
+    .related-mesh-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
   </style>
 
   <!-- Schema.org JSON-LD -->
@@ -294,7 +355,7 @@
   "@graph": [
     {
       "@type": "Book",
-      "@id": "https://www.somatic-library.com/books/healing-the-scarcity-mindset.html#book",
+      "@id": "https://www.somatic-library.com/books/healing-the-scarcity-mindset#book",
       "name": "Healing The Scarcity Mindset",
       "alternateName": "A Daily Guide to Releasing Money Anxiety and Rewiring Your Scarcity Trauma",
       "author": {
@@ -314,7 +375,7 @@
       "genre": "Money & Scarcity",
       "description": "Stare at your bank app, physically frozen with anxiety? Feel a tight chest when paying routine bills? You aren't bad with money — your body is stuck in a survival loop. This audiobook translates somatic regulation into simple everyday financial habits. Learn the science of interoceptive alarms, use sixty-second nervous system resets before opening spreadsheets, and expand your capacity to hold wealth.",
       "image": "https://www.somatic-library.com/covers/scarcity_mindset.jpg",
-      "url": "https://www.somatic-library.com/books/healing-the-scarcity-mindset.html",
+      "url": "https://www.somatic-library.com/books/healing-the-scarcity-mindset",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -336,7 +397,7 @@
         },
         {
           "@type": "Offer",
-          "price": "14.99",
+          "price": "11.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0HNJYXX62",
@@ -366,7 +427,7 @@
           "@type": "ListItem",
           "position": 3,
           "name": "Healing The Scarcity Mindset",
-          "item": "https://www.somatic-library.com/books/healing-the-scarcity-mindset.html"
+          "item": "https://www.somatic-library.com/books/healing-the-scarcity-mindset"
         }
       ]
     },
@@ -409,12 +470,12 @@
   <header>
     <nav class="navbar" id="navbar" aria-label="Main Navigation">
       <div class="nav-inner">
-        <a href="../" class="nav-logo" aria-label="The Somatic Library Home">
+        <a href="/" class="nav-logo" aria-label="The Somatic Library Home">
           <span class="logo-icon" aria-hidden="true">📚</span>
           <span class="logo-text">The Somatic Library</span>
         </a>
         <div class="nav-links">
-          <a href="../#books">All Books (17)</a>
+          <a href="/#books">All Books (17)</a>
           <a href="../#author">About Author</a>
           <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" class="nav-cta">
             <span>Amazon Store</span> <span class="cta-arrow">↗</span>
@@ -425,7 +486,7 @@
   </header>
 
   <main class="book-page-wrap">
-    <a href="../#books" class="back-nav">← Back to Complete Library</a>
+    <a href="/#books" class="back-nav">← Back to Complete Library</a>
 
     <article class="book-hero-grid">
       <div class="book-cover-col">
@@ -531,5 +592,39 @@
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = null;
+      try { saved = localStorage.getItem('somatic_currency'); } catch(e) {}
+      var isIndia = false;
+      if (saved === 'INR') {
+        isIndia = true;
+      } else if (saved !== 'USD') {
+        try {
+          var tz = (Intl && Intl.DateTimeFormat) ? Intl.DateTimeFormat().resolvedOptions().timeZone : '';
+          var offset = new Date().getTimezoneOffset();
+          isIndia = (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta') && offset === -330;
+        } catch(e) { isIndia = false; }
+      }
+      if (!isIndia) return;
+
+      document.querySelectorAll('a[href*="amazon.com/dp/"]').forEach(function(a) {
+        a.href = a.href.replace('https://www.amazon.com/dp/', 'https://www.amazon.in/dp/');
+      });
+      var kindleBtn = document.querySelector('.btn-buy-kindle');
+      if (kindleBtn && kindleBtn.innerHTML.indexOf('$4.99') !== -1) {
+        kindleBtn.innerHTML = kindleBtn.innerHTML.replace('$4.99', '₹480');
+      }
+      var pbBtn = document.querySelector('.btn-buy-paperback');
+      if (pbBtn && pbBtn.innerHTML.indexOf('$11.99') !== -1) {
+        pbBtn.innerHTML = pbBtn.innerHTML.replace('$11.99', '₹1,500');
+      }
+      document.querySelectorAll('.btn-google-play').forEach(function(gp) {
+        if (gp.innerHTML.indexOf('$4.99') !== -1) {
+          gp.innerHTML = gp.innerHTML.replace('$4.99', '₹480');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

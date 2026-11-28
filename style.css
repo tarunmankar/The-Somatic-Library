@@ -3518,3 +3518,76 @@ body {
     padding: 6px 14px;
   }
 }
+
+/* ── SEO INTERNAL LINKS & AUDIOBOOKS SECTION ── */
+.card-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.card-title-link:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.card-sub-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 0 2px;
+}
+.card-sub-links .card-more-formats {
+  margin-top: 0;
+  text-align: left;
+}
+.card-details-link {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.card-details-link:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+.card-coming-soon {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+.card-format-tag.audio-only {
+  background: rgba(139, 92, 246, 0.16);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+.modal-full-page-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.45);
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+}
+.modal-full-page-link:hover {
+  opacity: 0.85;
+}
+.audiobooks-exclusives-wrap {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 480px) {
+  .card-sub-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+}

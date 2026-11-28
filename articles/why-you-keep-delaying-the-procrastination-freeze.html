@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Instant Canonical Apex to WWW Redirect -->
+  <script>
+    if (window.location.hostname === 'somatic-library.com') {
+      window.location.replace('https://www.somatic-library.com' + window.location.pathname + window.location.search + window.location.hash);
+    }
+  </script>
   
   <!-- Primary SEO & Google Discover Meta Tags -->
   <title>Why You Keep Delaying: The Neurobiology of the Procrastination Freeze Response — The Somatic Library</title>
@@ -11,9 +17,9 @@
   <meta name="keywords" content="procrastination somatic freeze, why do I delay things, dorsal vagal shutdown procrastination, nervous system freeze response, somatic productivity, Tarun Mankar, The Procrastination Loop" />
   <meta name="author" content="Tarun Mankar" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze.html" />
-  <link rel="alternate" hreflang="en-us" href="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze.html" />
-  <link rel="alternate" hreflang="x-default" href="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze.html" />
+  <link rel="canonical" href="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze" />
+  <link rel="alternate" hreflang="en-us" href="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze" />
+  <link rel="alternate" hreflang="x-default" href="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze" />
 
   <!-- Favicon Suite -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
@@ -24,7 +30,7 @@
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze.html" />
+  <meta property="og:url" content="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze" />
   <meta property="og:title" content="Why You Keep Delaying: The Neurobiology of the Procrastination Freeze Response" />
   <meta property="og:description" content="Procrastination is not laziness — it is an autonomic freeze response. Discover how to thaw task paralysis with nervous system biology." />
   <meta property="og:image" content="https://www.somatic-library.com/assets/articles/procrastination_freeze_delay.jpg" />
@@ -34,7 +40,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze.html" />
+  <meta name="twitter:url" content="https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze" />
   <meta name="twitter:title" content="Why You Keep Delaying: The Neurobiology of the Procrastination Freeze Response" />
   <meta name="twitter:description" content="The biology of task paralysis and the 60-second somatic reset to transition from frozen resistance into effortless flow." />
   <meta name="twitter:image" content="https://www.somatic-library.com/assets/articles/procrastination_freeze_delay.jpg" />
@@ -57,7 +63,7 @@
     "@graph": [
       {
         "@type": "BlogPosting",
-        "@id": "https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze.html#article",
+        "@id": "https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze#article",
         "isPartOf": {
           "@type": "WebSite",
           "@id": "https://www.somatic-library.com/#website",
@@ -72,14 +78,14 @@
         "author": {
           "@type": "Person",
           "name": "Tarun Mankar",
-          "url": "https://www.somatic-library.com/about.html"
+          "url": "https://www.somatic-library.com/about"
         },
         "publisher": {
           "@type": "Organization",
           "name": "The Somatic Library",
           "url": "https://www.somatic-library.com/"
         },
-        "mainEntityOfPage": "https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze.html"
+        "mainEntityOfPage": "https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze"
       },
       {
         "@type": "BreadcrumbList",
@@ -94,13 +100,13 @@
             "@type": "ListItem",
             "position": 2,
             "name": "Blogs",
-            "item": "https://www.somatic-library.com/articles.html"
+            "item": "https://www.somatic-library.com/articles"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Procrastination & Somatic Freeze",
-            "item": "https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze.html"
+            "item": "https://www.somatic-library.com/articles/why-you-keep-delaying-the-procrastination-freeze"
           }
         ]
       },
@@ -158,15 +164,15 @@
   <header>
     <nav class="navbar" id="navbar" aria-label="Main Navigation">
       <div class="nav-inner">
-        <a href="../index.html" class="nav-logo" aria-label="The Somatic Library Home">
+        <a href="/" class="nav-logo" aria-label="The Somatic Library Home">
           <span class="logo-icon" aria-hidden="true">📚</span>
           <span class="logo-text">The Somatic Library</span>
         </a>
         <div class="nav-links">
           <a href="../index.html#books" id="nav-books-link">Catalog (8)</a>
-          <a href="../articles.html" class="active" id="nav-articles-link">Blogs</a>
+          <a href="/articles" class="active" id="nav-articles-link">Blogs</a>
           <a href="../index.html#trust-features" id="nav-features-link">Why Body-First</a>
-          <a href="../about.html" id="nav-author-link">About Author</a>
+          <a href="/about" id="nav-author-link">About Author</a>
           <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" class="nav-cta" id="nav-amazon-link">
             <span>Amazon Store</span> <span class="cta-arrow">↗</span>
           </a>
@@ -185,9 +191,9 @@
       
       <!-- Breadcrumb -->
       <nav class="article-breadcrumb" aria-label="Breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="/">Home</a>
         <span>/</span>
-        <a href="../articles.html">Blogs</a>
+        <a href="/articles">Blogs</a>
         <span>/</span>
         <span aria-current="page">Procrastination &amp; Somatic Freeze</span>
       </nav>
@@ -400,10 +406,10 @@
       </div>
       <p class="footer-copy">© 2026 Tarun Mankar. All rights reserved.</p>
       <div class="footer-links">
-        <a href="../index.html" id="footer-home">Storefront Home</a>
+        <a href="/" id="footer-home">Storefront Home</a>
         <a href="../index.html#books" id="footer-catalog">Books Catalog</a>
-        <a href="../articles.html" id="footer-articles">Blogs</a>
-        <a href="../about.html" id="footer-about">About Author</a>
+        <a href="/articles" id="footer-articles">Blogs</a>
+        <a href="/about" id="footer-about">About Author</a>
         <a href="https://www.amazon.com/stores/Tarun-Mankar/author/B0BTBLH2SN" target="_blank" rel="noopener" id="footer-amazon">Amazon Store</a>
       </div>
           <div class="footer-disclaimer" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.76rem; color: var(--text-dim); line-height: 1.5; text-align: center; max-width: 820px; margin-left: auto; margin-right: auto;">

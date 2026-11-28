@@ -9,6 +9,7 @@ if (typeof window !== 'undefined' && window.location.hostname === 'somatic-libra
 }
 
 let allBooks = [];
+let allUpcomingBooks = [];
 let activeFilter = 'all';
 let searchQuery = '';
 
@@ -571,7 +572,7 @@ function setCurrency(curr) {
   }
   // If modal is currently open, re-render
   if (typeof isModalOpen !== 'undefined' && isModalOpen && typeof currentOpenBookId !== 'undefined' && currentOpenBookId) {
-    const book = allBooks.find(b => b.id === currentOpenBookId);
+    const book = allBooks.find(b => b.id === currentOpenBookId) || allUpcomingBooks.find(b => b.id === currentOpenBookId);
     if (book) {
       const buyGrid = document.getElementById('buy-grid');
       if (buyGrid) buyGrid.innerHTML = buildBuyOptions(book.links, book.title);
@@ -660,12 +661,16 @@ async function loadBooks() {
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
     allBooks = data.books;
+    allUpcomingBooks = data.upcoming_books || [];
     renderBooks(allBooks);
+    renderUpcomingAudiobooks(allUpcomingBooks);
     updateStats(data.author.stats);
   } catch (err) {
     // Fallback to inline data (works on file:// protocol)
     allBooks = INLINE_DATA.books;
+    allUpcomingBooks = INLINE_DATA.upcoming_books || [];
     renderBooks(allBooks);
+    renderUpcomingAudiobooks(allUpcomingBooks);
     updateStats(INLINE_DATA.author.stats);
   }
 }
@@ -731,7 +736,7 @@ function renderBooks(books) {
           <span class="card-rating-score">${getBookRating(book)}</span>
           <span class="card-rating-count">(${getBookReviewsCount(book)})</span>
         </div>
-        <h3 class="card-title">${book.title}</h3>
+        <h3 class="card-title"><a href="/books/${slug}" class="card-title-link" onclick="event.stopPropagation()">${book.title}</a></h3>
         <p class="card-subtitle">${book.subtitle}</p>
         <div class="card-hook-wrap">
           <p class="card-hook">"${book.hook}"</p>
@@ -754,18 +759,87 @@ function renderBooks(books) {
               <span class="btn-icon">🎧</span> Listen on ElevenReader ↗
             </a>
           ` : ''}
-          <div class="card-more-formats"
-            id="buy-btn-${book.id}"
-            onclick="event.stopPropagation();openModal(${book.id})"
-            role="button"
-            tabindex="0"
-            aria-label="View Paperback & Google Play options — ${book.title}">
-            Paperback &amp; Google Play available ↓
+          <div class="card-sub-links">
+            <div class="card-more-formats"
+              id="buy-btn-${book.id}"
+              onclick="event.stopPropagation();openModal(${book.id})"
+              role="button"
+              tabindex="0"
+              aria-label="View Paperback & Google Play options — ${book.title}">
+              Paperback &amp; Google Play ↓
+            </div>
+            <a href="/books/${slug}" class="card-details-link" onclick="event.stopPropagation()">
+              Full Protocols →
+            </a>
           </div>
         </div>
       </div>
     </article>
   `;
+  }).join('');
+}
+
+
+/* ── RENDER UPCOMING / EXCLUSIVE AUDIOBOOKS (IDs 11-17) ── */
+function renderUpcomingAudiobooks(items) {
+  const grid = document.getElementById('audiobooks-grid');
+  if (!grid || !items || items.length === 0) return;
+
+  grid.innerHTML = items.map((book, i) => {
+    const slug = book.slug || getBookSlug(book);
+    return `
+    <article class="book-card audiobook-only-card" id="${slug}" data-slug="${slug}" data-book-id="${book.id}"
+             onclick="openModal(${book.id})"
+             style="animation-delay:${i * 0.04}s"
+             aria-label="${book.title} Audiobook by Tarun Mankar">
+      <div class="card-cover-wrap">
+        <img
+          class="card-cover"
+          src="${book.cover}"
+          alt="${book.title} Audiobook Cover — Somatic Psychology by Tarun Mankar"
+          loading="lazy"
+          onerror="this.style.background='#1a1530';this.src=''"
+        />
+        <div class="card-overlay">
+          <span class="overlay-badge">Exclusive Somatic Audiobook</span>
+          <a href="/books/${slug}" class="overlay-btn" onclick="event.stopPropagation()">
+            📖 Read Audio Guide &amp; Protocols →
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-meta-line">
+          <span class="card-cat-badge">${book.category_label}</span>
+          <span class="card-format-tag audio-only">🎧 Studio Audio Live</span>
+        </div>
+        <div class="card-rating-line">
+          <span class="card-stars">★★★★★</span>
+          <span class="card-rating-score">${getBookRating(book)}</span>
+          <span class="card-rating-count">(${getBookReviewsCount(book)})</span>
+        </div>
+        <h3 class="card-title"><a href="/books/${slug}" class="card-title-link" onclick="event.stopPropagation()">${book.title}</a></h3>
+        <p class="card-subtitle">${book.subtitle}</p>
+        <div class="card-hook-wrap">
+          <p class="card-hook">"${book.hook}"</p>
+        </div>
+        <div class="card-actions">
+          ${book.links && book.links.elevenreader ? `
+            <a href="${book.links.elevenreader}" target="_blank" rel="noopener"
+               class="card-btn-eleven-direct"
+               onclick="event.stopPropagation()"
+               aria-label="Listen on ElevenReader — ${book.title}">
+              <span class="btn-icon">🎧</span> Listen on ElevenReader ↗
+            </a>
+          ` : ''}
+          <div class="card-sub-links">
+            <span class="card-coming-soon">Kindle &amp; Print releasing soon</span>
+            <a href="/books/${slug}" class="card-details-link" onclick="event.stopPropagation()">
+              Full Protocols →
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>`;
   }).join('');
 }
 
@@ -890,7 +964,7 @@ function filterModalBuyOptions(fmt) {
 }
 
 function openModal(bookId, updateHash = true) {
-  const book = allBooks.find(b => b.id === bookId);
+  const book = allBooks.find(b => b.id === bookId) || allUpcomingBooks.find(b => b.id === bookId);
   if (!book) return;
   currentOpenBookId = bookId;
   isModalOpen = true;
@@ -936,6 +1010,10 @@ function openModal(bookId, updateHash = true) {
 
   document.getElementById('modal-hook').textContent = `"${book.hook}"`;
   document.getElementById('modal-desc').textContent = book.description;
+  const fullPageLink = document.getElementById('modal-full-page-link');
+  if (fullPageLink) {
+    fullPageLink.href = `/books/${slug}`;
+  }
 
   const buyGrid = document.getElementById('buy-grid');
   buyGrid.innerHTML = buildBuyOptions(book.links, book.title);
@@ -1221,7 +1299,16 @@ function getBookSlug(book) {
     5: "the-courage-to-disappoint",
     6: "wired-for-security",
     7: "mastering-the-emotional-storm",
-    8: "the-procrastination-loop"
+    8: "the-procrastination-loop",
+    9: "thawing-the-freeze",
+    10: "the-inability-to-rest",
+    11: "the-midnight-nervous-system",
+    12: "the-shame-collapse",
+    13: "the-phantom-alarm",
+    14: "the-social-hangover",
+    15: "the-braced-body",
+    16: "the-imposter-alarm",
+    17: "the-calm-alarm"
   };
   return book ? (slugs[book.id] || `book-${book.id}`) : '';
 }
@@ -1310,7 +1397,7 @@ function initBookHashRouting() {
 }
 
 function copyCurrentBookLink() {
-  const book = allBooks.find(b => b.id === currentOpenBookId);
+  const book = allBooks.find(b => b.id === currentOpenBookId) || allUpcomingBooks.find(b => b.id === currentOpenBookId);
   if (!book) return;
   const slug = book.slug || getBookSlug(book);
   const shareUrl = `${window.location.origin}/#${slug}`;
