@@ -150,4 +150,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://www.somatic-library.com/articles/why-you-feel-numb-functional-freeze</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.somatic-library.com/articles/why-sitting-still-feels-like-panic-rest-guilt</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.somatic-library.com/articles/why-you-wake-up-at-3am-with-racing-heart</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.somatic-library.com/articles/why-small-mistakes-trigger-shame-collapse</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.somatic-library.com/articles/why-body-aches-trigger-health-anxiety</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.somatic-library.com/articles/why-socializing-drains-you-replay-loop</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
