@@ -103,28 +103,10 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.somatic-library.com/books/the-braced-body</loc>
-    <lastmod>2026-11-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.somatic-library.com/books/the-calm-alarm</loc>
-    <lastmod>2026-11-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.somatic-library.com/books/the-courage-to-disappoint</loc>
     <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.somatic-library.com/books/the-imposter-alarm</loc>
-    <lastmod>2026-11-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.somatic-library.com/books/the-inability-to-rest</loc>

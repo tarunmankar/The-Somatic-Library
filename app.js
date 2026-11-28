@@ -22,7 +22,7 @@ const INLINE_DATA = {
         "bio": "For years, I dealt with everyday stress, constant overthinking, and mental exhaustion. That led me to deeply research behavioral neuroscience and somatic psychology. I created The Somatic Library to share practical, fluff-free guides and 60-second body resets that quiet racing thoughts and bring genuine balance to everyday life.",
         "stats": {
             "books": "14 Books",
-            "audiobooks": "17 Audiobooks",
+            "audiobooks": "14 Audiobooks",
             "platforms": "3"
         },
         "profiles": {
@@ -686,14 +686,14 @@ async function loadBooks() {
     allBooks = data.books;
     allUpcomingBooks = data.upcoming_books || [];
     renderBooks(allBooks);
-    renderUpcomingAudiobooks(allUpcomingBooks);
+    // Upcoming books hidden until live on all platforms
     updateStats(data.author.stats);
   } catch (err) {
     // Fallback to inline data (works on file:// protocol)
     allBooks = INLINE_DATA.books;
     allUpcomingBooks = INLINE_DATA.upcoming_books || [];
     renderBooks(allBooks);
-    renderUpcomingAudiobooks(allUpcomingBooks);
+    // Upcoming books hidden until live on all platforms
     updateStats(INLINE_DATA.author.stats);
   }
 }
