@@ -3,6 +3,22 @@
     "site": "the-somatic-library",
     "public": ".",
     "cleanUrls": true,
+    "redirects": [
+      { "source": "/stop-spiraling", "destination": "/books/stop-spiraling", "type": 301 },
+      { "source": "/somatic-pacing", "destination": "/books/somatic-pacing", "type": 301 },
+      { "source": "/healing-the-scarcity-mindset", "destination": "/books/healing-the-scarcity-mindset", "type": 301 },
+      { "source": "/dopamine-reset-and-deep-focus", "destination": "/books/dopamine-reset-and-deep-focus", "type": 301 },
+      { "source": "/the-courage-to-disappoint", "destination": "/books/the-courage-to-disappoint", "type": 301 },
+      { "source": "/wired-for-security", "destination": "/books/wired-for-security", "type": 301 },
+      { "source": "/mastering-the-emotional-storm", "destination": "/books/mastering-the-emotional-storm", "type": 301 },
+      { "source": "/the-procrastination-loop", "destination": "/books/the-procrastination-loop", "type": 301 },
+      { "source": "/thawing-the-freeze", "destination": "/books/thawing-the-freeze", "type": 301 },
+      { "source": "/the-inability-to-rest", "destination": "/books/the-inability-to-rest", "type": 301 },
+      { "source": "/the-midnight-nervous-system", "destination": "/books/the-midnight-nervous-system", "type": 301 },
+      { "source": "/the-shame-collapse", "destination": "/books/the-shame-collapse", "type": 301 },
+      { "source": "/the-phantom-alarm", "destination": "/books/the-phantom-alarm", "type": 301 },
+      { "source": "/the-social-hangover", "destination": "/books/the-social-hangover", "type": 301 }
+    ],
     "ignore": [
       "firebase.json",
       ".firebaserc",

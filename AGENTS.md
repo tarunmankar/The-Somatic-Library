@@ -206,24 +206,35 @@ Invoke-WebRequest -Uri "https://play.google.com/books/publisher/content/images/f
 ```
 
 **Step 2: Update Data Sources (Dual Data Source Pattern)**
-- Append new book object to `books_data.json` (`"books"` array).
-- Append the EXACT SAME object to `INLINE_DATA.books` in `app.js`.
+- Only add a book to `"books"` when it is **live on ALL platforms** (Amazon Kindle, Paperback, Google Play eBook & Audio, ElevenReader).
+- Append new book object (with `"slug"`) to `books_data.json` (`"books"` array) and `INLINE_DATA.books` in `app.js`.
+- Add the static `.book-card` to `index.html` `#books-grid` (linking title & `Full Protocols →` to `/books/{slug}`).
 - Ensure Amazon links are strictly official direct URLs: `https://www.amazon.com/dp/{ASIN}` (NEVER use mybook.to or shorteners).
 
-**Step 3: Write Companion SEO Somatic Article**
-- Create `articles/{slug}.html` addressing the book's core visceral emotional hook.
-- Include complete JSON-LD Schema (`Article`, `Book`, `FAQPage`).
-- Include the high-converting in-article book buy box.
-- Include interactive 4-item FAQ section for Google rich snippets.
+**Step 3: Create Dedicated Book Sales Page (`books/{slug}.html`)**
+- Create `books/{slug}.html` matching the existing 14 book pages:
+  - Clean extensionless canonical (`https://www.somatic-library.com/books/{slug}`) + apex-to-www redirect.
+  - JSON-LD `Book` + `Offer` (`$4.99` Kindle, `$11.99` Paperback) + `BreadcrumbList`.
+  - **40% OFF Countdown Timer** + strikethrough anchor prices (`$8.30 → $4.99` / `$19.99 → $11.99` USD; `₹800 → ₹480` / `₹2,500 → ₹1,500` INR via India geo-script).
+  - **All 5 live buy buttons** (Amazon Kindle, Paperback, Google Play Books, Google Play Audiobook, ElevenReader).
+  - Core Somatic Protocols, 3 FAQs, and **Related Somatic Guides & Books** internal link mesh.
+- Add `{ "source": "/{slug}", "destination": "/books/{slug}", "type": 301 }` to `firebase.json` (never create separate root folders).
 
-**Step 4: Create Compressed 16:9 Featured Image**
-- Save lightweight WebP (< 80 KB) + JPG fallback to `assets/articles/{slug}.webp` and `.jpg`.
+**Step 4: Write Companion SEO Somatic Article**
+- Create `articles/{article-slug}.html` addressing the book's core visceral emotional hook.
+- Include complete JSON-LD Schema (`BlogPosting`, `FAQPage`, `BreadcrumbList`).
+- Include the high-converting in-article book buy box (with Amazon `₹480`/`$4.99`, ElevenReader, and `/books/{slug}` link) + interactive 4-item FAQ section.
 
-**Step 5: Integrate into Article/Blog Hub**
+**Step 5: Create Compressed 16:9 Featured Image**
+- Save lightweight WebP (< 80 KB) + JPG fallback to `assets/articles/{img_slug}.webp` and `.jpg`.
+
+**Step 6: Integrate into Article Hub, Filter Tabs & Sitemap**
 - Add article card to `articles.html` inside `.articles-grid`.
-- Update category counts in `index.html` `#filter-tabs`.
+- Update category counts in `index.html` `#filter-tabs` and `Catalog (N)` across navbars.
+- Add clean extensionless `/books/{slug}` and `/articles/{article-slug}` URLs to `sitemap.xml`.
 
-**Step 6: Deploy**
+**Step 7: Localhost Verify First (NEVER Commit/Push/Deploy Unverified)**
+- Preview on `http://localhost:5000/` (`firebase serve --only hosting --port 5000`) and wait for user approval before running:
 ```bash
 git add . && git commit -m "feat: add Book X and companion SEO article" && git push origin main
 firebase deploy --only hosting
