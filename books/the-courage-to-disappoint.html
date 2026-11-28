@@ -346,6 +346,42 @@
       line-height: 1.35;
     }
 
+  
+    .offer-timer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.16), rgba(239, 68, 68, 0.12));
+      border: 1px solid rgba(212, 175, 55, 0.42);
+      border-radius: 10px;
+      font-size: 0.84rem;
+    }
+    .offer-badge {
+      font-weight: 800;
+      color: #f0d060;
+      letter-spacing: 0.03em;
+    }
+    .offer-countdown {
+      color: #f5f0e8;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .offer-countdown strong {
+      color: #fca5a5;
+      font-variant-numeric: tabular-nums;
+      font-weight: 800;
+    }
+    .price-cut {
+      opacity: 0.65;
+      text-decoration: line-through;
+      margin-right: 4px;
+      font-weight: 500;
+      font-size: 0.9em;
+    }
+
   </style>
 
   <!-- Schema.org JSON-LD -->
@@ -510,17 +546,21 @@
           Exhausted from carrying everyone else's emotional baggage? The Courage to Disappoint is a body-first guide to breaking free from chronic people-pleasing. Discover practical scripts, real-time nervous system regulation exercises, and deep psychological tools to stop over-explaining, dismantle boundary guilt, deliver clean unapologetic refusals, and reclaim your personal sovereignty.
         </p>
 
+        <div class="offer-timer-bar" id="offer-timer-bar">
+          <span class="offer-badge">🔥 LIMITED-TIME OFFER: 40% OFF</span>
+          <span class="offer-countdown">Ends in <strong id="offer-countdown-time">02:47:19</strong></span>
+        </div>
         <div class="cta-button-group">
           <a href="https://www.amazon.com/dp/B0HP8D7JRT" target="_blank" rel="noopener" class="btn-buy-kindle">
-            <span>📖 Buy Amazon Kindle eBook · $4.99</span>
+            <span>📖 Buy Amazon Kindle eBook · <del class="price-cut">$8.30</del> $4.99</span>
             <span>Instant 1-Click Buy ↗</span>
           </a>
           <a href="https://www.amazon.com/dp/B0HP8MQL2P" target="_blank" rel="noopener" class="btn-buy-paperback">
-            <span>📦 Order Amazon Prime Paperback · $11.99</span>
+            <span>📦 Order Amazon Prime Paperback · <del class="price-cut">$19.99</del> $11.99</span>
             <span>1-2 Day Prime Shipping ↗</span>
           </a>
           <a href="https://play.google.com/store/books/details?id=1WIhEgAAQBAJ" target="_blank" rel="noopener" class="btn-google-play">
-            <span>📱 Google Play Books · $4.99</span>
+            <span>📱 Google Play Books · <del class="price-cut">$8.30</del> $4.99</span>
             <span>Read Now ↗</span>
           </a>
           <a href="https://play.google.com/store/audiobooks/details?id=AQAAAEBGXVkdDM" target="_blank" rel="noopener" class="btn-google-play">
@@ -634,18 +674,45 @@
         a.href = a.href.replace('https://www.amazon.com/dp/', 'https://www.amazon.in/dp/');
       });
       var kindleBtn = document.querySelector('.btn-buy-kindle');
-      if (kindleBtn && kindleBtn.innerHTML.indexOf('$4.99') !== -1) {
-        kindleBtn.innerHTML = kindleBtn.innerHTML.replace('$4.99', '₹480');
+      if (kindleBtn) {
+        kindleBtn.innerHTML = kindleBtn.innerHTML.replace('$8.30', '₹800').replace('$4.99', '₹480');
       }
       var pbBtn = document.querySelector('.btn-buy-paperback');
-      if (pbBtn && pbBtn.innerHTML.indexOf('$11.99') !== -1) {
-        pbBtn.innerHTML = pbBtn.innerHTML.replace('$11.99', '₹1,500');
+      if (pbBtn) {
+        pbBtn.innerHTML = pbBtn.innerHTML.replace('$19.99', '₹2,500').replace('$11.99', '₹1,500');
       }
       document.querySelectorAll('.btn-google-play').forEach(function(gp) {
-        if (gp.innerHTML.indexOf('$4.99') !== -1) {
-          gp.innerHTML = gp.innerHTML.replace('$4.99', '₹480');
-        }
+        gp.innerHTML = gp.innerHTML.replace('$8.30', '₹800').replace('$4.99', '₹480');
       });
+    })();
+  </script>
+  <script>
+    (function() {
+      var el = document.getElementById('offer-countdown-time');
+      if (!el) return;
+      var KEY = 'somatic_offer_end';
+      var now = Date.now();
+      var end = 0;
+      try { end = parseInt(localStorage.getItem(KEY) || '0', 10); } catch(e) {}
+      if (!end || end <= now + 60000) {
+        // 2h 47m rolling window for realistic urgency
+        end = now + (2 * 3600 + 47 * 60 + 19) * 1000;
+        try { localStorage.setItem(KEY, String(end)); } catch(e) {}
+      }
+      function tick() {
+        var diff = Math.max(0, Math.floor((end - Date.now()) / 1000));
+        if (diff === 0) {
+          end = Date.now() + (2 * 3600 + 47 * 60 + 19) * 1000;
+          try { localStorage.setItem(KEY, String(end)); } catch(e) {}
+          diff = Math.floor((end - Date.now()) / 1000);
+        }
+        var h = String(Math.floor(diff / 3600)).padStart(2, '0');
+        var m = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
+        var s = String(diff % 60).padStart(2, '0');
+        el.textContent = h + ':' + m + ':' + s;
+      }
+      tick();
+      setInterval(tick, 1000);
     })();
   </script>
 </body>
